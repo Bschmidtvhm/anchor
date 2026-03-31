@@ -168,14 +168,16 @@
     .steps-grid::before {
       content: '';
       position: absolute;
-      top: 28px;
-      left: calc(12.5% + 2rem);
-      right: calc(12.5% + 2rem);
+      top: 20px;
+      left: 20px;
+      right: 20px;
       height: 1px;
       background: var(--border-strong);
     }
     .step-card {
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
     .step-number {
       width: 40px;
@@ -198,8 +200,10 @@
       color: var(--navy);
       margin-bottom: 0.75rem;
       font-weight: 400;
+      white-space: nowrap;
     }
     .step-card p {
+      flex: 1;
       font-size: 15px;
       color: var(--text-secondary);
       font-weight: 300;
@@ -634,6 +638,7 @@
       
       .steps-grid { grid-template-columns: repeat(2, 1fr); }
       .steps-grid::before { display: none; }
+      .step-card h3 { white-space: normal; }
       .step-details { grid-template-columns: 1fr; gap: 2rem; }
       .stat-bar-inner { grid-template-columns: 1fr; gap: 2rem; }
       .stat-item { padding: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
@@ -695,7 +700,7 @@
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-number">1</div>
-        <h3>Apply eligibility at the moment of action</h3>
+        <h3>Apply eligibility in real time</h3>
         <p>When a risk event or score triggers action, Anchor interprets eligibility across Medicare, Medicaid, and community services, ensuring the right benefits are used and limits are enforced.</p>
         <span class="step-tag">Upstream of care management</span>
       </div>
