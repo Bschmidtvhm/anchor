@@ -1152,17 +1152,50 @@
     @media (max-width: 900px) {
       .hamburger { display: block; }
       .nav-links {
-        display: none;
-        position: absolute;
-        top: 80px; left: 0; right: 0;
+        display: none !important;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #ffffff;
         flex-direction: column;
-        background: white;
-        border-bottom: 1px solid var(--border);
-        padding: 1rem 2rem;
-        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 0;
+        gap: 0;
+        z-index: 150;
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       }
-      .nav-links.active { display: flex; }
-      .nav-links a { font-size: 16px; }
+      .nav-links.active {
+        display: flex !important;
+      }
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links li:last-child {
+        border-bottom: none;
+        padding: 1.5rem 2rem;
+      }
+      .nav-links a {
+        display: block;
+        padding: 1.1rem 2rem;
+        font-size: 17px;
+      }
+      .nav-cta {
+        display: inline-block !important;
+        margin: 0 auto;
+      }
+      .footer-main {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+      }
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
     }
   </style>
 </head>
@@ -1480,20 +1513,20 @@
 
 <script>
   // Mobile menu toggle
-  function toggleMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  }
-
-  // Close mobile menu when clicking a link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.hamburger').classList.remove('active');
-      document.querySelector('.nav-links').classList.remove('active');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
     });
-  });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
 
   // Modal functions
   function openContactModal() {
