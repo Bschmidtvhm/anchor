@@ -163,12 +163,12 @@
       line-height: 1.65;
     }
 
-    /* OPENING STATEMENT */
-    #opening-statement { background: white; }
-    #opening-statement .section-body {
+    /* OPENING */
+    #opening { background: white; }
+    #opening .section-body {
       max-width: 760px;
     }
-    #opening-statement .section-body p {
+    #opening .section-body p {
       font-size: 17px;
       color: var(--text-secondary);
       font-weight: 300;
@@ -176,38 +176,46 @@
       margin-bottom: 1rem;
     }
 
-    /* MISSING LAYER */
-    #missing-layer { background: var(--cream); }
-    .today-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .today-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--coral);
-      border-radius: 8px;
-      padding: 1.75rem 2rem;
+    /* THE GAP */
+    #the-gap { background: var(--cream); }
+    .gap-list {
+      list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1.25rem;
+      margin-top: 2rem;
+      max-width: 700px;
     }
-    .today-card:nth-child(2) { border-left-color: var(--amber); }
-    .today-card:nth-child(3) { border-left-color: var(--navy-light); }
-    .today-card:nth-child(4) { border-left-color: var(--teal); }
-    .today-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.15rem;
-      color: var(--navy);
-      font-weight: 400;
+    .gap-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
     }
-    .today-card p {
-      font-size: 15px;
+    .gap-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--coral);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+    .gap-item:nth-child(2) .gap-dot { background: var(--amber); }
+    .gap-item:nth-child(3) .gap-dot { background: var(--navy-light); }
+    .gap-item:nth-child(4) .gap-dot { background: var(--teal); }
+    .gap-item p {
+      font-size: 16px;
       color: var(--text-secondary);
       font-weight: 300;
       line-height: 1.65;
+    }
+    .result-line {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--navy);
+      margin-top: 2.5rem;
+      padding-left: 14px;
+      border-left: 3px solid var(--coral);
+      line-height: 1.6;
     }
     .closing-line {
       font-family: 'DM Serif Display', serif;
@@ -225,115 +233,121 @@
 
     /* WHAT ANCHOR DOES */
     #what-anchor-does { background: white; }
-    .anchor-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
+    #what-anchor-does .section-body {
+      max-width: 700px;
+      margin-bottom: 2rem;
     }
-    .anchor-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      border-top: 4px solid var(--navy);
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      border: 1px solid var(--border);
-      border-top: 4px solid var(--navy);
-    }
-    .anchor-card:nth-child(2) { border-top-color: var(--teal); }
-    .anchor-card:nth-child(3) { border-top-color: var(--coral); }
-    .anchor-card:nth-child(4) { border-top-color: var(--amber); }
-    .anchor-card:nth-child(5) { border-top-color: var(--navy-light); }
-    .anchor-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.2rem;
-      color: var(--navy);
-      font-weight: 400;
-      margin-bottom: 0.25rem;
-    }
-    .anchor-card p {
-      font-size: 15px;
+    #what-anchor-does .section-body p {
+      font-size: 17px;
       color: var(--text-secondary);
       font-weight: 300;
-      line-height: 1.65;
+      line-height: 1.75;
+      margin-bottom: 1rem;
     }
-
-    /* WHY IT MATTERS */
-    #why-it-matters { background: var(--cream); }
-    .matters-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .matters-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
+    .capability-list {
+      list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.25rem;
+      max-width: 700px;
     }
-    .matters-card .matters-icon {
-      width: 40px;
-      height: 40px;
+    .capability-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .capability-icon {
+      width: 36px;
+      height: 36px;
       border-radius: 8px;
       background: var(--teal-pale);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      margin-top: 2px;
     }
-    .matters-card .matters-icon svg { width: 18px; height: 18px; }
-    .matters-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.15rem;
-      color: var(--navy);
-      font-weight: 400;
+    .capability-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
-    .matters-card p {
-      font-size: 15px;
+    .capability-item p {
+      font-size: 16px;
       color: var(--text-secondary);
       font-weight: 300;
       line-height: 1.65;
     }
-    .matters-sub {
-      margin-top: 3rem;
-    }
-    .matters-sub h3 {
+
+    /* WHY THIS MATTERS */
+    #why-this-matters { background: var(--cream); }
+    .matters-intro {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       color: var(--navy);
       font-weight: 400;
-      margin-bottom: 1.5rem;
+      font-style: italic;
+      margin-bottom: 2rem;
     }
-    .matters-sub-list {
+    .two-col-matters {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      list-style: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
     }
-    .matters-sub-item {
+    .matters-col h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+    }
+    .matters-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .matters-item {
       display: flex;
       gap: 0.75rem;
       align-items: flex-start;
     }
-    .matters-sub-dot {
+    .matters-dot {
       width: 8px;
       height: 8px;
       border-radius: 2px;
-      background: var(--teal);
       flex-shrink: 0;
       margin-top: 6px;
     }
-    .matters-sub-item p {
-      font-size: 14px;
+    .matters-dot.red { background: var(--coral); }
+    .matters-dot.green { background: var(--teal); }
+    .matters-item p {
+      font-size: 15px;
       color: var(--text-secondary);
       font-weight: 300;
       line-height: 1.6;
+    }
+
+    /* THE DIFFERENCE */
+    #the-difference { background: white; }
+    #the-difference .section-body {
+      max-width: 700px;
+    }
+    #the-difference .section-body p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    #the-difference .section-body p strong {
+      color: var(--navy);
+      font-weight: 500;
     }
 
     /* FINAL CTA */
@@ -377,10 +391,7 @@
     .final-cta-btn:hover { background: var(--teal-light); }
 
     @media (max-width: 900px) {
-      .today-grid { grid-template-columns: 1fr; }
-      .anchor-grid { grid-template-columns: 1fr; }
-      .matters-grid { grid-template-columns: 1fr; }
-      .matters-sub-list { grid-template-columns: 1fr; }
+      .two-col-matters { grid-template-columns: 1fr; }
     }
 
     /* FOOTER */
@@ -788,82 +799,144 @@
   </div>
 </section>
 
-<!-- OPENING STATEMENT -->
-<section id="opening-statement">
+<!-- OPENING -->
+<section id="opening">
   <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">The Missing System</span>
-      <h2>The Missing System for Non-Medical Benefit Spend</h2>
-    </div>
     <div class="section-body">
-      <p>Across Medicare, Medicaid, and community programs, non-medical benefits are fragmented, difficult to coordinate, and nearly impossible to measure.</p>
-      <p>There is no system of record for how this spend is deployed across programs.</p>
-      <p>Anchor sits between clinical decision-making and benefit delivery — managing how non-medical dollars are actually used.</p>
+      <p>Non-medical benefits are now a core cost driver, but they are not managed like one.</p>
+      <p>Across Medicare and Medicaid, benefit dollars are fragmented across systems, vendors, and workflows, with limited visibility into what is delivered or what works.</p>
+      <p>There is no system of record for how this spend is deployed or what outcomes it drives.</p>
     </div>
   </div>
 </section>
 
-<!-- THE MISSING LAYER -->
-<section id="missing-layer">
+<!-- THE GAP -->
+<section id="the-gap">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow">The Missing Layer</span>
-      <h2>The system between approval and delivery doesn't exist.</h2>
-      <p class="section-intro">Today's solutions operate around the problem:</p>
+      <span class="eyebrow">The Gap</span>
+      <h2>Spend is distributed across systems that do not connect.</h2>
+      <p class="section-intro">Today:</p>
     </div>
-    <div class="today-grid">
-      <div class="today-card">
-        <h3>Referral platforms</h3>
-        <p>Route patients to services.</p>
-      </div>
-      <div class="today-card">
-        <h3>Marketplaces</h3>
-        <p>Manage vendor networks.</p>
-      </div>
-      <div class="today-card">
-        <h3>Care management tools</h3>
-        <p>Document intent and tasks.</p>
-      </div>
-      <div class="today-card">
-        <h3>Analytics platforms</h3>
-        <p>Report on claims after the fact.</p>
-      </div>
-    </div>
-    <div class="closing-line">None of these systems manage how non-medical benefit spend is sequenced, delivered, or measured across payers.</div>
+    <ul class="gap-list">
+      <li class="gap-item">
+        <div class="gap-dot"></div>
+        <p>Benefits are approved in one system and delivered through others</p>
+      </li>
+      <li class="gap-item">
+        <div class="gap-dot"></div>
+        <p>Vendors operate independently with limited visibility across Medicare and Medicaid</p>
+      </li>
+      <li class="gap-item">
+        <div class="gap-dot"></div>
+        <p>Payer-of-first-resort rules and benefit limits are inconsistently applied</p>
+      </li>
+      <li class="gap-item">
+        <div class="gap-dot"></div>
+        <p>Delivery is not reliably verified or tracked in a single system</p>
+      </li>
+    </ul>
+    <p class="result-line"><strong>The result:</strong> Plans are accountable for outcomes and cost, without control over how benefit dollars are actually used.</p>
   </div>
 </section>
 
-<!-- WHAT ANCHOR DOES DIFFERENTLY -->
+<!-- WHAT ANCHOR DOES -->
 <section id="what-anchor-does">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow">What We Do Differently</span>
-      <h2>Anchor owns the layer no one else does.</h2>
-      <p class="section-intro">Anchor sits between clinical decision-making and benefit delivery — managing how non-medical dollars are actually used.</p>
+      <span class="eyebrow">What Anchor Does</span>
+      <h2>Anchor manages how non-medical benefit spend is deployed across payers.</h2>
     </div>
-    <div class="anchor-grid">
-      <div class="anchor-card">
-        <h3>Sequences benefits across payers based on need and constraints</h3>
-        <p>Routes each benefit to the right funding source — Medicaid LTSS, SSBCI, ILOS, Medicare supplemental — based on eligibility, caps, and plan-defined rules.</p>
+    <div class="section-body">
+      <p>Anchor sits between clinical decision-making and benefit delivery, ensuring that approved benefits are sequenced correctly, delivered, and tied to outcomes.</p>
+    </div>
+    <ul class="capability-list">
+      <li class="capability-item">
+        <div class="capability-icon"><svg viewBox="0 0 16 16"><path d="M2 8h12M8 2v12"/></svg></div>
+        <p>Sequences benefits across Medicare, Medicaid, and community programs</p>
+      </li>
+      <li class="capability-item">
+        <div class="capability-icon"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8l2 2 4-4"/></svg></div>
+        <p>Ensures services are delivered and verified</p>
+      </li>
+      <li class="capability-item">
+        <div class="capability-icon"><svg viewBox="0 0 16 16"><path d="M3 4h10M3 8h10M3 12h6"/></svg></div>
+        <p>Enforces rules, limits, and payer-of-first-resort logic</p>
+      </li>
+      <li class="capability-item">
+        <div class="capability-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5"/><path d="M8 5v3l2 1"/></svg></div>
+        <p>Creates a system of record for benefit spend and status</p>
+      </li>
+      <li class="capability-item">
+        <div class="capability-icon"><svg viewBox="0 0 16 16"><path d="M2 12l4-4 3 3 5-7"/></svg></div>
+        <p>Connects spend to utilization, outcomes, and total cost of care</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHY THIS MATTERS -->
+<section id="why-this-matters">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Why This Matters</span>
+      <h2>This is financial and operational infrastructure — not workflow.</h2>
+    </div>
+    <div class="two-col-matters">
+      <div class="matters-col">
+        <h3>Without a system of record:</h3>
+        <ul class="matters-list">
+          <li class="matters-item">
+            <div class="matters-dot red"></div>
+            <p>Plans cannot verify how dollars are used</p>
+          </li>
+          <li class="matters-item">
+            <div class="matters-dot red"></div>
+            <p>Cannot enforce benefit limits consistently</p>
+          </li>
+          <li class="matters-item">
+            <div class="matters-dot red"></div>
+            <p>Cannot measure impact on utilization or cost</p>
+          </li>
+          <li class="matters-item">
+            <div class="matters-dot red"></div>
+            <p>Cannot manage this category like other core drivers of spend</p>
+          </li>
+        </ul>
       </div>
-      <div class="anchor-card">
-        <h3>Ensures services are delivered and verified</h3>
-        <p>Every benefit interaction is tracked from activation through completion — not just authorization, but confirmation that the benefit was actually received.</p>
-      </div>
-      <div class="anchor-card">
-        <h3>Enforces rules and limits across programs</h3>
-        <p>Applies benefit caps, payer-of-first-resort logic, and sequencing rules to prevent duplication, leakage, and errors across Medicare and Medicaid.</p>
-      </div>
-      <div class="anchor-card">
-        <h3>Creates a system of record for benefit spend and outcomes</h3>
-        <p>Logs what is approved, in progress, completed, or stalled — and connects spend to utilization, outcomes, and total cost of care.</p>
-      </div>
-      <div class="anchor-card">
-        <h3>Reduces administrative burden on care managers</h3>
-        <p>Centralizes benefit coordination so care managers spend less time on logistics and more time on clinical care.</p>
+      <div class="matters-col">
+        <h3>With Anchor:</h3>
+        <ul class="matters-list">
+          <li class="matters-item">
+            <div class="matters-dot green"></div>
+            <p>Benefit spend is visible, controlled, and measurable</p>
+          </li>
+          <li class="matters-item">
+            <div class="matters-dot green"></div>
+            <p>Cross-payer coordination is enforced systematically</p>
+          </li>
+          <li class="matters-item">
+            <div class="matters-dot green"></div>
+            <p>Care managers spend less time coordinating logistics and more time on clinical care</p>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="closing-line">Anchor ensures non-medical benefit spend is controlled, verified, and measurable — across Medicare and Medicaid.</div>
+  </div>
+</section>
+
+<!-- THE DIFFERENCE -->
+<section id="the-difference">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Difference</span>
+      <h2>Anchor is not a referral platform, marketplace, or care management tool.</h2>
+    </div>
+    <div class="section-body">
+      <p>Those systems operate before or around benefit delivery.</p>
+      <p><strong>Anchor manages how benefit dollars are actually deployed across payers, in a single system of record.</strong></p>
+    </div>
+    <div class="closing-line">Anchor ensures non-medical benefit spend is controlled, verified, and measurable across Medicare and Medicaid.</div>
   </div>
 </section>
 
