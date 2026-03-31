@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Anchor — Built by People Inside the Problem</title>
-  <meta name="description" content="Learn about Anchor's founding team, mission, and the expertise we bring to dual-eligible benefit governance." />
+  <title>How We Help — Anchor</title>
+  <meta name="description" content="See how Anchor helps dual-eligible members and care managers through real examples." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -103,7 +103,146 @@
     .policy-page a { color: var(--teal); text-decoration: none; }
     .policy-page a:hover { text-decoration: underline; }
     @media (max-width: 768px) { .nav-links { gap: 1.5rem; } .about-grid { grid-template-columns: 1fr; gap: 2rem; } .stat-bar-inner { grid-template-columns: 1fr; gap: 2rem; } .stat-item { padding: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; } .stat-item:last-child { border-bottom: none; } .footer-main { grid-template-columns: 1fr; gap: 2rem; } }
-  </style>
+      /* DOROTHY SECTION */
+    #dorothy {
+      background: white;
+    }
+    .dorothy-intro {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      background: var(--teal-pale);
+      border-left: 3px solid var(--teal);
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+    .dorothy-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .dorothy-intro-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .dorothy-intro-text strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .persona-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .persona-header {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--cream);
+    }
+    .persona-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .persona-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .persona-role {
+      font-size: 12px;
+      color: var(--teal);
+    }
+    .persona-scenario {
+      padding: 1.5rem;
+    }
+    .scenario-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .scenario-label.bad { color: var(--coral); }
+    .scenario-label.good { color: var(--teal); }
+    .dot-bad {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--coral);
+    }
+    .dot-good {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+    .persona-scenario p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    .persona-scenario p strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .scenario-outcome {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding-top: 0.75rem;
+    }
+    .scenario-outcome.bad { color: var(--coral); }
+    .scenario-outcome.good { color: var(--teal); }
+
+    .dorothy-closing {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--navy);
+      text-align: center;
+      line-height: 1.4;
+      background: var(--cream);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 1024px) {
+      .persona-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    </style>
 </head>
 <body>
 <nav>
@@ -118,61 +257,101 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="how-it-works.html">How It Works</a></li>
       <li><a href="why-anchor.html">Why Anchor</a></li>
-      <li><a href="how-we-help.html">How We Help</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="how-we-help.html" class="active">How We Help</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Request a Pilot</a></li>
     </ul>
   </div>
 </nav>
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">About Anchor</span>
-    <h1>Built by people who've been inside the problem</h1>
-    <p>Anchor (operating as Anchor Care, Inc.) was founded to address a gap that becomes obvious only once you've watched care managers navigate it in real time: the upstream governance layer for non-medical benefit execution simply doesn't exist.</p>
+    <span class="eyebrow">How We Help</span>
+    <h1>What happens when Dorothy comes home from the hospital</h1>
+    <p>Dorothy, 74. CHF + diabetes. Dual-eligible. Just discharged. Lives alone. Her plan authorized grab bars, meals, transportation, and companion visits. Medicaid covers a personal care attendant. She has an ILOS cap of $2,500/quarter.</p>
   </div>
 </section>
-<section id="about">
+<section id="dorothy">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Our founding team brings direct experience scaling health tech ventures — including scaling a digital health company from launch to $25M ARR in 36 months — combined with deep domain expertise in D-SNP benefit design, Medicaid LTSS policy, and payer operations.</p>
-        <blockquote class="about-pull">"We're not building a feature. We're building the infrastructure that makes every other dual-eligible tool more effective."</blockquote>
-        <p>We work closely with a clinical and payer advisory network that includes experienced D-SNP plan operators, HCBS policy specialists, and MA actuaries — ensuring that what we build is grounded in how plans actually run, not how we imagine they do.</p>
-        <p>Our mission is clear: to govern the execution of non-medical benefits for dual-eligible populations at scale, removing coordination friction and unlocking actuarial attribution that plans can act on.</p>
+    <div class="dorothy-intro">
+      <div class="dorothy-avatar">D</div>
+      <div class="dorothy-intro-text">
+        <strong>The situation:</strong> Three separate funding sources. Four authorized benefits. One care manager juggling 150 members. No single system that knows what's been delivered, what's been paid, or whether the ILOS cap is about to cut off grab bar funding.
       </div>
-      <div class="about-right">
-        <div class="expertise-box">
-          <div style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.5rem;">Our expertise spans</div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>D-SNP & Dual-Eligible Policy</h4>
-              <p>FIDE, MMAI, D-SNP benefit design, CMS compliance requirements, HCBS audit standards</p>
-            </div>
+    </div>
+
+    <div class="persona-grid">
+      <!-- Dorothy -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="#4A5F75" stroke-width="1.3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
           </div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>Health Plan Operations</h4>
-              <p>Care management workflows, benefit authorization systems, Medicaid LTSS coordination, vendor management</p>
-            </div>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>Health Tech Venture Building</h4>
-              <p>Scaling from zero to market — product, payer sales, regulatory, and clinical integration</p>
-            </div>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>Data Infrastructure & AI</h4>
-              <p>Claims data, rules-based decisioning, execution dataset architecture</p>
-            </div>
+          <div>
+            <div class="persona-name">Dorothy</div>
+            <div class="persona-role">The Member</div>
           </div>
         </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p>Grab bars aren't installed for 3 weeks. <strong>Meals don't arrive — overlapping authorizations aren't resolved.</strong> She misses dialysis. She falls on day 9. Readmitted.</p>
+          <div class="scenario-outcome bad">Cost to plan: $14,000.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>Discharge triggers benefit sequencing. Grab bars installed by day 4. Meals sequenced — Medicaid weekdays, SSBCI weekends. Transportation pre-authorized.</p>
+          <div class="scenario-outcome good">Dorothy stays home.</div>
+        </div>
       </div>
+
+      <!-- Maria -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 8c0-2.2 1.8-4 4-4" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/><path d="M8 4c2.2 0 4 1.8 4 4v1a2 2 0 01-2 2H6a2 2 0 01-2-2V8" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/><path d="M8 14v-3" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Maria</div>
+            <div class="persona-role">The Caregiver (Dorothy's daughter)</div>
+          </div>
+        </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p><strong>Calling 4 vendors, member services, and the Medicaid case manager — no visibility into what's been delivered.</strong> Doesn't know the ILOS cap is about to cut off grab bar funding.</p>
+          <div class="scenario-outcome bad">No one knows what's been done.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>The system confirms delivery and flags gaps. The care manager has a single view. Maria calls her mom instead of calling vendors.</p>
+          <div class="scenario-outcome good">One call instead of four.</div>
+        </div>
+      </div>
+
+      <!-- Lisa -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="2" width="10" height="12" rx="2" stroke="#4A5F75" stroke-width="1.3"/><path d="M6 6h4M6 9h2" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Lisa</div>
+            <div class="persona-role">The Care Manager (150 members)</div>
+          </div>
+        </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p>Toggling between 4 systems and a spreadsheet. 45 minutes per member per month. <strong>Can't attribute $2,500 ILOS spend to outcomes. Manual HCBS documentation.</strong></p>
+          <div class="scenario-outcome bad">45 minutes per member.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>Full execution status in existing workflow. Sequencing automated, delivery confirmed, documentation generated, ILOS cap enforced.</p>
+          <div class="scenario-outcome good">5 minutes instead of 45.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dorothy-closing">
+      "Dorothy is one of 12.8 million dual-eligible Americans. Anchor governs the execution that keeps Dorothy healthy."
     </div>
   </div>
 </section>
