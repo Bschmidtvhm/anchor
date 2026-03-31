@@ -163,230 +163,223 @@
       line-height: 1.65;
     }
 
-    /* VALUE PROP */
-    #value-prop {
-      background: white;
+    /* OPENING STATEMENT */
+    #opening-statement { background: white; }
+    #opening-statement .section-body {
+      max-width: 760px;
     }
-    .value-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-      margin-bottom: 4rem;
-    }
-    .value-left h3 { margin-bottom: 1.5rem; }
-    .value-left p {
-      font-size: 16px;
+    #opening-statement .section-body p {
+      font-size: 17px;
       color: var(--text-secondary);
       font-weight: 300;
+      line-height: 1.75;
       margin-bottom: 1rem;
-      line-height: 1.7;
-    }
-    .value-left strong {
-      color: var(--navy);
-      font-weight: 500;
-    }
-    .differentiator-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .diff-item {
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-    }
-    .diff-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .diff-icon svg { width: 16px; height: 16px; }
-    .diff-content h4 {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-    .diff-content p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.6;
     }
 
-    /* WHAT ANCHOR IS NOT */
-    .what-not {
-      background: var(--teal-pale);
-      border: 1px solid rgba(45, 125, 111, 0.2);
-      border-radius: 12px;
-      padding: 2.5rem;
-      margin-bottom: 4rem;
-    }
-    .what-not h3 {
-      margin-bottom: 1.5rem;
-      color: var(--navy);
-    }
-    .what-not-list {
+    /* MISSING LAYER */
+    #missing-layer { background: var(--cream); }
+    .today-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-    .what-not-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .what-not-check {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--teal);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .what-not-item p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    /* DATA ASSET */
-    #data-asset { background: white; padding: 80px 2rem; }
-    .da-header { margin-bottom: 3rem; }
-    .da-header h2 { margin-bottom: 0.75rem; }
-    .da-subtitle {
-      font-size: 17px;
-      font-weight: 300;
-      color: var(--text-secondary);
-      max-width: 700px;
-      line-height: 1.65;
-      font-style: italic;
-    }
-    .da-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
+      margin-top: 3rem;
     }
-    .da-card {
+    .today-card {
+      background: white;
       border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .da-card-header {
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .da-card-header h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.1rem;
-      color: var(--navy);
-      font-weight: 400;
-      margin-bottom: 2px;
-    }
-    .da-card-header p {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    .da-card-body {
-      padding: 1rem 1.25rem;
+      border-left: 3px solid var(--coral);
+      border-radius: 8px;
+      padding: 1.75rem 2rem;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
     }
-    .da-item {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-    .da-bar {
-      width: 3px;
-      min-height: 100%;
-      border-radius: 2px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .da-item-title {
-      font-size: 13px;
-      font-weight: 500;
+    .today-card:nth-child(2) { border-left-color: var(--amber); }
+    .today-card:nth-child(3) { border-left-color: var(--navy-light); }
+    .today-card:nth-child(4) { border-left-color: var(--teal); }
+    .today-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
       color: var(--navy);
+      font-weight: 400;
     }
-    .da-item-desc {
-      font-size: 12px;
+    .today-card p {
+      font-size: 15px;
       color: var(--text-secondary);
       font-weight: 300;
-      line-height: 1.5;
+      line-height: 1.65;
     }
-    .da-card.navy-card .da-card-header {
-      background: var(--navy);
-      border-bottom: none;
-    }
-    .da-card.navy-card .da-card-header h3 { color: var(--cream); }
-    .da-card.navy-card .da-card-header p { color: rgba(245,242,237,0.5); }
-    .da-card.navy-card .da-card-body { background: var(--navy); }
-    .da-card.navy-card .da-item-title { color: var(--cream); }
-    .da-card.navy-card .da-item-desc { color: rgba(245,242,237,0.55); }
-    .da-card.teal-card .da-card-header {
-      background: var(--teal-pale);
-    }
-    .da-card.teal-card .da-card-header h3 { color: var(--teal); }
-    .da-closing {
-      text-align: center;
+    .closing-line {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-style: italic;
       color: var(--navy);
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-    }
-    @media (max-width: 900px) {
-      .da-grid { grid-template-columns: 1fr; }
+      text-align: left;
+      line-height: 1.5;
+      background: var(--teal-pale);
+      border-left: 3px solid var(--teal);
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      margin-top: 3rem;
     }
 
-    /* STAT BAR */
-    .stat-bar {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--cream);
-      padding: 2rem;
+    /* WHAT ANCHOR DOES */
+    #what-anchor-does { background: white; }
+    .anchor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
     }
-    .stat-bar-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 2rem;
+    .anchor-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      border-top: 4px solid var(--navy);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--navy);
+    }
+    .anchor-card:nth-child(2) { border-top-color: var(--teal); }
+    .anchor-card:nth-child(3) { border-top-color: var(--coral); }
+    .anchor-card:nth-child(4) { border-top-color: var(--amber); }
+    .anchor-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--navy);
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+    }
+    .anchor-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    /* WHY IT MATTERS */
+    #why-it-matters { background: var(--cream); }
+    .matters-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .matters-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
     }
-    .stat-item {
-      padding: 0 2rem;
-      border-right: 1px solid var(--border);
+    .matters-card .matters-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--teal-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
-    .stat-item:last-child { border-right: none; }
-    .stat-number {
+    .matters-card .matters-icon svg { width: 18px; height: 18px; }
+    .matters-card h3 {
       font-family: 'DM Serif Display', serif;
-      font-size: 2.2rem;
+      font-size: 1.15rem;
       color: var(--navy);
-      line-height: 1;
-      margin-bottom: 6px;
+      font-weight: 400;
     }
-    .stat-desc {
+    .matters-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+    .matters-sub {
+      margin-top: 3rem;
+    }
+    .matters-sub h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+    .matters-sub-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .matters-sub-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .matters-sub-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--teal);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+    .matters-sub-item p {
       font-size: 14px;
       color: var(--text-secondary);
       font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* FINAL CTA */
+    #final-cta {
+      background: var(--navy);
+      padding: 80px 2rem;
+    }
+    .final-cta-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #final-cta h2 {
+      color: var(--cream);
+      margin-bottom: 1.25rem;
+    }
+    #final-cta h2 em {
+      color: var(--teal-light);
+      font-style: italic;
+    }
+    .final-cta-sub {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: rgba(245,242,237,0.6);
+      line-height: 1.55;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+    .final-cta-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: white;
+      padding: 14px 36px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .final-cta-btn:hover { background: var(--teal-light); }
+
+    @media (max-width: 900px) {
+      .today-grid { grid-template-columns: 1fr; }
+      .anchor-grid { grid-template-columns: 1fr; }
+      .matters-grid { grid-template-columns: 1fr; }
+      .matters-sub-list { grid-template-columns: 1fr; }
     }
 
     /* FOOTER */
@@ -790,232 +783,151 @@
   <div class="container">
     <span class="eyebrow">The Value Proposition</span>
     <h1>Why Anchor</h1>
-    <p>Anchor is the execution layer for cross-payer sequencing of non-medical benefits in dual-eligible populations — sitting between clinical assessment and delivery, where decisions become measurable outcomes.</p>
+    <p>No other system governs what happens after approval across programs.</p>
   </div>
 </section>
 
-<!-- VALUE PROPOSITION -->
-<section id="value-prop">
+<!-- OPENING STATEMENT -->
+<section id="opening-statement">
   <div class="container">
-    <div class="value-grid">
-      <div class="value-left">
-        <h3>Built for what health plans can't build themselves</h3>
-        <p>Benefit navigation tools surface community resources. They're excellent at the pre-decision layer. <strong>Anchor is what happens next:</strong> authorized sequencing, governed delivery, and attributed outcomes across payers.</p>
-        <p>This isn't a care management feature. <strong>It's the infrastructure layer below care management</strong> — the same reason banks didn't build Stripe.</p>
-      </div>
-      <div class="value-right">
-        <ul class="differentiator-list">
-          <li class="diff-item">
-            <div class="diff-icon">
-              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 8h12M8 2v12" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="diff-content">
-              <h4>Cross-payer benefit sequencing</h4>
-              <p>Medicaid LTSS first, then SSBCI, then ILOS — governed by rules your compliance team owns, not a vendor's black box.</p>
-            </div>
-          </li>
-          <li class="diff-item">
-            <div class="diff-icon">
-              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="12" height="12" rx="2" stroke="#F5F2ED" stroke-width="1.4"/>
-                <path d="M5 8l2 2 4-4" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="diff-content">
-              <h4>Delivery tracking at the event level</h4>
-              <p>Not just authorization — confirmation. Every benefit interaction is logged, time-stamped, and tied to the member record.</p>
-            </div>
-          </li>
-          <li class="diff-item">
-            <div class="diff-icon">
-              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="5" stroke="#F5F2ED" stroke-width="1.4"/>
-                <path d="M8 5v3l2 1" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="diff-content">
-              <h4>Actuarial attribution to outcomes</h4>
-              <p>Connect non-medical spend to ER avoidance, readmission reduction, and Stars quality metrics — the data CFOs and medical directors need.</p>
-            </div>
-          </li>
-          <li class="diff-item">
-            <div class="diff-icon">
-              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 4h10M3 8h10M3 12h6" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="diff-content">
-              <h4>Care manager multiplier — not replacement</h4>
-              <p>Anchor surfaces the right benefit, at the right time, with the right authorization. Your care managers make the calls; we remove the coordination burden.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <div class="section-header">
+      <span class="eyebrow">The Gap</span>
+      <h2>Benefits are approved. Then what?</h2>
     </div>
-
-    <div class="what-not">
-      <h3>What Anchor is NOT</h3>
-      <div class="what-not-list">
-        <div class="what-not-item">
-          <div class="what-not-check">✓</div>
-          <p><strong>Not a referral platform.</strong> Referrals surface options. Anchor activates governance.</p>
-        </div>
-        <div class="what-not-item">
-          <div class="what-not-check">✓</div>
-          <p><strong>Not a marketplace.</strong> Marketplaces aggregate vendors. Anchor sequences funding sources.</p>
-        </div>
-        <div class="what-not-item">
-          <div class="what-not-check">✓</div>
-          <p><strong>Not a retrospective analytics layer.</strong> We don't analyze what happened. We execute what should happen — and log it as it does.</p>
-        </div>
-        <div class="what-not-item">
-          <div class="what-not-check">✓</div>
-          <p><strong>Not a care management replacement.</strong> We're the layer that makes care management more effective by handling coordination and governance upstream.</p>
-        </div>
-      </div>
+    <div class="section-body">
+      <p>Plans approve billions in non-medical benefits every year. But between approval and delivery, there's no system governing what gets activated, in what order, from which funding source, or whether it was received.</p>
+      <p>That gap — between decision and execution — is where outcomes are lost, compliance exposure grows, and ROI becomes unmeasurable.</p>
+      <p>Anchor fills it.</p>
     </div>
   </div>
 </section>
 
-
-<!-- DATA ASSET -->
-<section id="data-asset">
+<!-- THE MISSING LAYER -->
+<section id="missing-layer">
   <div class="container">
-    <div class="da-header">
-      <span class="eyebrow">The data asset</span>
-      <h2>Anchor creates the dataset linking decisions to outcomes</h2>
-      <p class="da-subtitle">Not just what was delivered — but what was prioritized, why, and what worked over time.</p>
+    <div class="section-header">
+      <span class="eyebrow">The Missing Layer</span>
+      <h2>The system between approval and delivery doesn't exist.</h2>
+      <p class="section-intro">Today's tools solve adjacent problems. None of them own the execution layer.</p>
     </div>
-    <div class="da-grid">
-      <!-- Column 1: Execution Data -->
-      <div class="da-card">
-        <div class="da-card-header">
-          <h3>Execution Data</h3>
-          <p>Unavailable anywhere else</p>
-        </div>
-        <div class="da-card-body">
-          <div class="da-item">
-            <div class="da-bar" style="background:var(--navy);"></div>
-            <div>
-              <div class="da-item-title">Payer-of-first-resort outcomes</div>
-              <div class="da-item-desc">Which funding source actually paid — across Medicare and Medicaid</div>
-            </div>
-          </div>
-          <div class="da-item">
-            <div class="da-bar" style="background:var(--navy);"></div>
-            <div>
-              <div class="da-item-title">Denial triggers</div>
-              <div class="da-item-desc">Rejection patterns across payer types and benefit categories</div>
-            </div>
-          </div>
-          <div class="da-item">
-            <div class="da-bar" style="background:var(--navy);"></div>
-            <div>
-              <div class="da-item-title">Cap utilization patterns</div>
-              <div class="da-item-desc">How quickly benefits are consumed by cohort and program</div>
-            </div>
-          </div>
-          <div class="da-item">
-            <div class="da-bar" style="background:var(--navy);"></div>
-            <div>
-              <div class="da-item-title">Time-to-activation</div>
-              <div class="da-item-desc">Real-world latency by benefit type, vendor, and geography</div>
-            </div>
-          </div>
-        </div>
+    <div class="today-grid">
+      <div class="today-card">
+        <h3>Referral platforms</h3>
+        <p>Connect members to community resources — but don't govern which funding source pays, in what order, or whether the benefit was received.</p>
       </div>
-      <!-- Column 2: What Plans Can Do -->
-      <div class="da-card teal-card">
-        <div class="da-card-header">
-          <h3>What Plans Can Do</h3>
-          <p style="color:var(--teal);">Use cases powered by execution data</p>
-        </div>
-        <div class="da-card-body">
-          <div class="da-item">
-            <div style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:white;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:500;">1</div>
-            <div>
-              <div class="da-item-title">Predict optimal sequencing</div>
-              <div class="da-item-desc">Route benefits to the right payer, at the right time</div>
-            </div>
-          </div>
-          <div class="da-item">
-            <div style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:white;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:500;">2</div>
-            <div>
-              <div class="da-item-title">Benchmark vendors</div>
-              <div class="da-item-desc">Compare delivery performance, cut spend on what doesn't work</div>
-            </div>
-          </div>
-          <div class="da-item">
-            <div style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:white;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:500;">3</div>
-            <div>
-              <div class="da-item-title">Model bid impact &amp; Stars</div>
-              <div class="da-item-desc">Simulate benefit design changes on total cost and Star Ratings</div>
-            </div>
-          </div>
-          <div class="da-item">
-            <div style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:white;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:500;">4</div>
-            <div>
-              <div class="da-item-title">Automate compliance docs</div>
-              <div class="da-item-desc">Generate CMS-ready HCBS audit documentation instantly</div>
-            </div>
-          </div>
-        </div>
+      <div class="today-card">
+        <h3>Benefit marketplaces</h3>
+        <p>Aggregate vendors and catalogs — but don't sequence across payers or track delivery at the event level.</p>
       </div>
-      <!-- Column 3: Why This Matters -->
-      <div class="da-card navy-card">
-        <div class="da-card-header">
-          <h3>Why This Matters</h3>
-          <p>Value + moat</p>
-        </div>
-        <div class="da-card-body">
-          <div class="da-item">
-            <div style="width:10px;height:10px;border-radius:2px;background:var(--teal);flex-shrink:0;margin-top:3px;"></div>
-            <div class="da-item-title">Connects care decisions to real-world outcomes and cost</div>
-          </div>
-          <div class="da-item">
-            <div style="width:10px;height:10px;border-radius:2px;background:var(--teal);flex-shrink:0;margin-top:3px;"></div>
-            <div class="da-item-title">Makes benefit spend measurable</div>
-          </div>
-          <div class="da-item">
-            <div style="width:10px;height:10px;border-radius:2px;background:var(--teal);flex-shrink:0;margin-top:3px;"></div>
-            <div class="da-item-title">Turns data into care decisions</div>
-          </div>
-          <div class="da-item">
-            <div style="width:10px;height:10px;border-radius:2px;background:var(--teal);flex-shrink:0;margin-top:3px;"></div>
-            <div class="da-item-title">Improves benefit design and bids</div>
-          </div>
-          <div class="da-item">
-            <div style="width:10px;height:10px;border-radius:2px;background:var(--teal);flex-shrink:0;margin-top:3px;"></div>
-            <div class="da-item-title">Creates proprietary cross-plan benchmarks</div>
-          </div>
-        </div>
+      <div class="today-card">
+        <h3>Care management tools</h3>
+        <p>Coordinate clinical workflows — but treat non-medical benefits as a referral task, not a governed process.</p>
+      </div>
+      <div class="today-card">
+        <h3>Analytics platforms</h3>
+        <p>Report on what happened — but can't intervene in what's happening, or attribute outcomes to specific benefit actions.</p>
       </div>
     </div>
-    <div class="da-closing">
-      The dataset compounds with every activation, plan, and market — strengthening performance and defensibility over time.
+    <div class="closing-line">None of these tools own the space between approval and delivery. That's the layer Anchor was built for.</div>
+  </div>
+</section>
+
+<!-- WHAT ANCHOR DOES DIFFERENTLY -->
+<section id="what-anchor-does">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What We Do Differently</span>
+      <h2>Anchor owns the layer no one else does.</h2>
+    </div>
+    <div class="anchor-grid">
+      <div class="anchor-card">
+        <h3>Cross-payer sequencing engine</h3>
+        <p>Routes each benefit to the right funding source — Medicaid LTSS, SSBCI, ILOS, Medicare supplemental — based on eligibility, caps, and plan-defined rules. Not a suggestion. A governed decision.</p>
+      </div>
+      <div class="anchor-card">
+        <h3>Event-level delivery tracking</h3>
+        <p>Every benefit interaction is logged, time-stamped, and tied to the member record — not just authorization, but confirmation that the benefit was actually received.</p>
+      </div>
+      <div class="anchor-card">
+        <h3>Actuarial attribution</h3>
+        <p>Connects non-medical spend to ER avoidance, readmission reduction, and Stars quality metrics — the data CFOs, actuaries, and medical directors need to justify and expand investment.</p>
+      </div>
+      <div class="anchor-card">
+        <h3>Care manager multiplier</h3>
+        <p>Surfaces the right benefit, at the right time, with the right authorization — so care managers make better calls without carrying the coordination burden.</p>
+      </div>
+    </div>
+    <div class="closing-line">Anchor doesn't replace what plans already have. It governs the layer underneath — the same reason banks didn't build Stripe.</div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section id="why-it-matters">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Why It Matters</span>
+      <h2>Plans are accountable — without the infrastructure to manage it.</h2>
+    </div>
+    <div class="matters-grid">
+      <div class="matters-card">
+        <div class="matters-icon">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 2v14M2 9h14" stroke="#2D7D6F" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>CMS is tightening oversight</h3>
+        <p>New D-SNP requirements demand demonstrable coordination between Medicare and Medicaid — not just contracts, but execution proof. Plans need infrastructure that produces auditable records.</p>
+      </div>
+      <div class="matters-card">
+        <div class="matters-icon">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="14" height="14" rx="3" stroke="#2D7D6F" stroke-width="1.5"/>
+            <path d="M6 9l2.5 2.5L12.5 7" stroke="#2D7D6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Non-medical spend is growing</h3>
+        <p>SSBCI, ILOS, and supplemental benefits are expanding every year — but without execution governance, plans can't measure what's working, benchmark vendors, or defend spend at bid.</p>
+      </div>
+      <div class="matters-card">
+        <div class="matters-icon">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="6" stroke="#2D7D6F" stroke-width="1.5"/>
+            <path d="M9 6v3.5l2.5 1.5" stroke="#2D7D6F" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Outcomes are unmeasurable</h3>
+        <p>Plans approve benefits. Vendors deliver some of them. No one tracks the connection between what was activated and what it prevented. Anchor closes that loop.</p>
+      </div>
+    </div>
+
+    <div class="matters-sub">
+      <h3>Without a system of record for benefit execution, plans can't:</h3>
+      <ul class="matters-sub-list">
+        <li class="matters-sub-item">
+          <div class="matters-sub-dot"></div>
+          <p>Prove ROI on non-medical spend at bid or audit</p>
+        </li>
+        <li class="matters-sub-item">
+          <div class="matters-sub-dot"></div>
+          <p>Sequence benefits across payers without manual intervention</p>
+        </li>
+        <li class="matters-sub-item">
+          <div class="matters-sub-dot"></div>
+          <p>Attribute outcomes to specific benefit actions at the member level</p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- STAT BAR -->
-<div class="stat-bar">
-  <div class="stat-bar-inner">
-    <div class="stat-item">
-      <div class="stat-number">12.5M</div>
-      <div class="stat-desc">dual-eligible beneficiaries in the U.S., each navigating multiple funding streams</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">$40B+</div>
-      <div class="stat-desc">Medicaid LTSS spend annually — largely untracked at the benefit execution layer</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Zero</div>
-      <div class="stat-desc">purpose-built governance tools exist for cross-payer benefit sequencing in D-SNP</div>
-    </div>
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="final-cta-inner">
+    <h2>Turn Approved Benefits Into <em>Measurable Outcomes</em></h2>
+    <p class="final-cta-sub">Anchor turns approved benefits into measurable outcomes — across programs, in a single system.</p>
+    <a href="contact.html" class="final-cta-btn">Request a Pilot</a>
   </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
