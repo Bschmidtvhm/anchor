@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anchor — Governance Infrastructure for Dual-Eligible Populations</title>
-  <meta name="description" content="Anchor is the benefit governance and orchestration layer for Medicare Advantage and Medicaid health plans serving dual-eligible members." />
+  <title>How Anchor Works — Governance Infrastructure for Dual-Eligible Populations</title>
+  <meta name="description" content="Learn how Anchor's four-layer governance platform sequences, tracks, and attributes non-medical benefits across Medicare Advantage and Medicaid funding sources." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -105,19 +105,28 @@
     section { padding: 100px 2rem; }
     .container { max-width: 1140px; margin: 0 auto; }
 
-    /* HERO */
-    #hero {
+    /* PAGE HERO */
+    .page-hero {
       padding-top: 160px;
-      padding-bottom: 120px;
-      position: relative;
-      overflow: hidden;
+      padding-bottom: 60px;
+      background: linear-gradient(135deg, var(--cream) 0%, rgba(232,243,241,0.5) 100%);
     }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
+    .page-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
     }
+    .page-hero p {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 600px;
+    }
+
     .eyebrow {
       display: inline-block;
       font-size: 12px;
@@ -127,172 +136,7 @@
       color: var(--teal);
       margin-bottom: 1.25rem;
     }
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.4rem, 4vw, 3.2rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--navy);
-      margin-bottom: 1.5rem;
-    }
-    h1 em {
-      font-style: italic;
-      color: var(--teal);
-    }
-    .hero-sub {
-      font-size: 18px;
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.65;
-      margin-bottom: 2.5rem;
-      max-width: 480px;
-    }
-    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-block;
-      background: var(--navy);
-      color: var(--cream);
-      padding: 13px 28px;
-      border-radius: 6px;
-      font-size: 15px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--navy-mid); }
-    .btn-ghost {
-      display: inline-block;
-      color: var(--teal);
-      padding: 13px 0;
-      font-size: 15px;
-      font-weight: 400;
-      text-decoration: none;
-      border-bottom: 1px solid var(--teal);
-      transition: opacity 0.2s;
-    }
-    .btn-ghost:hover { opacity: 0.7; }
 
-    /* Hero diagram */
-    .hero-diagram {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      position: relative;
-    }
-    .diagram-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-    .funding-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .flow-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .flow-source {
-      flex: 1;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 10px 14px;
-    }
-    .flow-source-label {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-    .flow-source-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-    .flow-arrow {
-      color: var(--text-muted);
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-    .anchor-node {
-      background: var(--navy);
-      border-radius: 8px;
-      padding: 18px 20px;
-      text-align: center;
-      margin: 8px 0;
-    }
-    .anchor-node-label {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--cream);
-      letter-spacing: 0.03em;
-    }
-    .anchor-node-sub {
-      font-size: 11px;
-      color: rgba(245,242,237,0.6);
-      margin-top: 3px;
-    }
-    .flow-outputs {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 8px;
-      margin-top: 4px;
-    }
-    .flow-output {
-      background: var(--teal-pale);
-      border: 1px solid rgba(45, 125, 111, 0.2);
-      border-radius: 6px;
-      padding: 8px 10px;
-      text-align: center;
-    }
-    .flow-output-label {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--teal);
-    }
-
-    /* STAT BAR */
-    .stat-bar {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--cream);
-      padding: 2rem;
-    }
-    .stat-bar-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    .stat-item {
-      padding: 0 2rem;
-      border-right: 1px solid var(--border);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.2rem;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-desc {
-      font-size: 14px;
-      color: var(--text-secondary);
-      font-weight: 300;
-    }
-
-    /* SECTION TITLES */
-    .section-header { margin-bottom: 4rem; }
-    .section-header .eyebrow { margin-bottom: 1rem; }
     h2 {
       font-family: 'DM Serif Display', serif;
       font-size: clamp(2rem, 3.5vw, 2.8rem);
@@ -301,6 +145,9 @@
       color: var(--navy);
       margin-bottom: 1rem;
     }
+
+    .section-header { margin-bottom: 4rem; }
+    .section-header .eyebrow { margin-bottom: 1rem; }
     .section-intro {
       font-size: 18px;
       font-weight: 300;
@@ -316,6 +163,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
       position: relative;
+      margin-bottom: 4rem;
     }
     .steps-grid::before {
       content: '';
@@ -356,10 +204,10 @@
       color: var(--text-secondary);
       font-weight: 300;
       line-height: 1.65;
+      margin-bottom: 1rem;
     }
     .step-tag {
       display: inline-block;
-      margin-top: 1rem;
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.07em;
@@ -370,297 +218,71 @@
       border-radius: 4px;
     }
 
-    /* WHY ANCHOR */
-    #why-anchor { background: white; }
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    .why-left h2 { margin-bottom: 1.5rem; }
-    .why-left p {
-      font-size: 16px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      margin-bottom: 1rem;
-      line-height: 1.7;
-    }
-    .differentiator-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .diff-item {
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-    }
-    .diff-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .diff-icon svg { width: 16px; height: 16px; }
-    .diff-content h4 {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-    .diff-content p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.6;
-    }
-
-    /* HUMAN PROBLEM */
-    #human-problem { background: white; }
-    .dorothy-intro {
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-      background: var(--teal-pale);
-      border-left: 3px solid var(--teal);
-      padding: 1.5rem 2rem;
-      border-radius: 8px;
-      margin-bottom: 3rem;
-    }
-    .dorothy-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--teal);
-      color: white;
-      font-size: 20px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .dorothy-intro-text {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-    .dorothy-intro-text strong {
-      color: var(--navy);
-      font-weight: 500;
-    }
-    .persona-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    .persona-card {
+    .step-details {
       background: white;
       border: 1px solid var(--border);
       border-radius: 12px;
-      overflow: hidden;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
     }
-    .persona-header {
+    .step-details h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      grid-column: 1 / -1;
+    }
+    .detail-box {
       display: flex;
+      flex-direction: column;
       gap: 1rem;
-      padding: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      background: var(--cream);
     }
-    .persona-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .persona-name {
-      font-size: 14px;
+    .detail-box h4 {
+      font-size: 15px;
       font-weight: 500;
       color: var(--navy);
-      margin-bottom: 2px;
     }
-    .persona-role {
-      font-size: 12px;
-      color: var(--teal);
-    }
-    .persona-scenario {
-      padding: 1.5rem;
-    }
-    .scenario-label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .scenario-label.bad { color: var(--coral); }
-    .scenario-label.good { color: var(--teal); }
-    .dot-bad {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--coral);
-    }
-    .dot-good {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-    .persona-scenario p {
-      font-size: 13px;
+    .detail-box p {
+      font-size: 14px;
       color: var(--text-secondary);
       font-weight: 300;
       line-height: 1.6;
-      margin-bottom: 0.75rem;
     }
-    .persona-scenario p strong {
-      color: var(--navy);
-      font-weight: 500;
-    }
-    .scenario-outcome {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      padding-top: 0.75rem;
-    }
-    .scenario-outcome.bad { color: var(--coral); }
-    .scenario-outcome.good { color: var(--teal); }
-    .dorothy-closing {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-      font-style: italic;
-      color: var(--navy);
-      text-align: center;
-      line-height: 1.4;
+
+    /* STAT BAR */
+    .stat-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
       background: var(--cream);
       padding: 2rem;
-      border-radius: 8px;
     }
-
-    /* ABOUT */
-    #about { background: var(--cream); }
-    .about-grid {
+    .stat-bar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 2rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .about-text p {
-      font-size: 16px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
-    .about-pull {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.4rem;
-      font-style: italic;
-      color: var(--navy);
-      line-height: 1.4;
-      border-left: 3px solid var(--teal);
-      padding-left: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    /* CONTACT */
-    #contact { background: var(--navy); }
-    #contact .eyebrow { color: var(--teal-light); }
-    #contact h2 { color: var(--cream); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-    .contact-left p {
-      font-size: 17px;
-      color: rgba(245,242,237,0.65);
-      font-weight: 300;
-      line-height: 1.65;
-      margin-bottom: 2rem;
-    }
-    .contact-detail {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .contact-line {
-      font-size: 14px;
-      color: rgba(245,242,237,0.5);
-    }
-    .contact-line a {
-      color: var(--teal-light);
-      text-decoration: none;
-    }
-    .contact-line a:hover { text-decoration: underline; }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group label {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: rgba(245,242,237,0.5);
+    .stat-item {
+      padding: 0 2rem;
+      border-right: 1px solid var(--border);
     }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 6px;
-      padding: 11px 14px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      color: var(--cream);
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.2rem;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 6px;
     }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(245,242,237,0.3); }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--teal-light); }
-    .form-group select { color: rgba(245,242,237,0.6); }
-    .form-group select option { background: var(--navy); color: var(--cream); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .btn-submit {
-      background: var(--teal);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      padding: 13px 28px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-      align-self: flex-start;
+    .stat-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 300;
     }
-    .btn-submit:hover { background: var(--teal-light); }
 
     /* FOOTER */
     footer {
@@ -800,6 +422,32 @@
       flex-direction: column;
       gap: 1rem;
     }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group textarea {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 11px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text-muted); }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--teal); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
     .modal-btn-row {
       display: flex;
       gap: 1rem;
@@ -897,16 +545,12 @@
     /* Responsive */
     @media (max-width: 768px) {
       .nav-links { gap: 1.5rem; }
-      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid::before { display: none; }
+      .step-details { grid-template-columns: 1fr; gap: 2rem; }
       .stat-bar-inner { grid-template-columns: 1fr; gap: 2rem; }
       .stat-item { padding: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
       .stat-item:last-child { border-bottom: none; }
-      .steps-grid { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid::before { display: none; }
-      .why-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .persona-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-main { grid-template-columns: 1fr; gap: 2rem; }
     }
   </style>
@@ -934,8 +578,8 @@
       <span class="nav-logo-text">Anchor</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="how-it-works.html" class="active">How It Works</a></li>
       <li><a href="why-anchor.html">Why Anchor</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Request a Pilot</a></li>
@@ -943,64 +587,66 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <span class="eyebrow fade-up">Medicare Advantage · D-SNP · MMAI</span>
-        <h1 class="fade-up delay-1">Governance infrastructure for <em>dual-eligible</em> benefit execution</h1>
-        <p class="hero-sub fade-up delay-2">Anchor sequences non-medical benefits across funding sources, tracks delivery, and attributes spend to outcomes — so your care management teams can focus on members, not coordination.</p>
-        <div class="btn-group fade-up delay-3">
-          <a href="contact.html" class="btn-primary">Request a Pilot</a>
-          <a href="how-it-works.html" class="btn-ghost">See how it works</a>
-        </div>
+    <span class="eyebrow">The Platform</span>
+    <h1>How Anchor works</h1>
+    <p>Three coordinated layers that turn fragmented benefit entitlements into governed, measurable care delivery.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Govern eligibility</h3>
+        <p>Anchor ingests member enrollment data — 834 EDI, PBP benefit files, Medicaid eligibility — and determines entitlements across all funding sources in real time, including ILOS cap enforcement at $2,500/quarter.</p>
+        <span class="step-tag">Upstream of care management</span>
       </div>
-      <div class="fade-up delay-4">
-        <div class="hero-diagram">
-          <p class="diagram-label">Benefit orchestration layer</p>
-          <div class="funding-flow">
-            <div class="flow-row">
-              <div class="flow-source">
-                <div class="flow-source-label">Medicaid LTSS</div>
-                <div class="flow-source-sub">Primary funding</div>
-              </div>
-              <div class="flow-source">
-                <div class="flow-source-label">SSBCI / ILOS</div>
-                <div class="flow-source-sub">Supplemental</div>
-              </div>
-              <div class="flow-source">
-                <div class="flow-source-label">MA Supplemental</div>
-                <div class="flow-source-sub">Flex benefit</div>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">sequenced by</div>
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-            </div>
-            <div class="anchor-node">
-              <div class="anchor-node-label">Anchor Governance Layer</div>
-              <div class="anchor-node-sub">Eligibility · Sequencing · Delivery tracking · Attribution</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">delivered to</div>
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-            </div>
-            <div class="flow-outputs">
-              <div class="flow-output">
-                <div class="flow-output-label">Member</div>
-              </div>
-              <div class="flow-output">
-                <div class="flow-output-label">Care Manager</div>
-              </div>
-              <div class="flow-output">
-                <div class="flow-output-label">Plan CFO</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Sequence & authorize</h3>
+        <p>Our rules engine sequences benefit utilization across Medicaid LTSS, SSBCI, and MA supplemental — ensuring the right funding source is applied first, compliantly, every time a benefit is triggered.</p>
+        <span class="step-tag">Cross-payer coordination</span>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Track & attribute</h3>
+        <p>Every benefit delivery event is logged, time-stamped, and tied to the member record — confirming delivery, not just authorization, and linking non-medical spend to ER avoidance and readmission outcomes.</p>
+        <span class="step-tag">Actuarial attribution</span>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h3>Report & compound</h3>
+        <p>CMS-ready HCBS audit documentation is generated automatically. The execution dataset — payer-of-first-resort outcomes, denial triggers, cap utilization, time-to-activation — compounds with every plan and market added.</p>
+        <span class="step-tag">Compliance + data asset</span>
+      </div>
+    </div>
+
+    <div class="step-details">
+      <h3>Deeper dive: The governance engine</h3>
+
+      <div class="detail-box">
+        <h4>Structured activation</h4>
+        <p>Benefits don't get sent to a vendor queue. Anchor creates a deterministic activation workflow: eligibility check → authorization → delivery confirmation → outcome attribution. Every step is logged and auditable.</p>
+      </div>
+
+      <div class="detail-box">
+        <h4>Economic rule enforcement</h4>
+        <p>Your compliance team writes the rules. Medicaid LTSS gets priority. SSBCI fills gaps. ILOS caps are enforced at the transaction level. No vendor black box — you own the logic.</p>
+      </div>
+
+      <div class="detail-box">
+        <h4>Activation-level economic signal</h4>
+        <p>Every activation (grab bars installed, meals delivered, transportation provided) sends an economic signal upstream. Plan CFOs see ILOS spend and outcomes; care managers see delivery confirmation and time-to-activation.</p>
+      </div>
+
+      <div class="detail-box">
+        <h4>Compliance documentation</h4>
+        <p>HCBS audit prep is automated. Time-and-task documentation flows from delivery confirmation. No more manual spreadsheets or post-hoc reconciliation — the record is created as delivery happens.</p>
       </div>
     </div>
   </div>
@@ -1027,7 +673,6 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-main">
-    <!-- Brand -->
     <div class="footer-brand">
       <svg height="24" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <g fill="rgba(245,242,237,0.7)">
@@ -1046,7 +691,6 @@
       <p>Governance infrastructure for Medicare Advantage and Medicaid health plans serving dual-eligible populations.</p>
     </div>
 
-    <!-- Platform -->
     <div>
       <div class="footer-col-title">Platform</div>
       <ul class="footer-col-links">
@@ -1057,7 +701,6 @@
       </ul>
     </div>
 
-    <!-- Legal -->
     <div>
       <div class="footer-col-title">Legal</div>
       <ul class="footer-col-links">
@@ -1068,7 +711,6 @@
       </ul>
     </div>
 
-    <!-- Contact -->
     <div>
       <div class="footer-col-title">Contact</div>
       <div class="footer-contact-detail">
@@ -1183,19 +825,6 @@
 </div>
 
 <script>
-  // Main contact form
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }, 800);
-  }
-
-  // Contact modal
   function openContactModal() {
     document.getElementById('contact-modal').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1217,8 +846,6 @@
       document.getElementById('modal-success').style.display = 'block';
     }, 800);
   }
-
-  // Policy pages
   function openPolicy(which) {
     document.getElementById(which + '-page').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1228,8 +855,6 @@
     document.getElementById(which + '-page').classList.remove('open');
     document.body.style.overflow = '';
   }
-
-  // Set active nav link
   document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(link => {

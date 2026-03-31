@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anchor — Governance Infrastructure for Dual-Eligible Populations</title>
-  <meta name="description" content="Anchor is the benefit governance and orchestration layer for Medicare Advantage and Medicaid health plans serving dual-eligible members." />
+  <title>Why Anchor — Governance Infrastructure for Dual-Eligible Populations</title>
+  <meta name="description" content="Anchor is the execution governance layer for cross-payer benefit sequencing. Learn why plans need Anchor and see the Dorothy story." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -105,19 +105,28 @@
     section { padding: 100px 2rem; }
     .container { max-width: 1140px; margin: 0 auto; }
 
-    /* HERO */
-    #hero {
+    /* PAGE HERO */
+    .page-hero {
       padding-top: 160px;
-      padding-bottom: 120px;
-      position: relative;
-      overflow: hidden;
+      padding-bottom: 60px;
+      background: linear-gradient(135deg, var(--cream) 0%, rgba(232,243,241,0.5) 100%);
     }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
+    .page-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
     }
+    .page-hero p {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 600px;
+    }
+
     .eyebrow {
       display: inline-block;
       font-size: 12px;
@@ -127,172 +136,7 @@
       color: var(--teal);
       margin-bottom: 1.25rem;
     }
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.4rem, 4vw, 3.2rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--navy);
-      margin-bottom: 1.5rem;
-    }
-    h1 em {
-      font-style: italic;
-      color: var(--teal);
-    }
-    .hero-sub {
-      font-size: 18px;
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.65;
-      margin-bottom: 2.5rem;
-      max-width: 480px;
-    }
-    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-block;
-      background: var(--navy);
-      color: var(--cream);
-      padding: 13px 28px;
-      border-radius: 6px;
-      font-size: 15px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--navy-mid); }
-    .btn-ghost {
-      display: inline-block;
-      color: var(--teal);
-      padding: 13px 0;
-      font-size: 15px;
-      font-weight: 400;
-      text-decoration: none;
-      border-bottom: 1px solid var(--teal);
-      transition: opacity 0.2s;
-    }
-    .btn-ghost:hover { opacity: 0.7; }
 
-    /* Hero diagram */
-    .hero-diagram {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      position: relative;
-    }
-    .diagram-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-    .funding-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .flow-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .flow-source {
-      flex: 1;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 10px 14px;
-    }
-    .flow-source-label {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-    .flow-source-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-    .flow-arrow {
-      color: var(--text-muted);
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-    .anchor-node {
-      background: var(--navy);
-      border-radius: 8px;
-      padding: 18px 20px;
-      text-align: center;
-      margin: 8px 0;
-    }
-    .anchor-node-label {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--cream);
-      letter-spacing: 0.03em;
-    }
-    .anchor-node-sub {
-      font-size: 11px;
-      color: rgba(245,242,237,0.6);
-      margin-top: 3px;
-    }
-    .flow-outputs {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 8px;
-      margin-top: 4px;
-    }
-    .flow-output {
-      background: var(--teal-pale);
-      border: 1px solid rgba(45, 125, 111, 0.2);
-      border-radius: 6px;
-      padding: 8px 10px;
-      text-align: center;
-    }
-    .flow-output-label {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--teal);
-    }
-
-    /* STAT BAR */
-    .stat-bar {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--cream);
-      padding: 2rem;
-    }
-    .stat-bar-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    .stat-item {
-      padding: 0 2rem;
-      border-right: 1px solid var(--border);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.2rem;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-desc {
-      font-size: 14px;
-      color: var(--text-secondary);
-      font-weight: 300;
-    }
-
-    /* SECTION TITLES */
-    .section-header { margin-bottom: 4rem; }
-    .section-header .eyebrow { margin-bottom: 1rem; }
     h2 {
       font-family: 'DM Serif Display', serif;
       font-size: clamp(2rem, 3.5vw, 2.8rem);
@@ -301,6 +145,16 @@
       color: var(--navy);
       margin-bottom: 1rem;
     }
+
+    h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      font-weight: 400;
+    }
+
+    .section-header { margin-bottom: 4rem; }
+    .section-header .eyebrow { margin-bottom: 1rem; }
     .section-intro {
       font-size: 18px;
       font-weight: 300;
@@ -309,82 +163,28 @@
       line-height: 1.65;
     }
 
-    /* HOW IT WORKS */
-    #how-it-works { background: var(--cream); }
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      position: relative;
+    /* VALUE PROP */
+    #value-prop {
+      background: white;
     }
-    .steps-grid::before {
-      content: '';
-      position: absolute;
-      top: 28px;
-      left: calc(12.5% + 2rem);
-      right: calc(12.5% + 2rem);
-      height: 1px;
-      background: var(--border-strong);
-    }
-    .step-card {
-      position: relative;
-    }
-    .step-number {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--cream);
-      font-size: 15px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .step-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-      color: var(--navy);
-      margin-bottom: 0.75rem;
-      font-weight: 400;
-    }
-    .step-card p {
-      font-size: 15px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.65;
-    }
-    .step-tag {
-      display: inline-block;
-      margin-top: 1rem;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--teal);
-      border: 1px solid rgba(45, 125, 111, 0.3);
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-
-    /* WHY ANCHOR */
-    #why-anchor { background: white; }
-    .why-grid {
+    .value-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
       align-items: start;
+      margin-bottom: 4rem;
     }
-    .why-left h2 { margin-bottom: 1.5rem; }
-    .why-left p {
+    .value-left h3 { margin-bottom: 1.5rem; }
+    .value-left p {
       font-size: 16px;
       color: var(--text-secondary);
       font-weight: 300;
       margin-bottom: 1rem;
       line-height: 1.7;
+    }
+    .value-left strong {
+      color: var(--navy);
+      font-weight: 500;
     }
     .differentiator-list {
       list-style: none;
@@ -422,8 +222,51 @@
       line-height: 1.6;
     }
 
-    /* HUMAN PROBLEM */
-    #human-problem { background: white; }
+    /* WHAT ANCHOR IS NOT */
+    .what-not {
+      background: var(--teal-pale);
+      border: 1px solid rgba(45, 125, 111, 0.2);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 4rem;
+    }
+    .what-not h3 {
+      margin-bottom: 1.5rem;
+      color: var(--navy);
+    }
+    .what-not-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .what-not-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .what-not-check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .what-not-item p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* DOROTHY SECTION */
+    #dorothy {
+      background: white;
+    }
     .dorothy-intro {
       display: flex;
       gap: 1.5rem;
@@ -456,6 +299,7 @@
       color: var(--navy);
       font-weight: 500;
     }
+
     .persona-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -541,6 +385,7 @@
     }
     .scenario-outcome.bad { color: var(--coral); }
     .scenario-outcome.good { color: var(--teal); }
+
     .dorothy-closing {
       font-family: 'DM Serif Display', serif;
       font-size: 1.3rem;
@@ -553,114 +398,38 @@
       border-radius: 8px;
     }
 
-    /* ABOUT */
-    #about { background: var(--cream); }
-    .about-grid {
+    /* STAT BAR */
+    .stat-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--cream);
+      padding: 2rem;
+    }
+    .stat-bar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 2rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .about-text p {
-      font-size: 16px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
-    .about-pull {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.4rem;
-      font-style: italic;
-      color: var(--navy);
-      line-height: 1.4;
-      border-left: 3px solid var(--teal);
-      padding-left: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    /* CONTACT */
-    #contact { background: var(--navy); }
-    #contact .eyebrow { color: var(--teal-light); }
-    #contact h2 { color: var(--cream); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-    .contact-left p {
-      font-size: 17px;
-      color: rgba(245,242,237,0.65);
-      font-weight: 300;
-      line-height: 1.65;
-      margin-bottom: 2rem;
-    }
-    .contact-detail {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .contact-line {
-      font-size: 14px;
-      color: rgba(245,242,237,0.5);
-    }
-    .contact-line a {
-      color: var(--teal-light);
-      text-decoration: none;
-    }
-    .contact-line a:hover { text-decoration: underline; }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group label {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: rgba(245,242,237,0.5);
+    .stat-item {
+      padding: 0 2rem;
+      border-right: 1px solid var(--border);
     }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 6px;
-      padding: 11px 14px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      color: var(--cream);
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.2rem;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 6px;
     }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(245,242,237,0.3); }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--teal-light); }
-    .form-group select { color: rgba(245,242,237,0.6); }
-    .form-group select option { background: var(--navy); color: var(--cream); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .btn-submit {
-      background: var(--teal);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      padding: 13px 28px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-      align-self: flex-start;
+    .stat-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 300;
     }
-    .btn-submit:hover { background: var(--teal-light); }
 
     /* FOOTER */
     footer {
@@ -800,6 +569,32 @@
       flex-direction: column;
       gap: 1rem;
     }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group textarea {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 11px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text-muted); }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--teal); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
     .modal-btn-row {
       display: flex;
       gap: 1rem;
@@ -897,16 +692,12 @@
     /* Responsive */
     @media (max-width: 768px) {
       .nav-links { gap: 1.5rem; }
-      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .value-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .what-not-list { grid-template-columns: 1fr; gap: 1.5rem; }
+      .persona-grid { grid-template-columns: 1fr; gap: 2rem; }
       .stat-bar-inner { grid-template-columns: 1fr; gap: 2rem; }
       .stat-item { padding: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
       .stat-item:last-child { border-bottom: none; }
-      .steps-grid { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid::before { display: none; }
-      .why-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .persona-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-main { grid-template-columns: 1fr; gap: 2rem; }
     }
   </style>
@@ -934,74 +725,198 @@
       <span class="nav-logo-text">Anchor</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="how-it-works.html">How It Works</a></li>
-      <li><a href="why-anchor.html">Why Anchor</a></li>
+      <li><a href="why-anchor.html" class="active">Why Anchor</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Request a Pilot</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <span class="eyebrow fade-up">Medicare Advantage · D-SNP · MMAI</span>
-        <h1 class="fade-up delay-1">Governance infrastructure for <em>dual-eligible</em> benefit execution</h1>
-        <p class="hero-sub fade-up delay-2">Anchor sequences non-medical benefits across funding sources, tracks delivery, and attributes spend to outcomes — so your care management teams can focus on members, not coordination.</p>
-        <div class="btn-group fade-up delay-3">
-          <a href="contact.html" class="btn-primary">Request a Pilot</a>
-          <a href="how-it-works.html" class="btn-ghost">See how it works</a>
+    <span class="eyebrow">The Value Proposition</span>
+    <h1>Why Anchor</h1>
+    <p>Anchor is the execution governance layer for cross-payer benefit sequencing in dual-eligible populations. We sit between clinical assessment and benefit delivery — where care management decisions turn into measurable outcomes.</p>
+  </div>
+</section>
+
+<!-- VALUE PROPOSITION -->
+<section id="value-prop">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-left">
+        <h3>Built for what health plans can't build themselves</h3>
+        <p>Benefit navigation tools surface community resources. They're excellent at the pre-decision layer. <strong>Anchor is what happens next:</strong> authorized sequencing, governed delivery, and attributed outcomes across payers.</p>
+        <p>This isn't a care management feature. <strong>It's the infrastructure layer below care management</strong> — the same reason banks didn't build Stripe.</p>
+      </div>
+      <div class="value-right">
+        <ul class="differentiator-list">
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 8h12M8 2v12" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Cross-payer benefit sequencing</h4>
+              <p>Medicaid LTSS first, then SSBCI, then ILOS — governed by rules your compliance team owns, not a vendor's black box.</p>
+            </div>
+          </li>
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="12" height="12" rx="2" stroke="#F5F2ED" stroke-width="1.4"/>
+                <path d="M5 8l2 2 4-4" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Delivery tracking at the event level</h4>
+              <p>Not just authorization — confirmation. Every benefit interaction is logged, time-stamped, and tied to the member record.</p>
+            </div>
+          </li>
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="5" stroke="#F5F2ED" stroke-width="1.4"/>
+                <path d="M8 5v3l2 1" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Actuarial attribution to outcomes</h4>
+              <p>Connect non-medical spend to ER avoidance, readmission reduction, and Stars quality metrics — the data CFOs and medical directors need.</p>
+            </div>
+          </li>
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4h10M3 8h10M3 12h6" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Care manager multiplier — not replacement</h4>
+              <p>Anchor surfaces the right benefit, at the right time, with the right authorization. Your care managers make the calls; we remove the coordination burden.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="what-not">
+      <h3>What Anchor is NOT</h3>
+      <div class="what-not-list">
+        <div class="what-not-item">
+          <div class="what-not-check">✓</div>
+          <p><strong>Not a referral platform.</strong> Referrals surface options. Anchor activates governance.</p>
+        </div>
+        <div class="what-not-item">
+          <div class="what-not-check">✓</div>
+          <p><strong>Not a marketplace.</strong> Marketplaces aggregate vendors. Anchor sequences funding sources.</p>
+        </div>
+        <div class="what-not-item">
+          <div class="what-not-check">✓</div>
+          <p><strong>Not a retrospective analytics layer.</strong> We don't analyze what happened. We execute what should happen — and log it as it does.</p>
+        </div>
+        <div class="what-not-item">
+          <div class="what-not-check">✓</div>
+          <p><strong>Not a care management replacement.</strong> We're the layer that makes care management more effective by handling coordination and governance upstream.</p>
         </div>
       </div>
-      <div class="fade-up delay-4">
-        <div class="hero-diagram">
-          <p class="diagram-label">Benefit orchestration layer</p>
-          <div class="funding-flow">
-            <div class="flow-row">
-              <div class="flow-source">
-                <div class="flow-source-label">Medicaid LTSS</div>
-                <div class="flow-source-sub">Primary funding</div>
-              </div>
-              <div class="flow-source">
-                <div class="flow-source-label">SSBCI / ILOS</div>
-                <div class="flow-source-sub">Supplemental</div>
-              </div>
-              <div class="flow-source">
-                <div class="flow-source-label">MA Supplemental</div>
-                <div class="flow-source-sub">Flex benefit</div>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">sequenced by</div>
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-            </div>
-            <div class="anchor-node">
-              <div class="anchor-node-label">Anchor Governance Layer</div>
-              <div class="anchor-node-sub">Eligibility · Sequencing · Delivery tracking · Attribution</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">delivered to</div>
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-            </div>
-            <div class="flow-outputs">
-              <div class="flow-output">
-                <div class="flow-output-label">Member</div>
-              </div>
-              <div class="flow-output">
-                <div class="flow-output-label">Care Manager</div>
-              </div>
-              <div class="flow-output">
-                <div class="flow-output-label">Plan CFO</div>
-              </div>
-            </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOROTHY SECTION -->
+<section id="dorothy">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Human Problem</span>
+      <h2>What happens when Dorothy comes home from the hospital</h2>
+      <p class="section-intro">Dorothy, 74. CHF + diabetes. Dual-eligible. Just discharged. Lives alone. Her plan authorized grab bars, meals, transportation, and companion visits. Medicaid covers a personal care attendant. She has an ILOS cap of $2,500/quarter.</p>
+    </div>
+
+    <div class="dorothy-intro">
+      <div class="dorothy-avatar">D</div>
+      <div class="dorothy-intro-text">
+        <strong>The situation:</strong> Three separate funding sources. Four authorized benefits. One care manager juggling 150 members. No single system that knows what's been delivered, what's been paid, or whether the ILOS cap is about to cut off grab bar funding.
+      </div>
+    </div>
+
+    <div class="persona-grid">
+      <!-- Dorothy -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="#4A5F75" stroke-width="1.3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Dorothy</div>
+            <div class="persona-role">The Member</div>
           </div>
         </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p>Grab bars aren't installed for 3 weeks. <strong>Meals don't arrive — overlapping authorizations aren't resolved.</strong> She misses dialysis. She falls on day 9. Readmitted.</p>
+          <div class="scenario-outcome bad">Cost to plan: $14,000.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>Discharge triggers benefit sequencing. Grab bars installed by day 4. Meals sequenced — Medicaid weekdays, SSBCI weekends. Transportation pre-authorized.</p>
+          <div class="scenario-outcome good">Dorothy stays home.</div>
+        </div>
       </div>
+
+      <!-- Maria -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 8c0-2.2 1.8-4 4-4" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/><path d="M8 4c2.2 0 4 1.8 4 4v1a2 2 0 01-2 2H6a2 2 0 01-2-2V8" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/><path d="M8 14v-3" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Maria</div>
+            <div class="persona-role">The Caregiver (Dorothy's daughter)</div>
+          </div>
+        </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p><strong>Calling 4 vendors, member services, and the Medicaid case manager — no visibility into what's been delivered.</strong> Doesn't know the ILOS cap is about to cut off grab bar funding.</p>
+          <div class="scenario-outcome bad">No one knows what's been done.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>The system confirms delivery and flags gaps. The care manager has a single view. Maria calls her mom instead of calling vendors.</p>
+          <div class="scenario-outcome good">One call instead of four.</div>
+        </div>
+      </div>
+
+      <!-- Lisa -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="2" width="10" height="12" rx="2" stroke="#4A5F75" stroke-width="1.3"/><path d="M6 6h4M6 9h2" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Lisa</div>
+            <div class="persona-role">The Care Manager (150 members)</div>
+          </div>
+        </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p>Toggling between 4 systems and a spreadsheet. 45 minutes per member per month. <strong>Can't attribute $2,500 ILOS spend to outcomes. Manual HCBS documentation.</strong></p>
+          <div class="scenario-outcome bad">45 minutes per member.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>Full execution status in existing workflow. Sequencing automated, delivery confirmed, documentation generated, ILOS cap enforced.</p>
+          <div class="scenario-outcome good">5 minutes instead of 45.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dorothy-closing">
+      "Dorothy is one of 12.8 million dual-eligible Americans. Anchor governs the execution that keeps Dorothy healthy."
     </div>
   </div>
 </section>
@@ -1027,7 +942,6 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-main">
-    <!-- Brand -->
     <div class="footer-brand">
       <svg height="24" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <g fill="rgba(245,242,237,0.7)">
@@ -1046,7 +960,6 @@
       <p>Governance infrastructure for Medicare Advantage and Medicaid health plans serving dual-eligible populations.</p>
     </div>
 
-    <!-- Platform -->
     <div>
       <div class="footer-col-title">Platform</div>
       <ul class="footer-col-links">
@@ -1057,7 +970,6 @@
       </ul>
     </div>
 
-    <!-- Legal -->
     <div>
       <div class="footer-col-title">Legal</div>
       <ul class="footer-col-links">
@@ -1068,7 +980,6 @@
       </ul>
     </div>
 
-    <!-- Contact -->
     <div>
       <div class="footer-col-title">Contact</div>
       <div class="footer-contact-detail">
@@ -1183,19 +1094,6 @@
 </div>
 
 <script>
-  // Main contact form
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }, 800);
-  }
-
-  // Contact modal
   function openContactModal() {
     document.getElementById('contact-modal').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1217,8 +1115,6 @@
       document.getElementById('modal-success').style.display = 'block';
     }, 800);
   }
-
-  // Policy pages
   function openPolicy(which) {
     document.getElementById(which + '-page').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1228,8 +1124,6 @@
     document.getElementById(which + '-page').classList.remove('open');
     document.body.style.overflow = '';
   }
-
-  // Set active nav link
   document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(link => {
