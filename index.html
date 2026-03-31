@@ -65,8 +65,8 @@
       text-decoration: none;
     }
     .nav-logo-mark {
-      width: 32px;
-      height: 32px;
+      width: 48px;
+      height: 48px;
     }
     .nav-logo-text {
       font-family: 'DM Serif Display', serif;
@@ -172,12 +172,12 @@
     }
     .btn-ghost:hover { opacity: 0.7; }
 
-    /* Hero diagram */
+    /* Hero diagram — System of Record */
     .hero-diagram {
       background: var(--cream);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 2rem;
+      padding: 1.5rem;
       position: relative;
     }
     .diagram-label {
@@ -186,70 +186,94 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
-    .funding-flow {
+    .sor-layout {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .sor-col {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 6px;
     }
-    .flow-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .sor-col-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
     }
-    .flow-source {
-      flex: 1;
+    .sor-item {
       background: white;
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 10px 14px;
-    }
-    .flow-source-label {
+      padding: 7px 10px;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .flow-source-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-    .flow-arrow {
-      color: var(--text-muted);
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-    .anchor-node {
+    .sor-item-icon { font-size: 13px; flex-shrink: 0; }
+    .sor-center {
       background: var(--navy);
-      border-radius: 8px;
-      padding: 18px 20px;
-      text-align: center;
-      margin: 8px 0;
+      border-radius: 10px;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      min-width: 180px;
     }
-    .anchor-node-label {
+    .sor-center-title {
       font-size: 13px;
       font-weight: 500;
       color: var(--cream);
-      letter-spacing: 0.03em;
+      text-align: center;
+      letter-spacing: 0.02em;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(245,242,237,0.15);
     }
-    .anchor-node-sub {
-      font-size: 11px;
-      color: rgba(245,242,237,0.6);
-      margin-top: 3px;
-    }
-    .flow-outputs {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 8px;
-      margin-top: 4px;
-    }
-    .flow-output {
+    .sor-pillar {
       background: var(--teal-pale);
-      border: 1px solid rgba(45, 125, 111, 0.2);
+      border: 1px solid rgba(45,125,111,0.2);
       border-radius: 6px;
       padding: 8px 10px;
+    }
+    .sor-pillar-name {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--teal);
+    }
+    .sor-pillar-desc {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+    .sor-arrow {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+    .sor-footnote {
+      font-size: 11px;
+      font-style: italic;
+      color: var(--text-muted);
       text-align: center;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+      .sor-layout { grid-template-columns: 1fr; }
+      .sor-arrow { justify-content: center; transform: rotate(90deg); }
+      .sor-center { min-width: auto; }
     }
     .flow-output-label {
       font-size: 11px;
@@ -917,7 +941,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <svg class="nav-logo-mark" height="32" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+      <svg class="nav-logo-mark" height="48" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <g fill="#1B2A3D">
           <path d="M1051.51,2158.47c28.69,0,55.74,13,75,33,7.16,7.4,15.97,21.14,26.44,41.23,26.67,51.17,69.07,133.82,102.57,194.93,22.34,40.76,38.38,70.23,48.11,88.4,12,22.33,18.55,37.97,19.65,46.93,4.52,35.43-12.67,69.5-49.1,78-35.76,8.39-58.38-13.66-79.3-39.39-16.82-20.63-36.19-43.63-58.1-69-25.49-29.49-47-53.9-85-53.85s-59.46,24.45-84.91,54c-21.86,25.44-41.19,48.48-58,69.12-20.88,25.77-43.45,47.87-79.26,39.53-36.42-8.43-53.67-42.5-49.24-77.93,1.13-8.96,7.67-24.63,19.6-47,9.75-18.2,25.76-47.68,48.03-88.44,33.41-61.21,75.68-143.9,102.25-195.12,10.42-20.12,19.2-33.88,26.34-41.28,19.27-20.07,46.27-33.12,75-33.12h-.08Z"/>
           <path d="M844.71,2651.65c-5.72-.01-11.43-.68-17-2-38.13-8.83-61.06-44.72-55.74-87.27,1.28-10.15,8-26.48,20.54-49.93,10.06-18.86,26.2-48.64,48-88.5,26.59-48.72,58.57-110.63,84.27-160.37,6.48-12.53,12.51-24.21,17.9-34.6,10.85-21,19.93-35.12,27.76-43.25,21.79-22.7,51.35-35.73,81.07-35.73h.17c29.71,0,59.21,13,81,35.59,7.77,8,16.88,22.16,27.84,43.19,5.53,10.59,11.72,22.54,18.37,35.36,25.67,49.47,57.61,111,84.13,159.41,21.91,40,38.1,69.75,48.14,88.47,12.58,23.48,19.32,39.79,20.59,49.88,5.43,42.5-17.43,78.44-55.59,87.37-5.58,1.34-11.31,2.03-17.05,2.06-31.69,0-53-22.51-70.78-44.36-16.47-20.2-36-43.36-57.94-68.84-24.58-28.44-44-50.91-78.46-50.91h-.1c-34.51,0-53.91,22.52-78.48,51-21.7,25.27-41.15,48.46-57.8,68.94-17.77,21.91-39.08,44.49-70.84,44.49Z"/>
@@ -931,7 +955,7 @@
           <path d="M3913.66,2418.14c0,1.84,3.18,2.51,4.54,1,45.93-50.14,109.17-71.99,189.7-65.56,12,1,21.1,8.49,21.1,17.53v59.92c0,1.11-.28,2.21-.82,3.19-6.09,11.08-15.55,16.65-28.37,16.71-74.84.48-130.32,8.16-166.51,60.26-10.73,15.42-15.95,42.98-15.64,82.68.54,70.58.54,123.7,0,159.37-.27,16.78-13.76,25.34-40.47,25.68-36.28.48-60.47-.06-72.39-1.63-11.64-1.56-17.64-7.27-18-17.25-1-28.2-1.58-149.87-1.73-365,0-10.66.73-18.48,2.09-23.3,2.18-7.88,11.37-13.59,22.19-13.79,6.73-.14,30.34-.32,70.84-.54,20.67-.14,31.58,6.79,32.74,20.79.64,8.62.91,21.94.73,39.94h0Z"/>
         </g>
       </svg>
-      <span class="nav-logo-text">Anchor</span>
+      
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
@@ -958,48 +982,37 @@
       </div>
       <div class="fade-up delay-4">
         <div class="hero-diagram">
-          <p class="diagram-label">Benefit orchestration layer</p>
-          <div class="funding-flow">
-            <div class="flow-row">
-              <div class="flow-source">
-                <div class="flow-source-label">Medicaid LTSS</div>
-                <div class="flow-source-sub">Primary funding</div>
-              </div>
-              <div class="flow-source">
-                <div class="flow-source-label">SSBCI / ILOS</div>
-                <div class="flow-source-sub">Supplemental</div>
-              </div>
-              <div class="flow-source">
-                <div class="flow-source-label">MA Supplemental</div>
-                <div class="flow-source-sub">Flex benefit</div>
-              </div>
+          <p class="diagram-label">System of Record — Governance &amp; Orchestration Layer</p>
+          <div class="sor-layout">
+            <!-- Left: Triggers & Inputs -->
+            <div class="sor-col">
+              <div class="sor-col-label">Triggers &amp; Inputs</div>
+              <div class="sor-item"><span class="sor-item-icon">🏥</span> EHR systems</div>
+              <div class="sor-item"><span class="sor-item-icon">📋</span> Care management</div>
+              <div class="sor-item"><span class="sor-item-icon">🩺</span> AWV / HRA data</div>
+              <div class="sor-item"><span class="sor-item-icon">🔄</span> Discharge planning</div>
+              <div class="sor-item"><span class="sor-item-icon">📄</span> Claims history</div>
             </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">sequenced by</div>
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-            </div>
-            <div class="anchor-node">
-              <div class="anchor-node-label">Anchor Governance Layer</div>
-              <div class="anchor-node-sub">Eligibility · Sequencing · Delivery tracking · Attribution</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">delivered to</div>
-              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
-            </div>
-            <div class="flow-outputs">
-              <div class="flow-output">
-                <div class="flow-output-label">Member</div>
+            <!-- Arrow -->
+            <div class="sor-arrow">→</div>
+            <!-- Center: Anchor -->
+            <div class="sor-center">
+              <div class="sor-center-title">Anchor</div>
+              <div class="sor-pillar">
+                <div class="sor-pillar-name">Benefit Sequencing</div>
+                <div class="sor-pillar-desc">Medicaid LTSS → SSBCI → ILOS</div>
               </div>
-              <div class="flow-output">
-                <div class="flow-output-label">Care Manager</div>
+              <div class="sor-pillar">
+                <div class="sor-pillar-name">Execution Tracking</div>
+                <div class="sor-pillar-desc">Confirms delivery, flags gaps</div>
               </div>
-              <div class="flow-output">
-                <div class="flow-output-label">Plan CFO</div>
+              <div class="sor-pillar">
+                <div class="sor-pillar-name">Attribution</div>
+                <div class="sor-pillar-desc">Links spend to outcomes</div>
               </div>
             </div>
           </div>
+          <div class="sor-footnote">Human-in-the-loop — approval stays with care management</div>
         </div>
       </div>
     </div>
@@ -1029,7 +1042,7 @@
   <div class="footer-main">
     <!-- Brand -->
     <div class="footer-brand">
-      <svg height="24" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+      <svg height="32" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <g fill="rgba(245,242,237,0.7)">
           <path d="M1051.51,2158.47c28.69,0,55.74,13,75,33,7.16,7.4,15.97,21.14,26.44,41.23,26.67,51.17,69.07,133.82,102.57,194.93,22.34,40.76,38.38,70.23,48.11,88.4,12,22.33,18.55,37.97,19.65,46.93,4.52,35.43-12.67,69.5-49.1,78-35.76,8.39-58.38-13.66-79.3-39.39-16.82-20.63-36.19-43.63-58.1-69-25.49-29.49-47-53.9-85-53.85s-59.46,24.45-84.91,54c-21.86,25.44-41.19,48.48-58,69.12-20.88,25.77-43.45,47.87-79.26,39.53-36.42-8.43-53.67-42.5-49.24-77.93,1.13-8.96,7.67-24.63,19.6-47,9.75-18.2,25.76-47.68,48.03-88.44,33.41-61.21,75.68-143.9,102.25-195.12,10.42-20.12,19.2-33.88,26.34-41.28,19.27-20.07,46.27-33.12,75-33.12h-.08Z"/>
           <path d="M844.71,2651.65c-5.72-.01-11.43-.68-17-2-38.13-8.83-61.06-44.72-55.74-87.27,1.28-10.15,8-26.48,20.54-49.93,10.06-18.86,26.2-48.64,48-88.5,26.59-48.72,58.57-110.63,84.27-160.37,6.48-12.53,12.51-24.21,17.9-34.6,10.85-21,19.93-35.12,27.76-43.25,21.79-22.7,51.35-35.73,81.07-35.73h.17c29.71,0,59.21,13,81,35.59,7.77,8,16.88,22.16,27.84,43.19,5.53,10.59,11.72,22.54,18.37,35.36,25.67,49.47,57.61,111,84.13,159.41,21.91,40,38.1,69.75,48.14,88.47,12.58,23.48,19.32,39.79,20.59,49.88,5.43,42.5-17.43,78.44-55.59,87.37-5.58,1.34-11.31,2.03-17.05,2.06-31.69,0-53-22.51-70.78-44.36-16.47-20.2-36-43.36-57.94-68.84-24.58-28.44-44-50.91-78.46-50.91h-.1c-34.51,0-53.91,22.52-78.48,51-21.7,25.27-41.15,48.46-57.8,68.94-17.77,21.91-39.08,44.49-70.84,44.49Z"/>
