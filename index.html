@@ -140,19 +140,32 @@
       color: var(--teal);
     }
     .hero-sub {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 300;
       color: var(--text-secondary);
       line-height: 1.65;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
+      max-width: 500px;
+    }
+    .hero-support {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
       max-width: 480px;
+      padding-left: 14px;
+      border-left: 2px solid var(--teal);
     }
     .hero-audience {
       font-size: 13px;
-      font-weight: 500;
-      color: var(--teal);
+      font-weight: 400;
+      color: var(--text-muted);
       letter-spacing: 0.02em;
       margin-bottom: 2rem;
+      max-width: 480px;
+      padding-left: 14px;
+      border-left: 2px solid var(--border);
     }
     .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn-primary {
@@ -1059,6 +1072,44 @@
       line-height: 1.65;
     }
 
+    /* WHY ANCHOR SECTION */
+    #why-anchor-section { background: var(--cream); }
+    .why-anchor-intro {
+      font-size: 17px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 700px;
+      margin-bottom: 1rem;
+    }
+    .what-not-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .what-not-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .what-not-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      font-weight: 400;
+    }
+    .what-not-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
     /* FINAL CTA SECTION */
     #final-cta {
       background: var(--navy);
@@ -1111,6 +1162,9 @@
       }
       .why-now-list {
         gap: 1.5rem;
+      }
+      .what-not-grid {
+        grid-template-columns: 1fr;
       }
       .stat-bar-inner {
         grid-template-columns: 1fr;
@@ -1246,10 +1300,11 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <span class="eyebrow">Payer &amp; Provider Infrastructure</span>
+        <span class="eyebrow">Payer &amp; Provider Infrastructure for Dual-Eligible Populations</span>
         <h1>The System of Record for Non-Medical Benefit Execution</h1>
         <p class="hero-sub">Anchor sits between clinical assessment and benefit delivery — ensuring what's approved across Medicare and Medicaid is actually delivered, verified, and tied to measurable outcomes.</p>
-        <p class="hero-audience">Providing visibility and control over non-medical benefit spend across payers.</p>
+        <p class="hero-support">Providing visibility and control over non-medical benefit spend across payers.</p>
+        <p class="hero-audience">Built for Medicare Advantage dual-eligible programs (D-SNP, FIDE SNP, HIDE SNP, MMAI)</p>
         <div class="btn-group">
           <a href="contact.html" class="btn-primary btn-teal">Request a Pilot</a>
         </div>
@@ -1353,23 +1408,56 @@
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">WHY NOW</span>
-      <h2>Plans Are Accountable Without Infrastructure</h2>
+      <h2>Plans Are Accountable — Without the Infrastructure</h2>
     </div>
     <div class="why-now-list">
       <div class="why-now-item">
         <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
-        <p>Dual-eligible integration increases cross-payer complexity</p>
+        <p>Dual-eligible integration increases cross-payer complexity and accountability</p>
       </div>
       <div class="why-now-item">
         <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <p>Supplemental benefit spend is growing without measurable ROI</p>
+        <p>Supplemental benefit spend is growing without visibility into utilization or ROI</p>
       </div>
       <div class="why-now-item">
         <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 5h6M9 14l2 2 4-4"/></svg></div>
-        <p>Regulatory pressure is rising on documentation and outcomes</p>
+        <p>Regulatory expectations are rising around documentation, timeliness, and outcomes</p>
       </div>
     </div>
-    <div class="closing-line">Plans are accountable for execution — without a system to manage it.</div>
+    <div class="closing-line">Plans are accountable for outcomes — without a system to manage execution across programs.</div>
+  </div>
+</section>
+
+<!-- WHY ANCHOR SECTION -->
+<section id="why-anchor-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">WHY ANCHOR</span>
+      <h2>No Other System Governs What Happens After Approval</h2>
+    </div>
+    <p class="why-anchor-intro">Navigation identifies need. Authorization approves it. But across Medicare, Medicaid, and community programs, no system ensures benefits are delivered, verified, or tied to outcomes.</p>
+    <div class="section-header" style="margin-bottom:0;">
+      <h3 style="margin-bottom:1rem;">What Anchor is Not</h3>
+    </div>
+    <div class="what-not-grid">
+      <div class="what-not-card">
+        <h3>Not a referral platform</h3>
+        <p>Referrals route patients to services but don't ensure delivery or track what happens next.</p>
+      </div>
+      <div class="what-not-card">
+        <h3>Not a marketplace or vendor network</h3>
+        <p>Marketplaces manage supply but don't govern execution across payers.</p>
+      </div>
+      <div class="what-not-card">
+        <h3>Not care management software</h3>
+        <p>Care management documents plans but doesn't ensure benefits are completed or verified.</p>
+      </div>
+      <div class="what-not-card">
+        <h3>Not an analytics layer</h3>
+        <p>Analytics reports on claims after the fact but doesn't track delivery in real time.</p>
+      </div>
+    </div>
+    <div class="closing-line">Anchor ensures what's approved is actually delivered, verified, and measurable — across Medicare and Medicaid.</div>
   </div>
 </section>
 
@@ -1377,7 +1465,7 @@
 <section id="final-cta">
   <div class="final-cta-inner">
     <h2>Turn Approved Benefits Into <em>Measurable Outcomes</em></h2>
-    <p class="final-cta-sub">Anchor gives plans visibility, control, and accountability over non-medical benefit execution.</p>
+    <p class="final-cta-sub">Anchor gives plans visibility, control, and accountability over non-medical benefit delivery and impact.</p>
     <a href="contact.html" class="final-cta-btn">Request a Pilot</a>
   </div>
 </section>
