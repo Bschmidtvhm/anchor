@@ -575,11 +575,11 @@
       .hamburger { display: block; }
       .nav-links {
         display: none !important;
-        position: fixed;
-        top: 80px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
-        bottom: 0;
+        height: calc(100vh - 80px);
         background: #ffffff;
         flex-direction: column;
         align-items: center;
@@ -695,8 +695,8 @@
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-number">1</div>
-        <h3>Govern eligibility</h3>
-        <p>Anchor ingests member enrollment data and determines benefits across all funding sources in real time, including ILOS cap enforcement at $2,500/quarter.</p>
+        <h3>Apply eligibility at the moment of action</h3>
+        <p>When a risk event or score triggers action, Anchor interprets eligibility across Medicare, Medicaid, and community services, ensuring the right benefits are used and limits are enforced.</p>
         <span class="step-tag">Upstream of care management</span>
       </div>
       <div class="step-card">
