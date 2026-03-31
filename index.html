@@ -948,7 +948,7 @@
     }
     .problem-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       margin-top: 3rem;
     }
@@ -964,6 +964,7 @@
     }
     .problem-box:nth-child(2) { border-left-color: var(--amber); }
     .problem-box:nth-child(3) { border-left-color: var(--navy-light); }
+    .problem-box:nth-child(4) { border-left-color: var(--teal); }
     .problem-box h3 {
       font-family: 'DM Serif Display', serif;
       font-size: 1.2rem;
@@ -1260,9 +1261,9 @@
     <div class="hero-grid">
       <div class="hero-left">
         <span class="eyebrow">Payer &amp; Provider Infrastructure for Dual-Eligible Populations</span>
-        <h1>The System of Record for Non-Medical Benefit Execution</h1>
-        <p class="hero-sub">Anchor sits between clinical assessment and benefit delivery — ensuring what's approved across Medicare and Medicaid is actually delivered, verified, and tied to measurable outcomes.</p>
-        <p class="hero-support">Providing visibility and control over non-medical benefit spend across payers.</p>
+        <h1>The System of Record for Non-Medical Benefit Spend</h1>
+        <p class="hero-sub">Anchor manages how non-medical benefit dollars are sequenced, delivered, and measured across Medicare and Medicaid — giving plans control over how spend is deployed and reducing administrative burden on care teams.</p>
+        <p class="hero-support">Non-medical benefits are now a core cost driver — but they are not managed like one.</p>
         <p class="hero-audience">Built for Medicare Advantage dual-eligible programs (D-SNP, FIDE SNP, HIDE SNP, MMAI)</p>
         <div class="btn-group">
           <a href="contact.html" class="btn-primary btn-teal">Request a Pilot</a>
@@ -1270,7 +1271,7 @@
       </div>
       <div>
         <div class="hero-diagram">
-          <p class="diagram-label">System of Record — Governance &amp; Orchestration Layer</p>
+          <p class="diagram-label">System of Record — Benefit Spend Management</p>
           <div class="sor-layout">
             <!-- Left: Triggers & Inputs -->
             <div class="sor-col">
@@ -1312,24 +1313,28 @@
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">THE PROBLEM</span>
-      <h2>Benefits Are Approved. What Happens Next Isn't Managed.</h2>
-      <p class="section-intro">Plans invest billions in non-medical benefits across Medicare and Medicaid — but no system ensures what's approved is actually delivered, verified, or tied to outcomes.</p>
+      <h2>Benefits Are Approved. Spend Isn't Managed.</h2>
+      <p class="section-intro">Plans invest billions in non-medical benefits across Medicare and Medicaid — but no system manages how that spend is actually deployed, enforced, or measured.</p>
     </div>
     <div class="problem-grid">
       <div class="problem-box">
-        <h3>Fragmented Execution</h3>
-        <p>Execution spans disconnected vendors, programs, and funding sources</p>
+        <h3>Siloed Across Programs</h3>
+        <p>Benefits are managed in silos across payers, vendors, and programs</p>
       </div>
       <div class="problem-box">
-        <h3>No Real-Time Enforcement</h3>
-        <p>Cap limits and payer-of-first-resort rules are not enforced in real time</p>
+        <h3>Inconsistent Enforcement</h3>
+        <p>Sequencing and payer-of-first-resort rules are inconsistently applied</p>
       </div>
       <div class="problem-box">
         <h3>No Verified Delivery</h3>
-        <p>No reliable way to confirm delivery or measure impact on total cost of care</p>
+        <p>No reliable way to verify delivery or measure impact on total cost of care</p>
+      </div>
+      <div class="problem-box">
+        <h3>Care Team Burden</h3>
+        <p>Care managers spend significant time coordinating benefits instead of clinical care</p>
       </div>
     </div>
-    <div class="closing-line">Referrals are made. Authorizations are approved. No system owns what happens next across programs.</div>
+    <div class="closing-line">Care is planned. Benefits are approved. But how dollars are actually used — and whether they work — is not managed.</div>
   </div>
 </section>
 
@@ -1338,25 +1343,25 @@
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">THE PLATFORM</span>
-      <h2>Anchor Owns the Layer Between Approval and Delivery</h2>
-      <p class="section-intro">Infrastructure that ensures benefits are activated, completed, and measurable across Medicare and Medicaid.</p>
+      <h2>Anchor Manages How Benefit Spend Is Deployed</h2>
+      <p class="section-intro">A system of record that ensures non-medical benefits are sequenced correctly, delivered, and tied to outcomes across Medicare and Medicaid.</p>
     </div>
     <div class="solution-grid">
       <div class="solution-card teal-accent">
-        <h3>Orchestration Engine</h3>
-        <p>Sequences benefit delivery across programs based on eligibility, timing, and constraints.</p>
+        <h3>Sequencing Engine</h3>
+        <p>Determines how benefits should be deployed across Medicare, Medicaid, and community programs based on eligibility, timing, and constraints.</p>
       </div>
       <div class="solution-card navy-accent">
         <h3>Execution Ledger</h3>
-        <p>Creates a system of record for what is approved, in progress, completed, or stalled — with verified, audit-ready documentation.</p>
+        <p>Creates a real-time system of record for how benefit dollars are used — what is approved, in progress, completed, or stalled — with verified documentation.</p>
       </div>
       <div class="solution-card coral-accent">
         <h3>Cap &amp; Rule Enforcement</h3>
-        <p>Applies benefit limits and payer-of-first-resort logic across Medicare and Medicaid.</p>
+        <p>Applies benefit limits and payer-of-first-resort logic across programs to prevent duplication, leakage, and errors.</p>
       </div>
       <div class="solution-card amber-accent">
-        <h3>Attribution &amp; Insights</h3>
-        <p>Connects benefit delivery to utilization, outcomes, and total cost of care.</p>
+        <h3>Measurement &amp; Reporting</h3>
+        <p>Connects benefit spend to utilization, outcomes, and total cost of care.</p>
       </div>
     </div>
   </div>
@@ -1367,31 +1372,31 @@
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">WHY NOW</span>
-      <h2>Plans Are Accountable — Without the Infrastructure</h2>
+      <h2>A New Category of Spend — Without Infrastructure</h2>
     </div>
     <div class="why-now-list">
+      <div class="why-now-item">
+        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <p>Non-medical benefits are a growing and material cost driver in Medicare Advantage</p>
+      </div>
       <div class="why-now-item">
         <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
         <p>Dual-eligible integration increases cross-payer complexity and accountability</p>
       </div>
       <div class="why-now-item">
-        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <p>Supplemental benefit spend is growing without visibility into utilization or ROI</p>
-      </div>
-      <div class="why-now-item">
         <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 5h6M9 14l2 2 4-4"/></svg></div>
-        <p>Regulatory expectations are rising around documentation, timeliness, and outcomes</p>
+        <p>Plans are expected to demonstrate impact on utilization, outcomes, and equity</p>
       </div>
     </div>
-    <div class="closing-line">Anchor doesn't replace navigation, care management, or analytics — it governs the layer underneath them.</div>
+    <div class="closing-line">Plans are accountable for how benefit dollars are used — without a system to manage them.</div>
   </div>
 </section>
 
 <!-- FINAL CTA SECTION -->
 <section id="final-cta">
   <div class="final-cta-inner">
-    <h2>Turn Approved Benefits Into <em>Measurable Outcomes</em></h2>
-    <p class="final-cta-sub">Anchor gives plans visibility, control, and accountability over non-medical benefit delivery and impact.</p>
+    <h2>Turn Benefit Spend Into <em>Measurable Impact</em></h2>
+    <p class="final-cta-sub">Anchor gives plans visibility, control, and accountability over non-medical benefit spend and outcomes.</p>
     <a href="contact.html" class="final-cta-btn">Request a Pilot</a>
   </div>
 </section>
