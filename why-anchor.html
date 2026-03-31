@@ -164,16 +164,35 @@
     }
 
     /* OPENING */
-    #opening { background: white; }
-    #opening .section-body {
-      max-width: 760px;
+    #opening {
+      background: white;
+      padding: 80px 2rem;
     }
-    #opening .section-body p {
-      font-size: 17px;
+    #opening .opening-card {
+      max-width: 800px;
+      background: var(--teal-pale);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      padding: 2.5rem 3rem;
+    }
+    #opening .opening-lead {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.35rem;
+      color: var(--navy);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    #opening .opening-body p {
+      font-size: 16px;
       color: var(--text-secondary);
       font-weight: 300;
       line-height: 1.75;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    #opening .opening-body p:last-child {
+      margin-bottom: 0;
+      font-weight: 400;
+      color: var(--navy);
     }
 
     /* THE GAP */
@@ -392,6 +411,7 @@
 
     @media (max-width: 900px) {
       .two-col-matters { grid-template-columns: 1fr; }
+      #opening .opening-card { padding: 2rem 1.75rem; }
     }
 
     /* FOOTER */
@@ -802,10 +822,12 @@
 <!-- OPENING -->
 <section id="opening">
   <div class="container">
-    <div class="section-body">
-      <p>Non-medical benefits are now a core cost driver, but they are not managed like one.</p>
-      <p>Across Medicare and Medicaid, benefit dollars are fragmented across systems, vendors, and workflows, with limited visibility into what is delivered or what works.</p>
-      <p>There is no system of record for how this spend is deployed or what outcomes it drives.</p>
+    <div class="opening-card">
+      <div class="opening-lead">Non-medical benefits are now a core cost driver, but they are not managed like one.</div>
+      <div class="opening-body">
+        <p>Across Medicare and Medicaid, benefit dollars are fragmented across systems, vendors, and workflows, with limited visibility into what is delivered or what works.</p>
+        <p>There is no system of record for how this spend is deployed or what outcomes it drives.</p>
+      </div>
     </div>
   </div>
 </section>
