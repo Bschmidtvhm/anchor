@@ -1030,13 +1030,25 @@
       gap: 1.5rem;
       align-items: flex-start;
     }
-    .why-now-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--teal);
+    .why-now-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--teal-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
-      margin-top: 4px;
+      margin-top: 2px;
+    }
+    .why-now-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
     .why-now-item p {
       font-size: 16px;
@@ -1311,7 +1323,7 @@
     <div class="section-header">
       <span class="eyebrow">THE PLATFORM</span>
       <h2>Anchor Owns the Execution Layer</h2>
-      <p class="section-intro">Infrastructure between approval and delivery — ensuring benefits are activated, completed, and measurable.</p>
+      <p class="section-intro">Infrastructure between approval and delivery — ensuring non-medical benefits are activated, completed, and measurable.</p>
     </div>
     <div class="solution-grid">
       <div class="solution-card teal-accent">
@@ -1343,15 +1355,15 @@
     </div>
     <div class="why-now-list">
       <div class="why-now-item">
-        <div class="why-now-dot"></div>
+        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
         <p>Dual-eligible integration increases cross-payer complexity</p>
       </div>
       <div class="why-now-item">
-        <div class="why-now-dot"></div>
+        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <p>Supplemental benefit spend is growing without measurable ROI</p>
       </div>
       <div class="why-now-item">
-        <div class="why-now-dot"></div>
+        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 5h6M9 14l2 2 4-4"/></svg></div>
         <p>Regulatory pressure is rising on documentation and outcomes</p>
       </div>
     </div>
