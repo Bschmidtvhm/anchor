@@ -244,7 +244,10 @@
         </div>
       </div>
       <div class="contact-right">
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="2cee4a41-486f-4154-8b7e-d782c471a65d" />
+          <input type="hidden" name="subject" value="New inquiry from anchorcare.ai" />
+          <input type="hidden" name="from_name" value="Anchor Website" />
           <div class="form-row">
             <div class="form-group">
               <label>First name</label>
@@ -315,7 +318,7 @@
 <div class="modal-overlay" id="contact-modal" onclick="closeIfOverlay(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeContactModal()">×</button>
-    <div id="modal-form-wrap"><h3>Get in touch</h3><p class="modal-sub">Reach us at <a href="mailto:info@anchorcare.ai" style="color:var(--teal);">info@anchorcare.ai</a> or complete the form below and we'll respond within one business day.</p><form class="modal-form" id="modal-form"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label>First name</label><input type="text" name="first_name" placeholder="Jane" required /></div><div class="form-group"><label>Last name</label><input type="text" name="last_name" placeholder="Smith" required /></div></div><div class="form-group"><label>Organization</label><input type="text" name="organization" placeholder="Health plan or company" /></div><div class="form-group"><label>Email</label><input type="email" name="email" placeholder="jane@plan.com" required /></div><div class="form-group"><label>Message</label><textarea name="message" placeholder="How can we help?"></textarea></div><div class="modal-btn-row"><button type="button" class="modal-cancel" onclick="closeContactModal()">Cancel</button><button type="submit" class="modal-submit" id="modal-submit-btn">Send message</button></div></form></div>
+    <div id="modal-form-wrap"><h3>Get in touch</h3><p class="modal-sub">Reach us at <a href="mailto:info@anchorcare.ai" style="color:var(--teal);">info@anchorcare.ai</a> or complete the form below and we'll respond within one business day.</p><form class="modal-form" id="modal-form" onsubmit="return false;"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label>First name</label><input type="text" name="first_name" placeholder="Jane" required /></div><div class="form-group"><label>Last name</label><input type="text" name="last_name" placeholder="Smith" required /></div></div><div class="form-group"><label>Organization</label><input type="text" name="organization" placeholder="Health plan or company" /></div><div class="form-group"><label>Email</label><input type="email" name="email" placeholder="jane@plan.com" required /></div><div class="form-group"><label>Message</label><textarea name="message" placeholder="How can we help?"></textarea></div><div class="modal-btn-row"><button type="button" class="modal-cancel" onclick="closeContactModal()">Cancel</button><button type="submit" class="modal-submit" id="modal-submit-btn">Send message</button></div></form></div>
     <div class="modal-success" id="modal-success"><div class="modal-success-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#2D7D6F" opacity="0.15"/><path d="M6 11l3.5 3.5L16 8" stroke="#2D7D6F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p><strong style="color:var(--navy);font-weight:500;">Message received.</strong><br>We'll be in touch within one business day. You can also reach us directly at info@anchorcare.ai.</p></div>
   </div>
 </div>
@@ -324,33 +327,29 @@
 <script>
 document.getElementById('contact-form').addEventListener('submit',function(e){
   e.preventDefault();
-  var f=this;
-  var fn=f.querySelector('[name=first_name]').value;
-  var ln=f.querySelector('[name=last_name]').value;
-  var org=f.querySelector('[name=organization]').value;
-  var title=f.querySelector('[name=title]').value;
-  var email=f.querySelector('[name=email]').value;
-  var interest=f.querySelector('[name=interest]').value;
-  var msg=f.querySelector('[name=message]').value;
-  var subject=encodeURIComponent('New inquiry from anchorcare.ai - '+fn+' '+ln);
-  var body=encodeURIComponent('Name: '+fn+' '+ln+'\nOrganization: '+org+'\nTitle: '+title+'\nEmail: '+email+'\nInterested in: '+interest+'\n\nMessage:\n'+msg);
-  window.location.href='mailto:info@anchorcare.ai?subject='+subject+'&body='+body;
-  document.getElementById('submit-btn').style.display='none';
-  document.getElementById('form-success').style.display='block';
+  var btn=document.getElementById('submit-btn');
+  btn.textContent='Sending...';btn.disabled=true;
+  var data=new FormData(this);
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
+  .then(function(r){return r.json();})
+  .then(function(d){
+    if(d.success){btn.style.display='none';document.getElementById('form-success').style.display='block';}
+    else{btn.textContent='Send request';btn.disabled=false;alert('Something went wrong. Please email info@anchorcare.ai directly.');}
+  }).catch(function(){btn.textContent='Send request';btn.disabled=false;alert('Something went wrong. Please email info@anchorcare.ai directly.');});
 });
 document.getElementById('modal-form').addEventListener('submit',function(e){
   e.preventDefault();
-  var f=this;
-  var fn=f.querySelector('[name=first_name]').value;
-  var ln=f.querySelector('[name=last_name]').value;
-  var org=f.querySelector('[name=organization]').value||'';
-  var email=f.querySelector('[name=email]').value;
-  var msg=f.querySelector('[name=message]').value||'';
-  var subject=encodeURIComponent('Inquiry from anchorcare.ai - '+fn+' '+ln);
-  var body=encodeURIComponent('Name: '+fn+' '+ln+'\nOrganization: '+org+'\nEmail: '+email+'\n\nMessage:\n'+msg);
-  window.location.href='mailto:info@anchorcare.ai?subject='+subject+'&body='+body;
-  document.getElementById('modal-form-wrap').style.display='none';
-  document.getElementById('modal-success').style.display='block';
+  var btn=document.getElementById('modal-submit-btn');
+  btn.textContent='Sending...';btn.disabled=true;
+  var data=new FormData(this);
+  data.append('access_key','2cee4a41-486f-4154-8b7e-d782c471a65d');
+  data.append('subject','Inquiry from anchorcare.ai (modal)');
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
+  .then(function(r){return r.json();})
+  .then(function(d){
+    if(d.success){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('modal-success').style.display='block';}
+    else{btn.textContent='Send message';btn.disabled=false;}
+  }).catch(function(){btn.textContent='Send message';btn.disabled=false;});
 });
 function openContactModal(){document.getElementById('contact-modal').classList.add('open');document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contact-modal').classList.remove('open');document.body.style.overflow='';}
