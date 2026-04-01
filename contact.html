@@ -45,7 +45,7 @@
     .contact-left p { font-size: 17px; color: rgba(245,242,237,0.65); font-weight: 300; line-height: 1.65; margin-bottom: 2rem; }
     .contact-detail { display: flex; flex-direction: column; gap: 0.75rem; }
     .contact-line { font-size: 14px; color: rgba(245,242,237,0.5); }
-    .contact-line a { color: var(--teal-light); text-decoration: none; }
+    .contact-line a { color: var(--teal-light); text-decoration: none; position: relative; z-index: 2; cursor: pointer; }
     .contact-line a:hover { text-decoration: underline; }
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -244,7 +244,7 @@
         </div>
       </div>
       <div class="contact-right">
-        <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@anchorcare.ai" method="POST">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/brenda@anchorcare.ai" method="POST">
           <input type="hidden" name="_subject" value="New inquiry from anchorcare.ai" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://anchorcare.ai/contact.html#thanks" />
@@ -329,7 +329,7 @@ document.getElementById('contact-form').addEventListener('submit',function(e){e.
 function openContactModal(){document.getElementById('contact-modal').classList.add('open');document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contact-modal').classList.remove('open');document.body.style.overflow='';}
 function closeIfOverlay(e){if(e.target===document.getElementById('contact-modal'))closeContactModal();}
-document.getElementById('modal-form').addEventListener('submit',function(e){e.preventDefault();const btn=document.getElementById('modal-submit-btn');btn.textContent='Sending...';btn.disabled=true;const data=new FormData(this);data.append('_subject','New inquiry from anchorcare.ai (modal)');data.append('_captcha','false');fetch('https://formsubmit.co/ajax/info@anchorcare.ai',{method:'POST',body:data,headers:{'Accept':'application/json'}}).then(r=>{if(r.ok){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('modal-success').style.display='block';}else{btn.textContent='Send message';btn.disabled=false;}}).catch(()=>{btn.textContent='Send message';btn.disabled=false;});});
+document.getElementById('modal-form').addEventListener('submit',function(e){e.preventDefault();const btn=document.getElementById('modal-submit-btn');btn.textContent='Sending...';btn.disabled=true;const data=new FormData(this);data.append('_subject','New inquiry from anchorcare.ai (modal)');data.append('_captcha','false');fetch('https://formsubmit.co/ajax/brenda@anchorcare.ai',{method:'POST',body:data,headers:{'Accept':'application/json'}}).then(r=>{if(r.ok){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('modal-success').style.display='block';}else{btn.textContent='Send message';btn.disabled=false;}}).catch(()=>{btn.textContent='Send message';btn.disabled=false;});});
 function openPolicy(which){document.getElementById(which+'-page').classList.add('open');document.body.style.overflow='hidden';window.scrollTo(0,0);}
 function closePolicy(which){document.getElementById(which+'-page').classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('DOMContentLoaded',function(){const currentPage=window.location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav-links a').forEach(link=>{const href=link.getAttribute('href');if(href===currentPage){link.classList.add('active');}else{link.classList.remove('active');}});});
