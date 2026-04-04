@@ -548,8 +548,13 @@
       border-bottom: 2px solid transparent;
       transition: color 0.2s, border-color 0.2s;
     }
-    .section-nav a:hover { color: var(--navy); }
-    .section-nav a.active { color: var(--teal); border-bottom-color: var(--teal); }
+    .section-nav a:hover {
+      color: var(--navy);
+    }
+    .section-nav a.active {
+      color: var(--teal);
+      border-bottom-color: var(--teal);
+    }
 
     @media (max-width: 900px) {
       .two-col-matters { grid-template-columns: 1fr; }
@@ -956,7 +961,7 @@
     <a href="#the-gap" data-section="the-gap">The Gap</a>
     <a href="#what-anchor-does" data-section="what-anchor-does">What Anchor Does</a>
     <a href="#why-this-matters" data-section="why-this-matters">Why It Matters</a>
-    <a href="#quality-revenue" data-section="quality-revenue">Quality &amp; Revenue</a>
+    <a href="#quality-revenue" data-section="quality-revenue">Quality & Revenue</a>
     <a href="#the-difference" data-section="the-difference">The Difference</a>
   </div>
 </nav>
@@ -1364,16 +1369,47 @@
 </script>
 
 <script>
-(function(){
-var nav=document.getElementById("section-nav");
-if(!nav)return;
-var links=nav.querySelectorAll("a[data-section]");
-var secs=[];
-links.forEach(function(a){var s=document.getElementById(a.dataset.section);if(s)secs.push({el:s,link:a});});
-links.forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();var t=document.getElementById(a.dataset.section);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-120,behavior:"smooth"});}});});
-var tick=false;
-window.addEventListener("scroll",function(){if(!tick){requestAnimationFrame(function(){var sy=window.scrollY+140;var act=null;secs.forEach(function(s){if(s.el.offsetTop<=sy)act=s;});links.forEach(function(a){a.classList.remove("active");});if(act)act.link.classList.add("active");tick=false;});tick=true;}});
-})();
+  // Section nav: active state on scroll + smooth scroll
+  (function() {
+    var nav = document.getElementById('section-nav');
+    if (!nav) return;
+    var links = nav.querySelectorAll('a[data-section]');
+    var sections = [];
+    links.forEach(function(a) {
+      var s = document.getElementById(a.dataset.section);
+      if (s) sections.push({el: s, link: a});
+    });
+
+    // Smooth scroll with offset
+    links.forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.getElementById(a.dataset.section);
+        if (target) {
+          var top = target.getBoundingClientRect().top + window.scrollY - 120;
+          window.scrollTo({top: top, behavior: 'smooth'});
+        }
+      });
+    });
+
+    // Highlight active section on scroll
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          var scrollY = window.scrollY + 140;
+          var active = null;
+          sections.forEach(function(s) {
+            if (s.el.offsetTop <= scrollY) active = s;
+          });
+          links.forEach(function(a) { a.classList.remove('active'); });
+          if (active) active.link.classList.add('active');
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  })();
 </script>
 
 </body>
