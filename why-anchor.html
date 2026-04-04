@@ -110,13 +110,13 @@
     .nav-cta:hover { background: var(--navy-mid) !important; }
 
     /* SECTIONS */
-    section { padding: 100px 2rem; }
+    section { padding: 64px 2rem; scroll-margin-top: 120px; }
     .container { max-width: 1140px; margin: 0 auto; }
 
     /* PAGE HERO */
     .page-hero {
-      padding-top: 160px;
-      padding-bottom: 60px;
+      padding-top: 140px;
+      padding-bottom: 48px;
       background: linear-gradient(135deg, var(--cream) 0%, rgba(232,243,241,0.5) 100%);
     }
     .page-hero h1 {
@@ -161,7 +161,7 @@
       font-weight: 400;
     }
 
-    .section-header { margin-bottom: 4rem; }
+    .section-header { margin-bottom: 2.5rem; }
     .section-header .eyebrow { margin-bottom: 1rem; }
     .section-intro {
       font-size: 18px;
@@ -174,7 +174,7 @@
     /* OPENING */
     #opening {
       background: white;
-      padding: 80px 2rem;
+      padding: 48px 2rem;
     }
     #opening .opening-card {
       max-width: 800px;
@@ -374,7 +374,7 @@
     #quality-revenue {
       background: var(--navy-mid);
       color: var(--cream);
-      padding: 100px 2rem;
+      padding: 64px 2rem;
     }
     #quality-revenue .eyebrow { color: #ffffff; }
     #quality-revenue h2 { color: var(--cream); margin-bottom: 1.5rem; }
@@ -483,7 +483,7 @@
     /* FINAL CTA */
     #final-cta {
       background: var(--navy);
-      padding: 80px 2rem;
+      padding: 64px 2rem;
     }
     .final-cta-inner {
       max-width: 720px;
@@ -520,11 +520,43 @@
     }
     .final-cta-btn:hover { background: var(--teal-light); }
 
+    /* SECTION JUMP NAV */
+    .section-nav {
+      position: sticky;
+      top: 64px;
+      z-index: 90;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(16,29,43,0.08);
+      padding: 0 2rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .section-nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.25rem;
+    }
+    .section-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 12px 16px;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .section-nav a:hover { color: var(--navy); }
+    .section-nav a.active { color: var(--teal); border-bottom-color: var(--teal); }
+
     @media (max-width: 900px) {
       .two-col-matters { grid-template-columns: 1fr; }
       .gap-list { grid-template-columns: 1fr; }
       .qr-grid { grid-template-columns: 1fr; }
       #opening .opening-card { padding: 2rem 1.75rem; }
+      .section-nav a { padding: 10px 12px; font-size: 12px; }
     }
 
     /* FOOTER */
@@ -917,6 +949,17 @@
     <p>No system optimizes how benefits are sequenced, delivered, and measured across Medicare and Medicaid.</p>
   </div>
 </section>
+
+<!-- SECTION JUMP NAV -->
+<nav class="section-nav" id="section-nav">
+  <div class="section-nav-inner">
+    <a href="#the-gap" data-section="the-gap">The Gap</a>
+    <a href="#what-anchor-does" data-section="what-anchor-does">What Anchor Does</a>
+    <a href="#why-this-matters" data-section="why-this-matters">Why It Matters</a>
+    <a href="#quality-revenue" data-section="quality-revenue">Quality &amp; Revenue</a>
+    <a href="#the-difference" data-section="the-difference">The Difference</a>
+  </div>
+</nav>
 
 <!-- OPENING -->
 <section id="opening">
@@ -1318,6 +1361,19 @@
       });
     });
   }
+</script>
+
+<script>
+(function(){
+var nav=document.getElementById("section-nav");
+if(!nav)return;
+var links=nav.querySelectorAll("a[data-section]");
+var secs=[];
+links.forEach(function(a){var s=document.getElementById(a.dataset.section);if(s)secs.push({el:s,link:a});});
+links.forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();var t=document.getElementById(a.dataset.section);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-120,behavior:"smooth"});}});});
+var tick=false;
+window.addEventListener("scroll",function(){if(!tick){requestAnimationFrame(function(){var sy=window.scrollY+140;var act=null;secs.forEach(function(s){if(s.el.offsetTop<=sy)act=s;});links.forEach(function(a){a.classList.remove("active");});if(act)act.link.classList.add("active");tick=false;});tick=true;}});
+})();
 </script>
 
 </body>
