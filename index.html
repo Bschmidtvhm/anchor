@@ -3,16 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anchor â Governance Infrastructure for Dual-Eligible Populations</title>
-  <meta name="description" content="Anchor sequences, verifies, and tracks non-medical benefits across Medicare and Medicaid, turning fragmented spend into a managed, measurable system." />
-  <meta property="og:title" content="Anchor â Benefit Governance for Dual-Eligible Plans" />
-  <meta property="og:description" content="Anchor sequences, verifies, and tracks non-medical benefits across Medicare and Medicaid, turning fragmented spend into a managed, measurable system." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://anchorcare.ai/" />
-  <meta property="og:image" content="https://anchorcare.ai/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Anchor â Benefit Governance for Dual-Eligible Plans" />
-  <meta name="twitter:description" content="Anchor sequences, verifies, and tracks non-medical benefits across Medicare and Medicaid, turning fragmented spend into a managed, measurable system." />
+  <title>Anchor — Governance Infrastructure for Dual-Eligible Populations</title>
+  <meta name="description" content="Anchor is the benefit governance and orchestration layer for Medicare Advantage and Medicaid health plans serving dual-eligible members." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -61,7 +53,7 @@
       max-width: 1140px;
       margin: 0 auto;
       padding: 0 2rem;
-      height: 80px;
+      height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -73,8 +65,8 @@
       text-decoration: none;
     }
     .nav-logo-mark {
-      width: 160px;
-      height: 60px;
+      width: 32px;
+      height: 32px;
     }
     .nav-logo-text {
       font-family: 'DM Serif Display', serif;
@@ -97,7 +89,6 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--navy); }
-    .nav-links a.active { color: var(--navy); font-weight: 500; }
     .nav-cta {
       background: var(--navy) !important;
       color: var(--cream) !important;
@@ -110,13 +101,13 @@
     .nav-cta:hover { background: var(--navy-mid) !important; }
 
     /* SECTIONS */
-    section { padding: 80px 2rem; }
+    section { padding: 100px 2rem; }
     .container { max-width: 1140px; margin: 0 auto; }
 
     /* HERO */
     #hero {
       padding-top: 160px;
-      padding-bottom: 80px;
+      padding-bottom: 120px;
       position: relative;
       overflow: hidden;
     }
@@ -148,32 +139,12 @@
       color: var(--teal);
     }
     .hero-sub {
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 300;
       color: var(--text-secondary);
       line-height: 1.65;
-      margin-bottom: 1.25rem;
-      max-width: 500px;
-    }
-    .hero-support {
-      font-size: 15px;
-      font-weight: 400;
-      color: var(--navy);
-      line-height: 1.6;
-      margin-bottom: 0.75rem;
+      margin-bottom: 2.5rem;
       max-width: 480px;
-      padding-left: 14px;
-      border-left: 2px solid var(--teal);
-    }
-    .hero-audience {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--text-muted);
-      letter-spacing: 0.02em;
-      margin-bottom: 2rem;
-      max-width: 480px;
-      padding-left: 14px;
-      border-left: 2px solid var(--border);
     }
     .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn-primary {
@@ -188,8 +159,6 @@
       transition: background 0.2s;
     }
     .btn-primary:hover { background: var(--navy-mid); }
-    .btn-teal { background: var(--teal); color: white; }
-    .btn-teal:hover { background: var(--teal-light); }
     .btn-ghost {
       display: inline-block;
       color: var(--teal);
@@ -202,12 +171,12 @@
     }
     .btn-ghost:hover { opacity: 0.7; }
 
-    /* Hero diagram â System of Record */
+    /* Hero diagram */
     .hero-diagram {
       background: var(--cream);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 2rem;
       position: relative;
     }
     .diagram-label {
@@ -216,94 +185,70 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 1rem;
-      text-align: center;
+      margin-bottom: 1.5rem;
     }
-    .sor-layout {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 12px;
-      align-items: stretch;
-    }
-    .sor-col {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .sor-col-label {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .sor-item {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 7px 10px;
-      font-size: 12px;
-      font-weight: 400;
-      color: var(--text-secondary);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .sor-item-icon { font-size: 13px; flex-shrink: 0; }
-    .sor-center {
-      background: var(--navy);
-      border-radius: 10px;
-      padding: 16px 14px;
+    .funding-flow {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      justify-content: center;
-      min-width: 180px;
     }
-    .sor-center-title {
+    .flow-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .flow-source {
+      flex: 1;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+    .flow-source-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .flow-source-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .flow-arrow {
+      color: var(--text-muted);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .anchor-node {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 18px 20px;
+      text-align: center;
+      margin: 8px 0;
+    }
+    .anchor-node-label {
       font-size: 13px;
       font-weight: 500;
       color: var(--cream);
-      text-align: center;
-      letter-spacing: 0.02em;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(245,242,237,0.15);
+      letter-spacing: 0.03em;
     }
-    .sor-pillar {
+    .anchor-node-sub {
+      font-size: 11px;
+      color: rgba(245,242,237,0.6);
+      margin-top: 3px;
+    }
+    .flow-outputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .flow-output {
       background: var(--teal-pale);
-      border: 1px solid rgba(45,125,111,0.2);
+      border: 1px solid rgba(45, 125, 111, 0.2);
       border-radius: 6px;
       padding: 8px 10px;
-    }
-    .sor-pillar-name {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--navy);
-    }
-    .sor-pillar-desc {
-      font-size: 10px;
-      color: var(--text-secondary);
-      margin-top: 2px;
-      line-height: 1.4;
-    }
-    .sor-arrow {
-      display: flex;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 16px;
-    }
-    .sor-footnote {
-      font-size: 11px;
-      font-style: italic;
-      color: var(--text-muted);
       text-align: center;
-      margin-top: 10px;
-    }
-    @media (max-width: 900px) {
-      .sor-layout { grid-template-columns: 1fr; }
-      .sor-arrow { justify-content: center; transform: rotate(90deg); }
-      .sor-center { min-width: auto; }
     }
     .flow-output-label {
       font-size: 11px;
@@ -476,137 +421,6 @@
       line-height: 1.6;
     }
 
-    /* HUMAN PROBLEM */
-    #human-problem { background: white; }
-    .dorothy-intro {
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-      background: var(--teal-pale);
-      border-left: 3px solid var(--teal);
-      padding: 1.5rem 2rem;
-      border-radius: 8px;
-      margin-bottom: 3rem;
-    }
-    .dorothy-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--teal);
-      color: white;
-      font-size: 20px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .dorothy-intro-text {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-    .dorothy-intro-text strong {
-      color: var(--navy);
-      font-weight: 500;
-    }
-    .persona-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    .persona-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .persona-header {
-      display: flex;
-      gap: 1rem;
-      padding: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      background: var(--cream);
-    }
-    .persona-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .persona-name {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 2px;
-    }
-    .persona-role {
-      font-size: 12px;
-      color: var(--teal);
-    }
-    .persona-scenario {
-      padding: 1.5rem;
-    }
-    .scenario-label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .scenario-label.bad { color: var(--coral); }
-    .scenario-label.good { color: var(--teal); }
-    .dot-bad {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--coral);
-    }
-    .dot-good {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-    .persona-scenario p {
-      font-size: 13px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.6;
-      margin-bottom: 0.75rem;
-    }
-    .persona-scenario p strong {
-      color: var(--navy);
-      font-weight: 500;
-    }
-    .scenario-outcome {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      padding-top: 0.75rem;
-    }
-    .scenario-outcome.bad { color: var(--coral); }
-    .scenario-outcome.good { color: var(--teal); }
-    .dorothy-closing {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-      font-style: italic;
-      color: var(--navy);
-      text-align: center;
-      line-height: 1.4;
-      background: var(--cream);
-      padding: 2rem;
-      border-radius: 8px;
-    }
-
     /* ABOUT */
     #about { background: var(--cream); }
     .about-grid {
@@ -632,6 +446,51 @@
       border-left: 3px solid var(--teal);
       padding-left: 1.5rem;
       margin: 2rem 0;
+    }
+    .team-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+    .team-member {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .team-member:first-child { padding-top: 0; }
+    .team-member:last-child { border-bottom: none; padding-bottom: 0; }
+    .team-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--cream);
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .team-info h4 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .team-info .role {
+      font-size: 13px;
+      color: var(--teal);
+      margin-bottom: 4px;
+    }
+    .team-info p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.5;
     }
 
     /* CONTACT */
@@ -839,400 +698,270 @@
     .modal-close:hover { color: var(--navy); }
     .modal h3 {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       color: var(--navy);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
     .modal-sub {
       font-size: 14px;
       color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+      font-weight: 300;
+      margin-bottom: 1.75rem;
+      line-height: 1.5;
     }
-    .modal-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .modal-btn-row {
-      display: flex;
-      gap: 1rem;
-      justify-content: flex-end;
-      margin-top: 0.5rem;
-    }
-    .modal-cancel {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-size: 14px;
+    .modal-form { display: flex; flex-direction: column; gap: 1rem; }
+    .modal-form .form-group label {
+      font-size: 11px;
       font-weight: 500;
-      cursor: pointer;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .modal-form .form-group input,
+    .modal-form .form-group select,
+    .modal-form .form-group textarea {
+      background: var(--cream);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 10px 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--navy);
+      outline: none;
+      width: 100%;
       transition: border-color 0.2s;
     }
-    .modal-cancel:hover { border-color: var(--text-secondary); }
+    .modal-form .form-group input:focus,
+    .modal-form .form-group textarea:focus { border-color: var(--teal); }
+    .modal-form .form-group textarea { resize: vertical; min-height: 100px; }
+    .modal-btn-row { display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 0.5rem; }
+    .modal-cancel {
+      background: none; border: 1px solid var(--border-strong);
+      border-radius: 6px; padding: 10px 20px;
+      font-family: 'DM Sans', sans-serif; font-size: 14px;
+      color: var(--text-secondary); cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .modal-cancel:hover { border-color: var(--navy); color: var(--navy); }
     .modal-submit {
-      background: var(--navy);
-      color: white;
-      border: none;
-      padding: 10px 24px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
+      background: var(--navy); color: white; border: none;
+      border-radius: 6px; padding: 10px 24px;
+      font-family: 'DM Sans', sans-serif; font-size: 14px;
+      font-weight: 500; cursor: pointer;
       transition: background 0.2s;
     }
     .modal-submit:hover { background: var(--navy-mid); }
     .modal-success {
       display: none;
       text-align: center;
+      padding: 2rem 0;
     }
     .modal-success-icon {
-      margin-bottom: 1rem;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--teal-pale); display: flex;
+      align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
     }
     .modal-success p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.6;
+      font-size: 15px; color: var(--text-secondary);
+      font-weight: 300; line-height: 1.6;
     }
 
-    /* POLICY PAGES */
+    /* PRIVACY / TRUST pages */
     .policy-page {
       display: none;
       position: fixed;
       inset: 0;
       background: white;
-      z-index: 600;
+      z-index: 400;
       overflow-y: auto;
     }
     .policy-page.open { display: block; }
     .policy-inner {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 5rem 2rem 4rem;
     }
     .policy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--teal);
+      cursor: pointer;
       background: none;
       border: none;
-      color: var(--teal);
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      margin-bottom: 2rem;
       padding: 0;
+      margin-bottom: 2.5rem;
+      font-family: 'DM Sans', sans-serif;
     }
     .policy-back:hover { opacity: 0.7; }
-    .policy-page h2 { margin-bottom: 0.5rem; }
-    .policy-date {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
+    .policy-inner h2 { margin-bottom: 0.5rem; }
+    .policy-inner .policy-date {
+      font-size: 13px; color: var(--text-muted); margin-bottom: 2rem;
     }
-    .policy-page h4 {
-      font-size: 1.1rem;
-      color: var(--navy);
-      font-weight: 500;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
+    .policy-inner h4 {
+      font-size: 15px; font-weight: 500; color: var(--navy);
+      margin: 1.75rem 0 0.5rem;
     }
-    .policy-page p {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 1rem;
+    .policy-inner p {
+      font-size: 15px; color: var(--text-secondary);
+      font-weight: 300; line-height: 1.75; margin-bottom: 0.75rem;
     }
-    .policy-page a {
-      color: var(--teal);
-      text-decoration: none;
-    }
-    .policy-page a:hover { text-decoration: underline; }
 
-    /* NEW SECTIONS: PROBLEM, SOLUTION, WHY NOW, FINAL CTA */
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
+    .delay-4 { animation-delay: 0.46s; }
 
-    /* PROBLEM SECTION */
-    #problem {
+    /* DOROTHY SECTION */
+    #human-problem { background: var(--cream); }
+    .dorothy-intro {
       background: white;
-    }
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .problem-box {
-      background: var(--cream);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--coral);
-      border-radius: 8px;
-      padding: 1.75rem 2rem;
+      border-left: 4px solid var(--navy);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 3rem;
       display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .problem-box:nth-child(2) { border-left-color: var(--amber); }
-    .problem-box:nth-child(3) { border-left-color: var(--navy-light); }
-    .problem-box:nth-child(4) { border-left-color: var(--teal); }
-    .problem-box h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.2rem;
-      color: var(--navy);
-      font-weight: 400;
-    }
-    .problem-box p {
-      font-size: 15px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.65;
-    }
-    .closing-line {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--navy);
-      text-align: left;
-      line-height: 1.5;
-      background: var(--teal-pale);
-      border-left: 3px solid var(--teal);
-      padding: 1.5rem 2rem;
-      border-radius: 8px;
-      margin-top: 3rem;
-    }
-
-    /* SOLUTION SECTION */
-    #solution {
-      background: var(--cream);
-    }
-    .solution-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .solution-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      border-top: 4px solid var(--navy);
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .solution-card.teal-accent { border-top-color: var(--teal); }
-    .solution-card.navy-accent { border-top-color: var(--navy); }
-    .solution-card.coral-accent { border-top-color: var(--coral); }
-    .solution-card.amber-accent { border-top-color: var(--amber); }
-    .solution-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.2rem;
-      color: var(--navy);
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-    }
-    .solution-card p {
-      font-size: 15px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.65;
-    }
-
-    /* WHY NOW SECTION */
-    #why-now {
-      background: white;
-    }
-    .why-now-list {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 3rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .why-now-item {
-      display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       align-items: flex-start;
     }
-    .why-now-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--teal-pale);
+    .dorothy-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 500;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-top: 2px;
     }
-    .why-now-icon svg {
-      width: 18px;
-      height: 18px;
-      stroke: var(--teal);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .dorothy-intro-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
-    .why-now-item p {
-      font-size: 16px;
+    .dorothy-intro-text strong { color: var(--navy); font-weight: 500; }
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .persona-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .persona-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .persona-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .persona-name { font-size: 15px; font-weight: 500; color: var(--navy); }
+    .persona-role { font-size: 12px; color: var(--text-muted); }
+    .persona-scenario {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .scenario-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 0.6rem;
+    }
+    .scenario-label.bad { color: var(--coral); }
+    .scenario-label.good { color: var(--teal); }
+    .dot-bad {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--coral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .dot-bad::after { content: '×'; color: white; font-size: 11px; line-height: 1; }
+    .dot-good {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .dot-good::after { content: '✓'; color: white; font-size: 9px; line-height: 1; }
+    .persona-scenario p {
+      font-size: 13.5px;
       color: var(--text-secondary);
       font-weight: 300;
-      line-height: 1.65;
+      line-height: 1.6;
     }
-
-    /* FINAL CTA SECTION */
-    #final-cta {
-      background: var(--navy);
-      padding: 80px 2rem;
-    }
-    .final-cta-inner {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    #final-cta h2 {
-      color: var(--cream);
-      font-weight: 400;
-      margin-bottom: 1.25rem;
-    }
-    #final-cta h2 em {
-      font-style: italic;
-      color: var(--teal-light);
-    }
-    .final-cta-sub {
-      font-size: 18px;
-      font-weight: 300;
-      color: rgba(245,242,237,0.65);
-      line-height: 1.65;
-      margin-bottom: 2.5rem;
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .final-cta-btn {
-      display: inline-block;
-      background: var(--teal);
-      color: white;
-      padding: 13px 32px;
-      border-radius: 6px;
-      font-size: 15px;
+    .persona-scenario p strong { font-weight: 500; color: var(--text-primary); }
+    .scenario-outcome {
+      font-size: 13px;
       font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s;
+      margin-top: 0.5rem;
     }
-    .final-cta-btn:hover { background: var(--teal-light); }
+    .scenario-outcome.bad { color: var(--coral); }
+    .scenario-outcome.good { color: var(--teal); }
+    .dorothy-closing {
+      text-align: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--navy);
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+    }
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .problem-grid {
-        grid-template-columns: 1fr;
-      }
-      .solution-grid {
-        grid-template-columns: 1fr;
-      }
-      .why-now-list {
-        gap: 1.5rem;
-      }
-      .stat-bar-inner {
-        grid-template-columns: 1fr;
-      }
-      .stat-item {
-        padding: 1rem 0;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
-      .stat-item:last-child {
-        border-bottom: none;
-      }
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-      .footer-main {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
+    @media (max-width: 900px) {
+      .hero-grid, .why-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid::before { display: none; }
+      .persona-grid { grid-template-columns: 1fr; }
+      .stat-bar-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 1.5rem; }
+      .stat-item:last-child { border-bottom: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-bar-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .nav-links { display: none; }
     }
-
-    /* HAMBURGER MENU */
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      z-index: 200;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--navy);
-      margin: 5px 0;
-      transition: all 0.3s ease;
-      border-radius: 2px;
-    }
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-    @media (max-width: 768px) {
-      .hamburger { display: block; }
-      .nav-links {
-        display: none !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        height: calc(100vh - 80px);
-        background: #ffffff;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 0;
-        gap: 0;
-        z-index: 150;
-        overflow-y: auto;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      }
-      .nav-links.open {
-        display: flex !important;
-      }
-      .nav-links li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid var(--border);
-      }
-      .nav-links li:last-child {
-        border-bottom: none;
-        padding: 1.5rem 2rem;
-      }
-      .nav-links a {
-        display: block;
-        padding: 1.1rem 2rem;
-        font-size: 17px;
-      }
-      .nav-cta {
-        display: inline-block !important;
-        margin: 0 auto;
-      }
-      .footer-main {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 2rem !important;
-      }
-      .footer-brand {
-        grid-column: 1 / -1;
-      }
+    @media (max-width: 540px) {
+      .footer-main { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1241,185 +970,9 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <svg class="nav-logo-mark" height="60" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-        <g fill="#1B2A3D"><path d="M1051.51,2158.47c28.69,0,55.74,13,75,33,7.16,7.4,15.97,21.14,26.44,41.23,26.67,51.17,69.07,133.82,102.57,194.93,22.34,40.76,38.38,70.23,48.11,88.4,12,22.33,18.55,37.97,19.65,46.93,4.52,35.43-12.67,69.5-49.1,78-35.76,8.39-58.38-13.66-79.3-39.39-16.82-20.63-36.19-43.63-58.1-69-25.49-29.49-47-53.9-85-53.85s-59.46,24.45-84.91,54c-21.86,25.44-41.19,48.48-58,69.12-20.88,25.77-43.45,47.87-79.26,39.53-36.42-8.43-53.67-42.5-49.24-77.93,1.13-8.96,7.67-24.63,19.6-47,9.75-18.2,25.76-47.68,48.03-88.44,33.41-61.21,75.68-143.9,102.25-195.12,10.42-20.12,19.2-33.88,26.34-41.28,19.27-20.07,46.27-33.12,75-33.12h-.08Z"/><path d="M844.71,2651.65c-5.72-.01-11.43-.68-17-2-38.13-8.83-61.06-44.72-55.74-87.27,1.28-10.15,8-26.48,20.54-49.93,10.06-18.86,26.2-48.64,48-88.5,26.59-48.72,58.57-110.63,84.27-160.37,6.48-12.53,12.51-24.21,17.9-34.6,10.85-21,19.93-35.12,27.76-43.25,21.79-22.7,51.35-35.73,81.07-35.73h.17c29.71,0,59.21,13,81,35.59,7.77,8,16.88,22.16,27.84,43.19,5.53,10.59,11.72,22.54,18.37,35.36,25.67,49.47,57.61,111,84.13,159.41,21.91,40,38.1,69.75,48.14,88.47,12.58,23.48,19.32,39.79,20.59,49.88,5.43,42.5-17.43,78.44-55.59,87.37-5.58,1.34-11.31,2.03-17.05,2.06-31.69,0-53-22.51-70.78-44.36-16.47-20.2-36-43.36-57.94-68.84-24.58-28.44-44-50.91-78.46-50.91h-.1c-34.51,0-53.91,22.52-78.48,51-21.7,25.27-41.15,48.46-57.8,68.94-17.77,21.91-39.08,44.49-70.84,44.49Z"/><path d="M1051.37,2617.41c14.32-.05,26.7,6.22,37.13,18.8,13.05,15.73,25.77,31.67,38.16,47.82,20.26,26.34,41.42,47.59,75.53,51.46,20.56,2.42,41.39,1.33,61.59-3.21.72-.17,1.44.28,1.61,1,.09.39,0,.8-.24,1.12-51,66.77-128.17,106.87-213.22,107.1s-162.37-39.48-213.78-106c-.45-.59-.34-1.43.25-1.88.32-.24.73-.33,1.12-.24,20.22,4.43,41.04,5.4,61.58,2.87,34.12-4,55.18-25.4,75.3-51.83,12.35-16.21,24.99-32.21,37.93-48,10.37-12.62,22.71-18.95,37-19h.04Z"/><path d="M1051.34,2850c-86.09,0-166.21-39.82-219.91-109.32-3.32-4.3-2.52-10.48,1.78-13.8,2.33-1.8,5.35-2.46,8.22-1.8,19.26,4.2,39.09,5.12,58.66,2.72,29.84-3.55,48.73-21.2,69.54-48.54,12.72-16.7,25.54-32.93,38.12-48.26,12-14.61,26.65-22,43.58-22.09h.19c16.8,0,31.44,7.35,43.5,21.86,13.23,15.95,26.14,32.13,38.38,48.09,20.95,27.24,39.93,44.8,69.74,48.18,19.62,2.3,39.48,1.27,58.75-3.05,5.29-1.24,10.58,2.05,11.82,7.34.68,2.9,0,5.94-1.82,8.29-53.46,69.91-133.61,110.14-219.9,110.38h-.65Z"/><path d="M1796.34,2729.42c-34.24,41.92-80.93,61.37-140.08,58.36-74.39-3.88-128.67-54.76-126.16-129,2.45-72.89,58.36-110.93,124.46-121.4,40.08-6.31,183.36-17.59,131.66-91.23-1.24-1.75-2.78-3.27-4.55-4.49-7.21-4.95-19-8.08-35.33-9.51-30.44-2.65-80.64-.54-97.35,30.44-2.38,4.41-5.71,10.46-9.85,18.07-2.64,4.86-7.72,7.88-13.25,7.88h-64.54c-.69,0-1.37-.13-2-.41-7.81-3.33-11.34-10-10.53-20.17,4.15-51.5,45.86-92.26,93.82-105.92,43.66-12.44,89.46-15.47,134.38-8.89,49.18,7,88.65,34.1,108.76,80.43,7.27,16.67,10.6,49.59,10,98.78-.34,28.53-.05,103.15.88,223.84.07,10-4.62,17.06-14.2,21.06-1.4.6-2.89.94-4.41,1-33.16,1.9-65.22,8.9-76.57-20.72-3.87-10.05,1.63-20.92-.74-27.44-.47-1.33-1.93-2.04-3.26-1.57-.46.16-.86.44-1.16.82M1792.92,2575.07c-33.08,14.2-63.58,20-108.69,29.48-13,2.72-37.57,12.71-44,20.65-30.84,38.39-6.31,77.93,38.11,81.12,60.19,4.35,117.8-32.13,118.89-94.29.34-16.78.61-27.92.82-33.43.07-2.04-1.52-3.76-3.56-3.83-.55-.02-1.1.08-1.61.3h.04Z"/><path d="M2061.81,2414.88c.66-.48,7.41-7.2,20.31-20.31,60.86-61.69,181.56-61.42,239.78,4.89,24.79,28.19,37.52,64.64,38.2,109.37,1.1,68.67,1.2,143.42.3,224.26-.3,23.91,3.37,44.22-26.33,45-28.08.75-47.44.75-57.92,0-17-1.22-23.1-9.51-23-26,.37-109.04.17-183.95-.59-224.73-.36-19-5.94-37-16.86-54.08-21.12-33.35-74.72-39.74-111.9-24.18-41.94,17.53-62.62,57.34-62.11,98.64,1.1,81.86,1.35,149.27.74,202.24-.22,19-8.21,29.56-30,29.35-32.19-.2-48.84-.34-50-.27-20.17,1-26.62-12.77-26.62-30.23.37-134.99.18-258.63-.59-370.93-.07-12.84,10.27-20.24,24.42-20.72,29.63-.88,50.74-.54,63.43,1.16,3.28.36,6.13,2.42,7.48,5.43,5.64,12.84,7.47,28.87,5.5,48.1-.3,2.92,3.3,4.76,5.79,3h-.03Z"/><path d="M2806.67,2628.54c3.87,8.09,4.14,17.44.75,25.74-33.09,83.5-92.38,128.17-177.86,134-155,10.6-253.19-127.45-220.11-274.18,25.28-112,123.1-177.72,237.3-162.1,85.46,11.62,139.33,59.24,161.62,142.87.63,2.24.66,4.61.07,6.86-2.25,8.83-8,13.59-17.26,14.34s-28.67,1-58.08.95c-6.79-.1-13.51-1.41-19.84-3.88-2.07-.8-3.78-2.32-4.82-4.28-14.68-27.65-24.73-50.74-56.8-61.07-58.63-19-115,7-135.46,66.1-14.74,42.53-13.16,83.27,4.75,122.22,17,37,52,62.63,91.38,62.16,48-.55,82.27-26.23,100.61-67.94,1.43-3.28,4.46-5.6,8-6.11,26.28-3.87,52.97-4.01,79.28-.41,2.83.37,5.26,2.17,6.45,4.76l.02-.03Z"/><path d="M2956.15,2429c0,1.17,1.88,1.69,2.75.78,47.05-48.67,109.52-67.69,187.43-57.07,96.78,13.15,131.19,87.13,130.25,160.13-.08,7.39.39,77.5,1.41,210.33.2,7.13-.27,14.27-1.41,21.31-1.65,8.75-10.76,15.16-21.45,15.29-28.67.32-48.59.45-59.78.39-21.29-.2-31.89-8.75-31.81-25.78.62-101.51.51-170.51-.32-207-.49-16.9-4.36-33.53-11.39-48.91-18-40.36-73.45-49.17-118.23-36.34-49.41,14.06-74.08,55.51-75.65,98-2.12,59.53-2.25,125.36-.39,197.5.39,17.17-13.82,21.89-33.54,21.77-36.3-.2-56.97-.59-62-1.17-21.45-2.53-19.09-16.2-19.17-32.45-.87-194.2-.87-360.25,0-498.14.08-19.1,12.88-23.12,33.62-22.67,3.22.07,22.39.07,57.5.13,1.93,0,3.85.34,5.66,1,10.45,3.83,15.71,11.41,15.63,22.68-.31,78.05-.02,138.12.87,180.2l.02.02Z"/><path d="M3533.44,2349.59c283.15,20.93,249.59,460.4-32.54,439.54s-250.61-460.46,32.54-439.54M3519.77,2440c-63.1-1.32-115.48,55.34-116.95,126.52s48.48,130,111.55,131.3,115.47-55.34,116.94-126.52-48.48-130-111.54-131.3Z"/><path d="M3913.66,2418.14c0,1.84,3.18,2.51,4.54,1,45.93-50.14,109.17-71.99,189.7-65.56,12,1,21.1,8.49,21.1,17.53v59.92c0,1.11-.28,2.21-.82,3.19-6.09,11.08-15.55,16.65-28.37,16.71-74.84.48-130.32,8.16-166.51,60.26-10.73,15.42-15.95,42.98-15.64,82.68.54,70.58.54,123.7,0,159.37-.27,16.78-13.76,25.34-40.47,25.68-36.28.48-60.47-.06-72.39-1.63-11.64-1.56-17.64-7.27-18-17.25-1-28.2-1.58-149.87-1.73-365,0-10.66.73-18.48,2.09-23.3,2.18-7.88,11.37-13.59,22.19-13.79,6.73-.14,30.34-.32,70.84-.54,20.67-.14,31.58,6.79,32.74,20.79.64,8.62.91,21.94.73,39.94h0Z"/></g>
-      </svg>
-      
-    </a>
-    <button class="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="how-it-works.html">How It Works</a></li>
-      <li><a href="why-anchor.html">Why Anchor</a></li>
-      <li><a href="how-we-help.html">How We Help</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="nav-cta">Request a Pilot</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <span class="eyebrow">Payer &amp; Provider Infrastructure for Dual-Eligible Populations</span>
-        <h1>The System of Record for Non-Medical Benefit Spend</h1>
-        <p class="hero-sub">Anchor manages how non-medical benefit dollars are sequenced, delivered, and measured across Medicare and Medicaid, enabling plans to improve quality performance, Star Ratings, and CMS revenue.</p>
-        <p class="hero-support">Non-medical benefits directly impact CAHPS, Stars, and risk-adjusted revenue, but they are not managed in a system of record.</p>
-        <p class="hero-audience">Built for Medicare Advantage dual-eligible programs (D-SNP, FIDE SNP, HIDE SNP, MMAI)</p>
-        <div class="btn-group">
-          <a href="contact.html" class="btn-primary btn-teal">Schedule a Call</a>
-        </div>
-      </div>
-      <div>
-        <div class="hero-diagram">
-          <p class="diagram-label">System of Record â Benefit Spend Management</p>
-          <div class="sor-layout">
-            <!-- Left: Triggers & Inputs -->
-            <div class="sor-col">
-              <div class="sor-col-label">Triggers &amp; Inputs</div>
-              <div class="sor-item"><span class="sor-item-icon">ð¥</span> EHR systems</div>
-              <div class="sor-item"><span class="sor-item-icon">ð</span> Care management</div>
-              <div class="sor-item"><span class="sor-item-icon">ð©º</span> AWV / HRA data</div>
-              <div class="sor-item"><span class="sor-item-icon">ð</span> Discharge planning</div>
-              <div class="sor-item"><span class="sor-item-icon">ð</span> Claims history</div>
-            </div>
-            <!-- Arrow -->
-            <div class="sor-arrow">â</div>
-            <!-- Center: Anchor -->
-            <div class="sor-center">
-              <div class="sor-center-title"><svg viewBox="1530 1920 2600 900" xmlns="http://www.w3.org/2000/svg" style="height:16px;display:inline-block;vertical-align:middle;"><path fill="rgba(245,242,237,0.9)" d="M1796.34,2729.42c-34.24,41.92-80.93,61.37-140.08,58.36-74.39-3.88-128.67-54.76-126.16-129,2.45-72.89,58.36-110.93,124.46-121.4,40.08-6.31,183.36-17.59,131.66-91.23-1.24-1.75-2.78-3.27-4.55-4.49-7.21-4.95-19-8.08-35.33-9.51-30.44-2.65-80.64-.54-97.35,30.44-2.38,4.41-5.71,10.46-9.85,18.07-2.64,4.86-7.72,7.88-13.25,7.88h-64.54c-.69,0-1.37-.13-2-.41-7.81-3.33-11.34-10-10.53-20.17,4.15-51.5,45.86-92.26,93.82-105.92,43.66-12.44,89.46-15.47,134.38-8.89,49.18,7,88.65,34.1,108.76,80.43,7.27,16.67,10.6,49.59,10,98.78-.34,28.53-.05,103.15.88,223.84.07,10-4.62,17.06-14.2,21.06-1.4.6-2.89.94-4.41,1-33.16,1.9-65.22,8.9-76.57-20.72-3.87-10.05,1.63-20.92-.74-27.44-.47-1.33-1.93-2.04-3.26-1.57-.46.16-.86.44-1.16.82M1792.92,2575.07c-33.08,14.2-63.58,20-108.69,29.48-13,2.72-37.57,12.71-44,20.65-30.84,38.39-6.31,77.93,38.11,81.12,60.19,4.35,117.8-32.13,118.89-94.29.34-16.78.61-27.92.82-33.43.07-2.04-1.52-3.76-3.56-3.83-.55-.02-1.1.08-1.61.3h.04Z"/><path fill="rgba(245,242,237,0.9)" d="M2061.81,2414.88c.66-.48,7.41-7.2,20.31-20.31,60.86-61.69,181.56-61.42,239.78,4.89,24.79,28.19,37.52,64.64,38.2,109.37,1.1,68.67,1.2,143.42.3,224.26-.3,23.91,3.37,44.22-26.33,45-28.08.75-47.44.75-57.92,0-17-1.22-23.1-9.51-23-26,.37-109.04.17-183.95-.59-224.73-.36-19-5.94-37-16.86-54.08-21.12-33.35-74.72-39.74-111.9-24.18-41.94,17.53-62.62,57.34-62.11,98.64,1.1,81.86,1.35,149.27.74,202.24-.22,19-8.21,29.56-30,29.35-32.19-.2-48.84-.34-50-.27-20.17,1-26.62-12.77-26.62-30.23.37-134.99.18-258.63-.59-370.93-.07-12.84,10.27-20.24,24.42-20.72,29.63-.88,50.74-.54,63.43,1.16,3.28.36,6.13,2.42,7.48,5.43,5.64,12.84,7.47,28.87,5.5,48.1-.3,2.92,3.3,4.76,5.79,3h-.03Z"/><path fill="rgba(245,242,237,0.9)" d="M2806.67,2628.54c3.87,8.09,4.14,17.44.75,25.74-33.09,83.5-92.38,128.17-177.86,134-155,10.6-253.19-127.45-220.11-274.18,25.28-112,123.1-177.72,237.3-162.1,85.46,11.62,139.33,59.24,161.62,142.87.63,2.24.66,4.61.07,6.86-2.25,8.83-8,13.59-17.26,14.34s-28.67,1-58.08.95c-6.79-.1-13.51-1.41-19.84-3.88-2.07-.8-3.78-2.32-4.82-4.28-14.68-27.65-24.73-50.74-56.8-61.07-58.63-19-115,7-135.46,66.1-14.74,42.53-13.16,83.27,4.75,122.22,17,37,52,62.63,91.38,62.16,48-.55,82.27-26.23,100.61-67.94,1.43-3.28,4.46-5.6,8-6.11,26.28-3.87,52.97-4.01,79.28-.41,2.83.37,5.26,2.17,6.45,4.76l.02-.03Z"/><path fill="rgba(245,242,237,0.9)" d="M2956.15,2429c0,1.17,1.88,1.69,2.75.78,47.05-48.67,109.52-67.69,187.43-57.07,96.78,13.15,131.19,87.13,130.25,160.13-.08,7.39.39,77.5,1.41,210.33.2,7.13-.27,14.27-1.41,21.31-1.65,8.75-10.76,15.16-21.45,15.29-28.67.32-48.59.45-59.78.39-21.29-.2-31.89-8.75-31.81-25.78.62-101.51.51-170.51-.32-207-.49-16.9-4.36-33.53-11.39-48.91-18-40.36-73.45-49.17-118.23-36.34-49.41,14.06-74.08,55.51-75.65,98-2.12,59.53-2.25,125.36-.39,197.5.39,17.17-13.82,21.89-33.54,21.77-36.3-.2-56.97-.59-62-1.17-21.45-2.53-19.09-16.2-19.17-32.45-.87-194.2-.87-360.25,0-498.14.08-19.1,12.88-23.12,33.62-22.67,3.22.07,22.39.07,57.5.13,1.93,0,3.85.34,5.66,1,10.45,3.83,15.71,11.41,15.63,22.68-.31,78.05-.02,138.12.87,180.2l.02.02Z"/><path fill="rgba(245,242,237,0.9)" d="M3533.44,2349.59c283.15,20.93,249.59,460.4-32.54,439.54s-250.61-460.46,32.54-439.54M3519.77,2440c-63.1-1.32-115.48,55.34-116.95,126.52s48.48,130,111.55,131.3,115.47-55.34,116.94-126.52-48.48-130-111.54-131.3Z"/><path fill="rgba(245,242,237,0.9)" d="M3913.66,2418.14c0,1.84,3.18,2.51,4.54,1,45.93-50.14,109.17-71.99,189.7-65.56,12,1,21.1,8.49,21.1,17.53v59.92c0,1.11-.28,2.21-.82,3.19-6.09,11.08-15.55,16.65-28.37,16.71-74.84.48-130.32,8.16-166.51,60.26-10.73,15.42-15.95,42.98-15.64,82.68.54,70.58.54,123.7,0,159.37-.27,16.78-13.76,25.34-40.47,25.68-36.28.48-60.47-.06-72.39-1.63-11.64-1.56-17.64-7.27-18-17.25-1-28.2-1.58-149.87-1.73-365,0-10.66.73-18.48,2.09-23.3,2.18-7.88,11.37-13.59,22.19-13.79,6.73-.14,30.34-.32,70.84-.54,20.67-.14,31.58,6.79,32.74,20.79.64,8.62.91,21.94.73,39.94h0Z"/></svg></div>
-              <div class="sor-pillar">
-                <div class="sor-pillar-name">Benefit Sequencing</div>
-                <div class="sor-pillar-desc">Medicaid LTSS â SSBCI â ILOS</div>
-              </div>
-              <div class="sor-pillar">
-                <div class="sor-pillar-name">Execution Tracking</div>
-                <div class="sor-pillar-desc">Confirms delivery, flags gaps</div>
-              </div>
-              <div class="sor-pillar">
-                <div class="sor-pillar-name">Attribution</div>
-                <div class="sor-pillar-desc">Links spend to outcomes</div>
-              </div>
-            </div>
-          </div>
-          <div class="sor-footnote">Human-in-the-loop â approval stays with care management</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROBLEM SECTION -->
-<section id="problem">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">THE PROBLEM</span>
-      <h2>Benefits Are Approved. Spend Isn't Managed.</h2>
-      <p class="section-intro">Plans invest billions in non-medical benefits across Medicare and Medicaid, but no system manages how that spend is deployed or how it impacts Star Ratings and CMS revenue.</p>
-    </div>
-    <div class="problem-grid">
-      <div class="problem-box">
-        <h3>Siloed Across Programs</h3>
-        <p>Benefits are managed in silos across payers, vendors, and programs</p>
-      </div>
-      <div class="problem-box">
-        <h3>Inconsistent Enforcement</h3>
-        <p>Sequencing and payer-of-first-resort rules are inconsistently applied</p>
-      </div>
-      <div class="problem-box">
-        <h3>No Verified Delivery</h3>
-        <p>No reliable way to verify delivery or measure impact on total cost of care</p>
-      </div>
-      <div class="problem-box">
-        <h3>Care Team Burden</h3>
-        <p>Care managers spend significant time coordinating benefits instead of clinical care</p>
-      </div>
-    </div>
-    <div class="closing-line">Care is planned. Benefits are approved. But how dollars are actually used â and whether they work â is not managed.</div>
-  </div>
-</section>
-
-<!-- SOLUTION SECTION -->
-<section id="solution">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">THE PLATFORM</span>
-      <h2>Anchor Manages How Benefit Spend Is Deployed</h2>
-      <p class="section-intro">A system of record that ensures non-medical benefits are sequenced and delivered, linking execution to CAHPS performance, Star Ratings, and plan revenue across Medicare and Medicaid.</p>
-    </div>
-    <div class="solution-grid">
-      <div class="solution-card teal-accent">
-        <h3>Sequencing Engine</h3>
-        <p>Determines how benefits should be deployed across Medicare, Medicaid, and community programs based on eligibility, timing, and constraints.</p>
-      </div>
-      <div class="solution-card navy-accent">
-        <h3>Execution Ledger</h3>
-        <p>Creates a real-time system of record for how benefit dollars are used â what is approved, in progress, completed, or stalled â with verified documentation.</p>
-      </div>
-      <div class="solution-card coral-accent">
-        <h3>Cap &amp; Rule Enforcement</h3>
-        <p>Applies benefit limits and payer-of-first-resort logic across programs to prevent duplication, leakage, and errors.</p>
-      </div>
-      <div class="solution-card amber-accent">
-        <h3>Measurement &amp; Reporting</h3>
-        <p>Connects benefit spend to utilization, outcomes, and total cost of care.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY NOW SECTION -->
-<section id="why-now">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">WHY NOW</span>
-      <h2>A Core Category of Spend Without Infrastructure</h2>
-    </div>
-    <div class="why-now-list">
-      <div class="why-now-item">
-        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <p>Non-medical benefits are a growing and material cost driver in Medicare Advantage</p>
-      </div>
-      <div class="why-now-item">
-        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
-        <p>Dual-eligible integration increases cross-payer complexity and accountability</p>
-      </div>
-      <div class="why-now-item">
-        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 5h6M9 14l2 2 4-4"/></svg></div>
-        <p>Plans are expected to demonstrate impact on utilization, outcomes, and equity</p>
-      </div>
-      <div class="why-now-item">
-        <div class="why-now-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p>Star Ratings, CAHPS, and plan revenue are increasingly driven by non-medical interventions and member experience</p>
-      </div>
-    </div>
-    <div class="closing-line">Plans are accountable for how benefit dollars are used, without a system to manage them.</div>
-  </div>
-</section>
-
-<!-- FINAL CTA SECTION -->
-<section id="final-cta">
-  <div class="final-cta-inner">
-    <h2>Turn Benefit Spend Into<br><em>Measurable Impact</em></h2>
-    <p class="final-cta-sub">Anchor gives plans visibility, control, and accountability over non-medical benefit spend and how it drives outcomes.</p>
-    <a href="contact.html" class="final-cta-btn">Schedule a Call</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-main">
-    <!-- Brand -->
-    <div class="footer-brand">
-      <svg height="36" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-        <g fill="rgba(245,242,237,0.8)">
+    <a href="#" class="nav-logo">
+      <svg height="28" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+        <g fill="#1A2332">
           <path d="M1051.51,2158.47c28.69,0,55.74,13,75,33,7.16,7.4,15.97,21.14,26.44,41.23,26.67,51.17,69.07,133.82,102.57,194.93,22.34,40.76,38.38,70.23,48.11,88.4,12,22.33,18.55,37.97,19.65,46.93,4.52,35.43-12.67,69.5-49.1,78-35.76,8.39-58.38-13.66-79.3-39.39-16.82-20.63-36.19-43.63-58.1-69-25.49-29.49-47-53.9-85-53.85s-59.46,24.45-84.91,54c-21.86,25.44-41.19,48.48-58,69.12-20.88,25.77-43.45,47.87-79.26,39.53-36.42-8.43-53.67-42.5-49.24-77.93,1.13-8.96,7.67-24.63,19.6-47,9.75-18.2,25.76-47.68,48.03-88.44,33.41-61.21,75.68-143.9,102.25-195.12,10.42-20.12,19.2-33.88,26.34-41.28,19.27-20.07,46.27-33.12,75-33.12h-.08Z"/>
           <path d="M844.71,2651.65c-5.72-.01-11.43-.68-17-2-38.13-8.83-61.06-44.72-55.74-87.27,1.28-10.15,8-26.48,20.54-49.93,10.06-18.86,26.2-48.64,48-88.5,26.59-48.72,58.57-110.63,84.27-160.37,6.48-12.53,12.51-24.21,17.9-34.6,10.85-21,19.93-35.12,27.76-43.25,21.79-22.7,51.35-35.73,81.07-35.73h.17c29.71,0,59.21,13,81,35.59,7.77,8,16.88,22.16,27.84,43.19,5.53,10.59,11.72,22.54,18.37,35.36,25.67,49.47,57.61,111,84.13,159.41,21.91,40,38.1,69.75,48.14,88.47,12.58,23.48,19.32,39.79,20.59,49.88,5.43,42.5-17.43,78.44-55.59,87.37-5.58,1.34-11.31,2.03-17.05,2.06-31.69,0-53-22.51-70.78-44.36-16.47-20.2-36-43.36-57.94-68.84-24.58-28.44-44-50.91-78.46-50.91h-.1c-34.51,0-53.91,22.52-78.48,51-21.7,25.27-41.15,48.46-57.8,68.94-17.77,21.91-39.08,44.49-70.84,44.49Z"/>
           <path d="M1051.37,2617.41c14.32-.05,26.7,6.22,37.13,18.8,13.05,15.73,25.77,31.67,38.16,47.82,20.26,26.34,41.42,47.59,75.53,51.46,20.56,2.42,41.39,1.33,61.59-3.21.72-.17,1.44.28,1.61,1,.09.39,0,.8-.24,1.12-51,66.77-128.17,106.87-213.22,107.1s-162.37-39.48-213.78-106c-.45-.59-.34-1.43.25-1.88.32-.24.73-.33,1.12-.24,20.22,4.43,41.04,5.4,61.58,2.87,34.12-4,55.18-25.4,75.3-51.83,12.35-16.21,24.99-32.21,37.93-48,10.37-12.62,22.71-18.95,37-19h.04Z"/>
@@ -1432,17 +985,428 @@
           <path d="M3913.66,2418.14c0,1.84,3.18,2.51,4.54,1,45.93-50.14,109.17-71.99,189.7-65.56,12,1,21.1,8.49,21.1,17.53v59.92c0,1.11-.28,2.21-.82,3.19-6.09,11.08-15.55,16.65-28.37,16.71-74.84.48-130.32,8.16-166.51,60.26-10.73,15.42-15.95,42.98-15.64,82.68.54,70.58.54,123.7,0,159.37-.27,16.78-13.76,25.34-40.47,25.68-36.28.48-60.47-.06-72.39-1.63-11.64-1.56-17.64-7.27-18-17.25-1-28.2-1.58-149.87-1.73-365,0-10.66.73-18.48,2.09-23.3,2.18-7.88,11.37-13.59,22.19-13.79,6.73-.14,30.34-.32,70.84-.54,20.67-.14,31.58,6.79,32.74,20.79.64,8.62.91,21.94.73,39.94h0Z"/>
         </g>
       </svg>
-      <p>Improve Quality. Capture Revenue. Control Spend.</p>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#why-anchor">Why Anchor</a></li>
+      <li><a href="#human-problem">The Problem</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Request a Pilot</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <span class="eyebrow fade-up">Medicare Advantage · D-SNP · MMAI</span>
+        <h1 class="fade-up delay-1">Governance infrastructure for <em>dual-eligible</em> benefit execution</h1>
+        <p class="hero-sub fade-up delay-2">Anchor sequences non-medical benefits across funding sources, tracks delivery, and attributes spend to outcomes — so your care management teams can focus on members, not coordination.</p>
+        <div class="btn-group fade-up delay-3">
+          <a href="#contact" class="btn-primary">Request a Pilot</a>
+          <a href="#how-it-works" class="btn-ghost">See how it works</a>
+        </div>
+      </div>
+      <div class="fade-up delay-4">
+        <div class="hero-diagram">
+          <p class="diagram-label">Benefit orchestration layer</p>
+          <div class="funding-flow">
+            <div class="flow-row">
+              <div class="flow-source">
+                <div class="flow-source-label">Medicaid LTSS</div>
+                <div class="flow-source-sub">Primary funding</div>
+              </div>
+              <div class="flow-source">
+                <div class="flow-source-label">SSBCI / ILOS</div>
+                <div class="flow-source-sub">Supplemental</div>
+              </div>
+              <div class="flow-source">
+                <div class="flow-source-label">MA Supplemental</div>
+                <div class="flow-source-sub">Flex benefit</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
+              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
+              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">sequenced by</div>
+              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
+            </div>
+            <div class="anchor-node">
+              <div class="anchor-node-label">Anchor Governance Layer</div>
+              <div class="anchor-node-sub">Eligibility · Sequencing · Delivery tracking · Attribution</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:0 4px;">
+              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
+              <div style="font-size:11px;color:var(--text-muted);font-weight:500;">delivered to</div>
+              <div style="flex:1;height:1px;background:var(--border-strong);"></div>
+            </div>
+            <div class="flow-outputs">
+              <div class="flow-output">
+                <div class="flow-output-label">Member</div>
+              </div>
+              <div class="flow-output">
+                <div class="flow-output-label">Care Manager</div>
+              </div>
+              <div class="flow-output">
+                <div class="flow-output-label">Plan CFO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-bar-inner">
+    <div class="stat-item">
+      <div class="stat-number">12.5M</div>
+      <div class="stat-desc">dual-eligible beneficiaries in the U.S., each navigating multiple funding streams</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">$40B+</div>
+      <div class="stat-desc">Medicaid LTSS spend annually — largely untracked at the benefit execution layer</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">Zero</div>
+      <div class="stat-desc">purpose-built governance tools exist for cross-payer benefit sequencing in D-SNP</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The platform</span>
+      <h2>How Anchor works</h2>
+      <p class="section-intro">Three coordinated layers that turn fragmented benefit entitlements into governed, measurable care delivery.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Govern eligibility</h3>
+        <p>Anchor ingests member enrollment data — 834 EDI, PBP benefit files, Medicaid eligibility — and determines entitlements across all funding sources in real time, including ILOS cap enforcement at $2,500/quarter.</p>
+        <span class="step-tag">Upstream of care management</span>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Sequence & authorize</h3>
+        <p>Our rules engine sequences benefit utilization across Medicaid LTSS, SSBCI, and MA supplemental — ensuring the right funding source is applied first, compliantly, every time a benefit is triggered.</p>
+        <span class="step-tag">Cross-payer coordination</span>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Track & attribute</h3>
+        <p>Every benefit delivery event is logged, time-stamped, and tied to the member record — confirming delivery, not just authorization, and linking non-medical spend to ER avoidance and readmission outcomes.</p>
+        <span class="step-tag">Actuarial attribution</span>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h3>Report & compound</h3>
+        <p>CMS-ready HCBS audit documentation is generated automatically. The execution dataset — payer-of-first-resort outcomes, denial triggers, cap utilization, time-to-activation — compounds with every plan and market added.</p>
+        <span class="step-tag">Compliance + data asset</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ANCHOR -->
+<section id="why-anchor">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-left">
+        <span class="eyebrow">Differentiation</span>
+        <h2>Built for what health plans can't build themselves</h2>
+        <p>Benefit navigation tools — FindHelp, Unite Us — surface community resources. They're excellent at the pre-decision layer. Anchor is what happens next: authorized sequencing, governed delivery, and attributed outcomes across payers.</p>
+        <p>This isn't a care management feature. It's the infrastructure layer below care management — the same reason banks didn't build Stripe.</p>
+      </div>
+      <div class="why-right">
+        <ul class="differentiator-list">
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 8h12M8 2v12" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Cross-payer benefit sequencing</h4>
+              <p>Medicaid LTSS first, then SSBCI, then ILOS — governed by rules your compliance team owns, not a vendor's black box.</p>
+            </div>
+          </li>
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="12" height="12" rx="2" stroke="#F5F2ED" stroke-width="1.4"/>
+                <path d="M5 8l2 2 4-4" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Delivery tracking at the event level</h4>
+              <p>Not just authorization — confirmation. Every benefit interaction is logged, time-stamped, and tied to the member record.</p>
+            </div>
+          </li>
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="5" stroke="#F5F2ED" stroke-width="1.4"/>
+                <path d="M8 5v3l2 1" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Actuarial attribution to outcomes</h4>
+              <p>Connect non-medical spend to ER avoidance, readmission reduction, and Stars quality metrics — the data CFOs and medical directors need.</p>
+            </div>
+          </li>
+          <li class="diff-item">
+            <div class="diff-icon">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4h10M3 8h10M3 12h6" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="diff-content">
+              <h4>Care manager multiplier — not replacement</h4>
+              <p>Anchor surfaces the right benefit, at the right time, with the right authorization. Your care managers make the calls; we remove the coordination burden.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HUMAN PROBLEM: DOROTHY -->
+<section id="human-problem">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The human problem</span>
+      <h2>What happens when Dorothy comes home from the hospital</h2>
+      <p class="section-intro">Dorothy, 74. CHF + diabetes. Dual-eligible. Just discharged. Lives alone. Her plan authorized grab bars, meals, transportation, and companion visits. Medicaid covers a personal care attendant. She has an ILOS cap of $2,500/quarter.</p>
+    </div>
+    <div class="dorothy-intro">
+      <div class="dorothy-avatar">D</div>
+      <div class="dorothy-intro-text">
+        <strong>The situation:</strong> Three separate funding sources. Four authorized benefits. One care manager juggling 150 members. No single system that knows what's been delivered, what's been paid, or whether the ILOS cap is about to cut off grab bar funding.
+      </div>
+    </div>
+    <div class="persona-grid">
+      <!-- Dorothy -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="#4A5F75" stroke-width="1.3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Dorothy</div>
+            <div class="persona-role">The Member</div>
+          </div>
+        </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p>Grab bars aren't installed for 3 weeks. <strong>Meals don't arrive — overlapping authorizations aren't resolved.</strong> She misses dialysis. She falls on day 9. Readmitted.</p>
+          <div class="scenario-outcome bad">Cost to plan: $14,000.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>Discharge triggers benefit sequencing. Grab bars installed by day 4. Meals sequenced — Medicaid weekdays, SSBCI weekends. Transportation pre-authorized.</p>
+          <div class="scenario-outcome good">Dorothy stays home.</div>
+        </div>
+      </div>
+      <!-- Maria -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 8c0-2.2 1.8-4 4-4" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/><path d="M8 4c2.2 0 4 1.8 4 4v1a2 2 0 01-2 2H6a2 2 0 01-2-2V8" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/><path d="M8 14v-3" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Maria</div>
+            <div class="persona-role">The Caregiver</div>
+          </div>
+        </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p><strong>Calling 4 vendors, member services, and the Medicaid case manager — no visibility into what's been delivered.</strong> Doesn't know the ILOS cap is about to cut off grab bar funding.</p>
+          <div class="scenario-outcome bad">No one knows what's been done.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>The system confirms delivery and flags gaps. The care manager has a single view. Maria calls her mom instead of calling vendors.</p>
+          <div class="scenario-outcome good">One call instead of four.</div>
+        </div>
+      </div>
+      <!-- Lisa -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="2" width="10" height="12" rx="2" stroke="#4A5F75" stroke-width="1.3"/><path d="M6 6h4M6 9h2" stroke="#4A5F75" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="persona-name">Lisa</div>
+            <div class="persona-role">The Care Manager · 150 members</div>
+          </div>
+        </div>
+        <div class="persona-scenario" style="border-bottom:1px solid var(--border);">
+          <div class="scenario-label bad"><div class="dot-bad"></div> Without Anchor</div>
+          <p>Toggling between 4 systems and a spreadsheet. 45 minutes per member per month. <strong>Can't attribute $2,500 ILOS spend to outcomes. Manual HCBS documentation.</strong></p>
+          <div class="scenario-outcome bad">45 minutes per member.</div>
+        </div>
+        <div class="persona-scenario">
+          <div class="scenario-label good"><div class="dot-good"></div> With Anchor</div>
+          <p>Full execution status in existing workflow. Sequencing automated, delivery confirmed, documentation generated, ILOS cap enforced.</p>
+          <div class="scenario-outcome good">5 minutes instead of 45.</div>
+        </div>
+      </div>
+    </div>
+    <div class="dorothy-closing">
+      "Dorothy is one of 12.8 million dual-eligible Americans. Anchor governs the execution that keeps Dorothy healthy."
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="eyebrow">About Anchor</span>
+        <h2>Built by people who've been inside the problem</h2>
+        <p>Anchor (operating as Woveyn, Inc.) was founded to address a gap that becomes obvious only once you've watched care managers navigate it in real time: the upstream governance layer for non-medical benefit execution simply doesn't exist.</p>
+        <blockquote class="about-pull">"We're not building a feature. We're building the infrastructure that makes every other dual-eligible tool more effective."</blockquote>
+        <p>Our team brings direct experience scaling health tech ventures — including scaling a digital health company from launch to $25M ARR in 36 months — combined with deep domain expertise in D-SNP benefit design, Medicaid LTSS policy, and payer operations.</p>
+        <p>We work closely with a clinical and payer advisory network that includes experienced D-SNP plan operators, HCBS policy specialists, and MA actuaries — ensuring that what we build is grounded in how plans actually run, not how we imagine they do.</p>
+      </div>
+      <div class="about-right">
+        <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 2rem;">
+          <p style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.5rem;">Our expertise spans</p>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--border);">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px;"></div>
+              <div>
+                <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:2px;">D-SNP & Dual-Eligible Policy</div>
+                <div style="font-size:13px;color:var(--text-secondary);font-weight:300;">FIDE, MMAI, D-SNP benefit design, CMS compliance requirements, HCBS audit standards</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--border);">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px;"></div>
+              <div>
+                <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:2px;">Health Plan Operations</div>
+                <div style="font-size:13px;color:var(--text-secondary);font-weight:300;">Care management workflows, benefit authorization systems, Medicaid LTSS coordination, vendor management</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--border);">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px;"></div>
+              <div>
+                <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:2px;">Health Tech Venture Building</div>
+                <div style="font-size:13px;color:var(--text-secondary);font-weight:300;">Scaling from zero to market — product, payer sales, regulatory, and clinical integration</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px;"></div>
+              <div>
+                <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:2px;">Data Infrastructure & AI</div>
+                <div style="font-size:13px;color:var(--text-secondary);font-weight:300;">834 EDI, PBP benefit files, claims data, rules-based decisioning, execution dataset architecture</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <span class="eyebrow">Get in touch</span>
+        <h2 style="color: var(--cream);">Join the pilot cohort</h2>
+        <p>Anchor is in active pilot conversations with Medicare Advantage plans in California and Illinois. If your plan serves a dual-eligible population and you're ready to get governance infrastructure right before 2026 reporting requirements land — we'd like to talk.</p>
+        <div class="contact-detail">
+          <div class="contact-line">anchorcare.ai</div>
+          <div class="contact-line"><a href="/cdn-cgi/l/email-protection#046c6168686b44656a676c6b76676576612a656d"><span class="__cf_email__" data-cfemail="167e737a7a79567778757e79647577647338777f">[email&#160;protected]</span></a></div>
+          <div class="contact-line" style="margin-top:0.5rem;font-size:13px;">Woveyn, Inc. · Tempe, AZ</div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First name</label>
+              <input type="text" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label>Last name</label>
+              <input type="text" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Health plan / organization</label>
+            <input type="text" placeholder="Molina Healthcare" required />
+          </div>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" placeholder="VP Care Management" />
+          </div>
+          <div class="form-group">
+            <label>Work email</label>
+            <input type="email" placeholder="jane@plan.com" required />
+          </div>
+          <div class="form-group">
+            <label>I'm interested in</label>
+            <select>
+              <option value="" disabled selected>Select one</option>
+              <option>Pilot partnership</option>
+              <option>Product demo</option>
+              <option>Investor inquiry</option>
+              <option>Partnership / integration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Anything you'd like us to know</label>
+            <textarea placeholder="D-SNP membership size, states, current challenges..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submit-btn">Send request</button>
+          <div id="form-success" style="display:none;font-size:14px;color:rgba(245,242,237,0.65);margin-top:0.5rem;">Thanks — we'll be in touch within one business day.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <svg height="24" viewBox="650 2030 3640 890" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+        <g fill="rgba(245,242,237,0.7)">
+          <path d="M1051.51,2158.47c28.69,0,55.74,13,75,33,7.16,7.4,15.97,21.14,26.44,41.23,26.67,51.17,69.07,133.82,102.57,194.93,22.34,40.76,38.38,70.23,48.11,88.4,12,22.33,18.55,37.97,19.65,46.93,4.52,35.43-12.67,69.5-49.1,78-35.76,8.39-58.38-13.66-79.3-39.39-16.82-20.63-36.19-43.63-58.1-69-25.49-29.49-47-53.9-85-53.85s-59.46,24.45-84.91,54c-21.86,25.44-41.19,48.48-58,69.12-20.88,25.77-43.45,47.87-79.26,39.53-36.42-8.43-53.67-42.5-49.24-77.93,1.13-8.96,7.67-24.63,19.6-47,9.75-18.2,25.76-47.68,48.03-88.44,33.41-61.21,75.68-143.9,102.25-195.12,10.42-20.12,19.2-33.88,26.34-41.28,19.27-20.07,46.27-33.12,75-33.12h-.08Z"/>
+          <path d="M844.71,2651.65c-5.72-.01-11.43-.68-17-2-38.13-8.83-61.06-44.72-55.74-87.27,1.28-10.15,8-26.48,20.54-49.93,10.06-18.86,26.2-48.64,48-88.5,26.59-48.72,58.57-110.63,84.27-160.37,6.48-12.53,12.51-24.21,17.9-34.6,10.85-21,19.93-35.12,27.76-43.25,21.79-22.7,51.35-35.73,81.07-35.73h.17c29.71,0,59.21,13,81,35.59,7.77,8,16.88,22.16,27.84,43.19,5.53,10.59,11.72,22.54,18.37,35.36,25.67,49.47,57.61,111,84.13,159.41,21.91,40,38.1,69.75,48.14,88.47,12.58,23.48,19.32,39.79,20.59,49.88,5.43,42.5-17.43,78.44-55.59,87.37-5.58,1.34-11.31,2.03-17.05,2.06-31.69,0-53-22.51-70.78-44.36-16.47-20.2-36-43.36-57.94-68.84-24.58-28.44-44-50.91-78.46-50.91h-.1c-34.51,0-53.91,22.52-78.48,51-21.7,25.27-41.15,48.46-57.8,68.94-17.77,21.91-39.08,44.49-70.84,44.49Z"/>
+          <path d="M1051.37,2617.41c14.32-.05,26.7,6.22,37.13,18.8,13.05,15.73,25.77,31.67,38.16,47.82,20.26,26.34,41.42,47.59,75.53,51.46,20.56,2.42,41.39,1.33,61.59-3.21.72-.17,1.44.28,1.61,1,.09.39,0,.8-.24,1.12-51,66.77-128.17,106.87-213.22,107.1s-162.37-39.48-213.78-106c-.45-.59-.34-1.43.25-1.88.32-.24.73-.33,1.12-.24,20.22,4.43,41.04,5.4,61.58,2.87,34.12-4,55.18-25.4,75.3-51.83,12.35-16.21,24.99-32.21,37.93-48,10.37-12.62,22.71-18.95,37-19h.04Z"/>
+          <path d="M1051.34,2850c-86.09,0-166.21-39.82-219.91-109.32-3.32-4.3-2.52-10.48,1.78-13.8,2.33-1.8,5.35-2.46,8.22-1.8,19.26,4.2,39.09,5.12,58.66,2.72,29.84-3.55,48.73-21.2,69.54-48.54,12.72-16.7,25.54-32.93,38.12-48.26,12-14.61,26.65-22,43.58-22.09h.19c16.8,0,31.44,7.35,43.5,21.86,13.23,15.95,26.14,32.13,38.38,48.09,20.95,27.24,39.93,44.8,69.74,48.18,19.62,2.3,39.48,1.27,58.75-3.05,5.29-1.24,10.58,2.05,11.82,7.34.68,2.9,0,5.94-1.82,8.29-53.46,69.91-133.61,110.14-219.9,110.38h-.65Z"/>
+          <path d="M1796.34,2729.42c-34.24,41.92-80.93,61.37-140.08,58.36-74.39-3.88-128.67-54.76-126.16-129,2.45-72.89,58.36-110.93,124.46-121.4,40.08-6.31,183.36-17.59,131.66-91.23-1.24-1.75-2.78-3.27-4.55-4.49-7.21-4.95-19-8.08-35.33-9.51-30.44-2.65-80.64-.54-97.35,30.44-2.38,4.41-5.71,10.46-9.85,18.07-2.64,4.86-7.72,7.88-13.25,7.88h-64.54c-.69,0-1.37-.13-2-.41-7.81-3.33-11.34-10-10.53-20.17,4.15-51.5,45.86-92.26,93.82-105.92,43.66-12.44,89.46-15.47,134.38-8.89,49.18,7,88.65,34.1,108.76,80.43,7.27,16.67,10.6,49.59,10,98.78-.34,28.53-.05,103.15.88,223.84.07,10-4.62,17.06-14.2,21.06-1.4.6-2.89.94-4.41,1-33.16,1.9-65.22,8.9-76.57-20.72-3.87-10.05,1.63-20.92-.74-27.44-.47-1.33-1.93-2.04-3.26-1.57-.46.16-.86.44-1.16.82M1792.92,2575.07c-33.08,14.2-63.58,20-108.69,29.48-13,2.72-37.57,12.71-44,20.65-30.84,38.39-6.31,77.93,38.11,81.12,60.19,4.35,117.8-32.13,118.89-94.29.34-16.78.61-27.92.82-33.43.07-2.04-1.52-3.76-3.56-3.83-.55-.02-1.1.08-1.61.3h.04Z"/>
+          <path d="M2061.81,2414.88c.66-.48,7.41-7.2,20.31-20.31,60.86-61.69,181.56-61.42,239.78,4.89,24.79,28.19,37.52,64.64,38.2,109.37,1.1,68.67,1.2,143.42.3,224.26-.3,23.91,3.37,44.22-26.33,45-28.08.75-47.44.75-57.92,0-17-1.22-23.1-9.51-23-26,.37-109.04.17-183.95-.59-224.73-.36-19-5.94-37-16.86-54.08-21.12-33.35-74.72-39.74-111.9-24.18-41.94,17.53-62.62,57.34-62.11,98.64,1.1,81.86,1.35,149.27.74,202.24-.22,19-8.21,29.56-30,29.35-32.19-.2-48.84-.34-50-.27-20.17,1-26.62-12.77-26.62-30.23.37-134.99.18-258.63-.59-370.93-.07-12.84,10.27-20.24,24.42-20.72,29.63-.88,50.74-.54,63.43,1.16,3.28.36,6.13,2.42,7.48,5.43,5.64,12.84,7.47,28.87,5.5,48.1-.3,2.92,3.3,4.76,5.79,3h-.03Z"/>
+          <path d="M2806.67,2628.54c3.87,8.09,4.14,17.44.75,25.74-33.09,83.5-92.38,128.17-177.86,134-155,10.6-253.19-127.45-220.11-274.18,25.28-112,123.1-177.72,237.3-162.1,85.46,11.62,139.33,59.24,161.62,142.87.63,2.24.66,4.61.07,6.86-2.25,8.83-8,13.59-17.26,14.34s-28.67,1-58.08.95c-6.79-.1-13.51-1.41-19.84-3.88-2.07-.8-3.78-2.32-4.82-4.28-14.68-27.65-24.73-50.74-56.8-61.07-58.63-19-115,7-135.46,66.1-14.74,42.53-13.16,83.27,4.75,122.22,17,37,52,62.63,91.38,62.16,48-.55,82.27-26.23,100.61-67.94,1.43-3.28,4.46-5.6,8-6.11,26.28-3.87,52.97-4.01,79.28-.41,2.83.37,5.26,2.17,6.45,4.76l.02-.03Z"/>
+          <path d="M2956.15,2429c0,1.17,1.88,1.69,2.75.78,47.05-48.67,109.52-67.69,187.43-57.07,96.78,13.15,131.19,87.13,130.25,160.13-.08,7.39.39,77.5,1.41,210.33.2,7.13-.27,14.27-1.41,21.31-1.65,8.75-10.76,15.16-21.45,15.29-28.67.32-48.59.45-59.78.39-21.29-.2-31.89-8.75-31.81-25.78.62-101.51.51-170.51-.32-207-.49-16.9-4.36-33.53-11.39-48.91-18-40.36-73.45-49.17-118.23-36.34-49.41,14.06-74.08,55.51-75.65,98-2.12,59.53-2.25,125.36-.39,197.5.39,17.17-13.82,21.89-33.54,21.77-36.3-.2-56.97-.59-62-1.17-21.45-2.53-19.09-16.2-19.17-32.45-.87-194.2-.87-360.25,0-498.14.08-19.1,12.88-23.12,33.62-22.67,3.22.07,22.39.07,57.5.13,1.93,0,3.85.34,5.66,1,10.45,3.83,15.71,11.41,15.63,22.68-.31,78.05-.02,138.12.87,180.2l.02.02Z"/>
+          <path d="M3533.44,2349.59c283.15,20.93,249.59,460.4-32.54,439.54s-250.61-460.46,32.54-439.54M3519.77,2440c-63.1-1.32-115.48,55.34-116.95,126.52s48.48,130,111.55,131.3,115.47-55.34,116.94-126.52-48.48-130-111.54-131.3Z"/>
+          <path d="M3913.66,2418.14c0,1.84,3.18,2.51,4.54,1,45.93-50.14,109.17-71.99,189.7-65.56,12,1,21.1,8.49,21.1,17.53v59.92c0,1.11-.28,2.21-.82,3.19-6.09,11.08-15.55,16.65-28.37,16.71-74.84.48-130.32,8.16-166.51,60.26-10.73,15.42-15.95,42.98-15.64,82.68.54,70.58.54,123.7,0,159.37-.27,16.78-13.76,25.34-40.47,25.68-36.28.48-60.47-.06-72.39-1.63-11.64-1.56-17.64-7.27-18-17.25-1-28.2-1.58-149.87-1.73-365,0-10.66.73-18.48,2.09-23.3,2.18-7.88,11.37-13.59,22.19-13.79,6.73-.14,30.34-.32,70.84-.54,20.67-.14,31.58,6.79,32.74,20.79.64,8.62.91,21.94.73,39.94h0Z"/>
+        </g>
+      </svg>
+      <p>Governance infrastructure for Medicare Advantage and Medicaid health plans serving dual-eligible populations.</p>
     </div>
 
     <!-- Platform -->
     <div>
       <div class="footer-col-title">Platform</div>
       <ul class="footer-col-links">
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="why-anchor.html">Why Anchor</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Request a Pilot</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#why-anchor">Why Anchor</a></li>
+        <li><a href="#human-problem">The Problem</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
     </div>
 
@@ -1452,7 +1416,7 @@
       <ul class="footer-col-links">
         <li><a href="#" onclick="openPolicy('privacy'); return false;">Privacy Policy</a></li>
         <li><a href="#" onclick="openPolicy('trust'); return false;">Trust Center</a></li>
-        <li><a href="contact.html">Request a Pilot</a></li>
+        <li><a href="#contact">Request a Pilot</a></li>
         <li><a href="#" onclick="openContactModal(); return false;">Contact Us</a></li>
       </ul>
     </div>
@@ -1462,15 +1426,15 @@
       <div class="footer-col-title">Contact</div>
       <div class="footer-contact-detail">
         <div class="footer-contact-line">5227 N 7th Street<br>Phoenix, AZ 85014</div>
-        
-        <div class="footer-contact-line" style="margin-top:0.25rem;font-size:12px;">Anchor Care, Inc.</div>
+        <div class="footer-contact-line"><a href="mailto:info@anchorcare.ai">info@anchorcare.ai</a></div>
+        <div class="footer-contact-line" style="margin-top:0.25rem;font-size:12px;">Woveyn, Inc.</div>
       </div>
     </div>
   </div>
 
   <div class="footer-bar">
     <div class="footer-bar-inner">
-      <div class="footer-copy">Â© 2026 Anchor Care, Inc. All rights reserved.</div>
+      <div class="footer-copy">© 2026 Woveyn, Inc. All rights reserved.</div>
       <ul class="footer-legal-links">
         <li><a href="#" onclick="openPolicy('privacy'); return false;">Privacy Policy</a></li>
         <li><a href="#" onclick="openPolicy('trust'); return false;">Trust Center</a></li>
@@ -1483,153 +1447,155 @@
 <!-- CONTACT MODAL -->
 <div class="modal-overlay" id="contact-modal" onclick="closeIfOverlay(event)">
   <div class="modal">
-    <button class="modal-close" onclick="closeContactModal()">Ã</button>
+    <button class="modal-close" onclick="closeContactModal()">×</button>
     <div id="modal-form-wrap">
       <h3>Get in touch</h3>
-      <p class="modal-sub">Have questions? Our team would love to hear from you.</p>
-      <form class="contact-form" onsubmit="submitContactForm(event)">
-        <div class="form-row">
+      <p class="modal-sub">Reach us at <a href="mailto:info@anchorcare.ai" style="color:var(--teal);">info@anchorcare.ai</a> or complete the form below and we'll respond within one business day.</p>
+      <form class="modal-form" onsubmit="handleModalSubmit(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
           <div class="form-group">
-            <label>First Name</label>
-            <input type="text" name="firstName" required placeholder="John" />
+            <label>First name</label>
+            <input type="text" placeholder="Jane" required />
           </div>
           <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" name="lastName" required placeholder="Doe" />
+            <label>Last name</label>
+            <input type="text" placeholder="Smith" required />
           </div>
+        </div>
+        <div class="form-group">
+          <label>Organization</label>
+          <input type="text" placeholder="Health plan or company" />
         </div>
         <div class="form-group">
           <label>Email</label>
-          <input type="email" name="email" required placeholder="you@company.com" />
-        </div>
-        <div class="form-group">
-          <label>Company</label>
-          <input type="text" name="company" required placeholder="Your Organization" />
+          <input type="email" placeholder="jane@plan.com" required />
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea name="message" placeholder="Tell us what you're interested in..."></textarea>
+          <textarea placeholder="How can we help?"></textarea>
         </div>
         <div class="modal-btn-row">
           <button type="button" class="modal-cancel" onclick="closeContactModal()">Cancel</button>
-          <button type="submit" class="modal-submit">Send</button>
+          <button type="submit" class="modal-submit" id="modal-submit-btn">Send message</button>
         </div>
       </form>
     </div>
-    <div id="modal-success-wrap" class="modal-success">
+    <div class="modal-success" id="modal-success">
       <div class="modal-success-icon">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="23" stroke="#2D7D6F" stroke-width="2"/>
-          <path d="M20 24L22 26L28 20" stroke="#2D7D6F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#2D7D6F" opacity="0.15"/><path d="M6 11l3.5 3.5L16 8" stroke="#2D7D6F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <h3>Message sent!</h3>
-      <p>Thanks for reaching out. We'll be in touch within 24 hours.</p>
+      <p><strong style="color:var(--navy);font-weight:500;">Message received.</strong><br>We'll be in touch within one business day. You can also reach us directly at info@anchorcare.ai.</p>
     </div>
   </div>
 </div>
 
-<!-- PRIVACY POLICY MODAL -->
-<div class="policy-page" id="privacy-policy">
+<!-- PRIVACY POLICY PAGE -->
+<div class="policy-page" id="privacy-page">
   <div class="policy-inner">
-    <button class="policy-back" onclick="closePolicy()">â Back</button>
+    <button class="policy-back" onclick="closePolicy('privacy')">← Back to anchorcare.ai</button>
+    <span class="eyebrow">Legal</span>
     <h2>Privacy Policy</h2>
-    <div class="policy-date">Last updated: January 2026</div>
-    <h4>Introduction</h4>
-    <p>Anchor Care, Inc. ("Anchor", "we", "us", or "our") operates the Anchor website and platform (collectively, the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service.</p>
-    <h4>Information Collection and Use</h4>
-    <p>We collect information for various purposes to provide and improve our Service, including data you provide to us (such as contact information), data collected automatically (such as usage patterns), and data from third parties (such as analytics providers).</p>
-    <h4>Data Security</h4>
-    <p>The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee its absolute security.</p>
-    <h4>Contact Us</h4>
-    <p>If you have any questions about this Privacy Policy, please contact us through our website.</p>
+    <p class="policy-date">Effective date: January 1, 2026</p>
+    <p>Woveyn, Inc. ("Anchor," "we," "us," or "our") operates anchorcare.ai and related services. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our website or engage with our platform.</p>
+    <h4>Information we collect</h4>
+    <p>We may collect information you provide directly — such as your name, email address, organization, and the content of messages submitted through contact forms. We also collect certain usage data automatically, including IP addresses, browser type, pages visited, and time spent on the site, through standard web analytics tools.</p>
+    <h4>How we use your information</h4>
+    <p>We use the information we collect to respond to inquiries, operate and improve our services, communicate about pilot programs and product updates, and comply with applicable legal obligations. We do not sell your personal information to third parties.</p>
+    <h4>Health information</h4>
+    <p>Our platform is designed for use by health plans and their authorized personnel. To the extent any protected health information (PHI) is processed through our platform, it is handled in accordance with applicable HIPAA requirements and the terms of executed Business Associate Agreements.</p>
+    <h4>Data retention</h4>
+    <p>We retain personal information for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law or contract.</p>
+    <h4>Your rights</h4>
+    <p>Depending on your jurisdiction, you may have rights to access, correct, or request deletion of your personal information. To exercise these rights, contact us at <a href="mailto:info@anchorcare.ai" style="color:var(--teal);">info@anchorcare.ai</a>.</p>
+    <h4>Contact</h4>
+    <p>Woveyn, Inc. · 5227 N 7th Street, Phoenix, AZ 85014 · <a href="mailto:info@anchorcare.ai" style="color:var(--teal);">info@anchorcare.ai</a></p>
   </div>
 </div>
 
-<!-- TRUST CENTER MODAL -->
-<div class="policy-page" id="trust-center">
+<!-- TRUST CENTER PAGE -->
+<div class="policy-page" id="trust-page">
   <div class="policy-inner">
-    <button class="policy-back" onclick="closePolicy()">â Back</button>
+    <button class="policy-back" onclick="closePolicy('trust')">← Back to anchorcare.ai</button>
+    <span class="eyebrow">Trust & Security</span>
     <h2>Trust Center</h2>
-    <div class="policy-date">Last updated: January 2026</div>
-    <h4>Security & Compliance</h4>
-    <p>Anchor is committed to maintaining the highest standards of security and compliance. We implement multiple layers of protection to ensure your data is safe, including encryption, access controls, and regular security audits.</p>
-    <h4>Data Handling</h4>
-    <p>All data is handled in accordance with HIPAA, state and federal privacy laws, and industry best practices. We maintain strict policies around data access, retention, and deletion.</p>
-    <h4>Certifications & Standards</h4>
-    <p>We are committed to achieving SOC 2 Type II compliance and are working toward HiTrust certification to further demonstrate our security posture.</p>
-    <h4>Contact Security Team</h4>
-    <p>For questions about security, compliance, or data handling, please contact our Trust & Security team at security@anchorcare.ai.</p>
+    <p class="policy-date">Last updated: January 2026</p>
+    <p>Anchor is built for health plans operating in a regulated, high-stakes environment. Our security and compliance posture reflects that responsibility.</p>
+    <h4>HIPAA compliance</h4>
+    <p>Anchor operates as a Business Associate under HIPAA when processing protected health information on behalf of covered entities. We execute Business Associate Agreements (BAAs) with all health plan partners prior to any data exchange. Our systems are designed to support the administrative, physical, and technical safeguards required under the HIPAA Security Rule.</p>
+    <h4>Data security</h4>
+    <p>All data transmitted to and from Anchor's systems is encrypted in transit using TLS 1.2 or higher. Data at rest is encrypted using AES-256. Access to production systems is restricted by role-based access controls and multi-factor authentication.</p>
+    <h4>Infrastructure</h4>
+    <p>Anchor's infrastructure is hosted on HIPAA-eligible cloud services. We maintain audit logs of system access and regularly review access permissions. Penetration testing and vulnerability assessments are conducted on a scheduled basis.</p>
+    <h4>Subprocessors</h4>
+    <p>We maintain a list of subprocessors used in the delivery of our services and update it as our vendor relationships change. Health plan partners may request the current subprocessor list by contacting us directly.</p>
+    <h4>Incident response</h4>
+    <p>Anchor maintains a documented incident response plan. In the event of a security incident affecting health plan data, we will notify affected partners in accordance with HIPAA Breach Notification Rule requirements and any applicable contractual obligations.</p>
+    <h4>Contact</h4>
+    <p>For security inquiries or to request a BAA, contact us at <a href="mailto:info@anchorcare.ai" style="color:var(--teal);">info@anchorcare.ai</a> · Woveyn, Inc. · 5227 N 7th Street, Phoenix, AZ 85014</p>
   </div>
 </div>
 
 <script>
-  // Mobile menu toggle
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
+  // Main contact form
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }, 800);
   }
 
-  // Modal functions
+  // Contact modal
   function openContactModal() {
     document.getElementById('contact-modal').classList.add('open');
-    document.querySelector('.hamburger').classList.remove('active');
-    document.querySelector('.nav-links').classList.remove('active');
+    document.body.style.overflow = 'hidden';
   }
-
   function closeContactModal() {
     document.getElementById('contact-modal').classList.remove('open');
+    document.body.style.overflow = '';
   }
-
-  function closeIfOverlay(event) {
-    if (event.target.id === 'contact-modal') {
-      closeContactModal();
-    }
+  function closeIfOverlay(e) {
+    if (e.target === document.getElementById('contact-modal')) closeContactModal();
   }
-
-  function submitContactForm(event) {
-    event.preventDefault();
-    const formWrap = document.getElementById('modal-form-wrap');
-    const successWrap = document.getElementById('modal-success-wrap');
-    formWrap.style.display = 'none';
-    successWrap.style.display = 'block';
+  function handleModalSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('modal-submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
     setTimeout(() => {
-      closeContactModal();
-      formWrap.style.display = 'block';
-      successWrap.style.display = 'none';
-    }, 2000);
+      document.getElementById('modal-form-wrap').style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+    }, 800);
   }
 
-  // Policy functions
-  function openPolicy(policyType) {
-    let policyId = policyType === 'privacy' ? 'privacy-policy' : 'trust-center';
-    document.getElementById(policyId).classList.add('open');
+  // Policy pages
+  function openPolicy(which) {
+    document.getElementById(which + '-page').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    window.scrollTo(0, 0);
+  }
+  function closePolicy(which) {
+    document.getElementById(which + '-page').classList.remove('open');
+    document.body.style.overflow = '';
   }
 
-  function closePolicy() {
-    document.getElementById('privacy-policy').classList.remove('open');
-    document.getElementById('trust-center').classList.remove('open');
-  }
-
-  // Close policies when clicking outside
-  document.querySelectorAll('.policy-page').forEach(policy => {
-    policy.addEventListener('click', (e) => {
-      if (e.target === policy) {
-        closePolicy();
+  // Scroll-triggered fade-in for sections below hero
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
       }
     });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.step-card, .diff-item, .team-member').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
   });
 </script>
-
-</body>
-</html>
