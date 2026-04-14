@@ -247,36 +247,102 @@
     }
 
     .step-details {
-      background: white;
+      background: linear-gradient(180deg, var(--cream) 0%, #fbf9f5 100%);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
+      border-radius: 18px;
+      padding: 3rem 2.5rem 2.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .step-details::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 100%);
+    }
+    .step-details-header {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+    .step-details-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--teal);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
     }
     .step-details h3 {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       color: var(--navy);
-      margin-bottom: 1.5rem;
-      grid-column: 1 / -1;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    @media (max-width: 900px) {
+      .details-grid { grid-template-columns: 1fr; }
+      .step-details { padding: 2.25rem 1.5rem; }
     }
     .detail-box {
+      background: #fff;
+      border: 1px solid rgba(27,42,61,0.06);
+      border-radius: 14px;
+      padding: 1.75rem 1.75rem 1.85rem;
+      box-shadow: 0 1px 2px rgba(27,42,61,0.03), 0 6px 18px rgba(27,42,61,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.85rem;
+    }
+    .detail-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(27,42,61,0.05), 0 14px 32px rgba(27,42,61,0.07);
+      border-color: rgba(58,158,142,0.28);
+    }
+    .detail-box-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--teal-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .detail-box-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--teal);
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
     .detail-box h4 {
-      font-size: 15px;
-      font-weight: 500;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
       color: var(--navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin: 0;
     }
     .detail-box p {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-secondary);
       font-weight: 300;
-      line-height: 1.6;
+      line-height: 1.65;
+      margin: 0;
     }
 
     /* STAT BAR */
@@ -751,26 +817,42 @@
     </div>
 
     <div class="step-details">
-      <h3>Deeper dive: The governance engine</h3>
-
-      <div class="detail-box">
-        <h4>Deterministic execution workflow</h4>
-        <p>Benefits don't get sent to a vendor queue. Anchor runs a deterministic workflow: eligibility check, sequencing, cap enforcement, delivery confirmation, and outcome attribution. Every step is logged and auditable.</p>
+      <div class="step-details-header">
+        <span class="step-details-eyebrow">Deeper Dive</span>
+        <h3>The Governance Engine</h3>
       </div>
+      <div class="details-grid">
+        <div class="detail-box">
+          <div class="detail-box-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 6h8M4 12h12M4 18h6"/><circle cx="17" cy="6" r="2"/><circle cx="20" cy="12" r="2"/><circle cx="14" cy="18" r="2"/></svg>
+          </div>
+          <h4>Deterministic execution workflow</h4>
+          <p>Benefits don't get sent to a vendor queue. Anchor runs a deterministic workflow: eligibility check, sequencing, cap enforcement, delivery confirmation, and outcome attribution. Every step is logged and auditable.</p>
+        </div>
 
-      <div class="detail-box">
-        <h4>Rule enforcement you own</h4>
-        <p>Your compliance team writes the rules. Plan supplemental and SSBCI are applied first. ILOS fills gaps under Medicaid managed care. Medicaid LTSS is reserved as the payer of last resort, with caps enforced at the point of orchestration. No vendor black box. You own the logic.</p>
-      </div>
+        <div class="detail-box">
+          <div class="detail-box-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8.3-8 9-4.8-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h4>Rule enforcement you own</h4>
+          <p>Your compliance team writes the rules. Plan supplemental and SSBCI are applied first. ILOS fills gaps under Medicaid managed care. Medicaid LTSS is reserved as the payer of last resort, with caps enforced at the point of orchestration. No vendor black box. You own the logic.</p>
+        </div>
 
-      <div class="detail-box">
-        <h4>Per-benefit substantiation profiles</h4>
-        <p>A $25 flex-card purchase and a $3,200 ILOS tenancy support do not share the same evidence standard. Anchor codifies the substantiation profile for each benefit class, so every execution event is captured in a form the plan can defend to CMS, NCQA, and state Medicaid auditors.</p>
-      </div>
+        <div class="detail-box">
+          <div class="detail-box-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+          </div>
+          <h4>Per-benefit substantiation profiles</h4>
+          <p>A $25 flex-card purchase and a $3,200 ILOS tenancy support do not share the same evidence standard. Anchor codifies the substantiation profile for each benefit class, so every execution event is captured in a form the plan can defend to CMS, NCQA, and state Medicaid auditors.</p>
+        </div>
 
-      <div class="detail-box">
-        <h4>Audit-ready evidence as it happens</h4>
-        <p>HCBS audit prep is automated. Documentation flows from delivery events, not spreadsheets or post-hoc reconciliation. Each event carries source, timestamp, actor, and corroboration. A case file, not a confidence score.</p>
+        <div class="detail-box">
+          <div class="detail-box-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h4>Audit-ready evidence as it happens</h4>
+          <p>HCBS audit prep is automated. Documentation flows from delivery events, not spreadsheets or post-hoc reconciliation. Each event carries source, timestamp, actor, and corroboration. A case file, not a confidence score.</p>
+        </div>
       </div>
     </div>
   </div>
