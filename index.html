@@ -137,9 +137,9 @@
     }
     h1 {
       font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.4rem, 4vw, 3.2rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+      font-size: clamp(2.5rem, 4.4vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
       color: var(--navy);
       margin-bottom: 1.5rem;
     }
@@ -180,16 +180,24 @@
       display: inline-block;
       background: var(--navy);
       color: var(--cream);
-      padding: 13px 28px;
-      border-radius: 6px;
+      padding: 14px 30px;
+      border-radius: 8px;
       font-size: 15px;
       font-weight: 500;
       text-decoration: none;
-      transition: background 0.2s;
+      box-shadow: 0 1px 2px rgba(27,42,61,0.08), 0 4px 12px rgba(27,42,61,0.08);
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .btn-primary:hover { background: var(--navy-mid); }
-    .btn-teal { background: var(--teal); color: white; }
-    .btn-teal:hover { background: var(--teal-light); }
+    .btn-primary:hover {
+      background: var(--navy-mid);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(27,42,61,0.10), 0 8px 20px rgba(27,42,61,0.14);
+    }
+    .btn-teal { background: var(--teal); color: white; box-shadow: 0 1px 2px rgba(45,125,111,0.20), 0 4px 12px rgba(45,125,111,0.16); }
+    .btn-teal:hover {
+      background: var(--teal-light);
+      box-shadow: 0 2px 4px rgba(45,125,111,0.22), 0 8px 20px rgba(45,125,111,0.22);
+    }
     .btn-ghost {
       display: inline-block;
       color: var(--teal);
@@ -206,9 +214,10 @@
     .hero-diagram {
       background: var(--cream);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
+      border-radius: 14px;
+      padding: 1.75rem;
       position: relative;
+      box-shadow: 0 1px 2px rgba(27,42,61,0.04), 0 12px 32px rgba(27,42,61,0.08);
     }
     .diagram-label {
       font-size: 11px;
@@ -1011,12 +1020,18 @@
     }
     .solution-card {
       background: white;
-      border-radius: 12px;
-      padding: 2rem;
+      border-radius: 14px;
+      padding: 2.25rem 2rem;
       border-top: 4px solid var(--navy);
+      box-shadow: 0 1px 2px rgba(27,42,61,0.04), 0 8px 24px rgba(27,42,61,0.06);
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .solution-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 2px 4px rgba(27,42,61,0.05), 0 16px 40px rgba(27,42,61,0.10);
     }
     .solution-card.teal-accent { border-top-color: var(--teal); }
     .solution-card.navy-accent { border-top-color: var(--navy); }
@@ -1024,9 +1039,10 @@
     .solution-card.amber-accent { border-top-color: var(--amber); }
     .solution-card h3 {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--navy);
       font-weight: 400;
+      letter-spacing: -0.01em;
       margin-bottom: 0.5rem;
     }
     .solution-card p {
@@ -1114,14 +1130,20 @@
       display: inline-block;
       background: var(--teal);
       color: white;
-      padding: 13px 32px;
-      border-radius: 6px;
+      padding: 15px 34px;
+      border-radius: 8px;
       font-size: 15px;
       font-weight: 500;
+      letter-spacing: 0.01em;
       text-decoration: none;
-      transition: background 0.2s;
+      box-shadow: 0 4px 14px rgba(58,158,142,0.35);
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .final-cta-btn:hover { background: var(--teal-light); }
+    .final-cta-btn:hover {
+      background: var(--teal-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(58,158,142,0.45);
+    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -1386,18 +1408,20 @@
     /* POSITIONING */
     #positioning { background: white; }
     .positioning-box {
-      background: var(--cream);
+      background: linear-gradient(to right, rgba(232,243,241,0.55), rgba(245,242,237,0.6));
       border-left: 3px solid var(--teal);
-      padding: 1.5rem 2rem;
-      border-radius: 0 8px 8px 0;
-      margin-top: 1.5rem;
+      padding: 1.75rem 2.25rem;
+      border-radius: 0 10px 10px 0;
+      margin-top: 2rem;
+      box-shadow: 0 1px 2px rgba(27,42,61,0.03);
     }
     .positioning-box p {
-      font-size: 16px;
-      color: var(--text-secondary);
+      font-size: 16.5px;
+      color: var(--text-primary);
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 1.75;
     }
+    .positioning-box strong { color: var(--navy); font-weight: 500; }
   </style>
 </head>
 <body>
@@ -1434,7 +1458,7 @@
       <div class="hero-left">
         <span class="eyebrow">Payer Infrastructure for Dual-Eligible Populations</span>
         <h1>The System of Record for Non-Medical Benefit <em>Execution</em></h1>
-        <p class="hero-sub">Anchor is the evidence layer that plan operations depend on &mdash; sequencing, ledger, and reporting for every non-medical benefit dollar. Not a decision of record. The record of what happened.</p>
+        <p class="hero-sub">Anchor is the evidence layer that plan operations depend on: sequencing, ledger, and reporting for every non-medical benefit dollar. Not a decision of record. The record of what happened.</p>
         <p class="hero-support">Sequence benefits to the right funding source. Log every execution event in a real-time ledger. Produce audit-ready evidence tied to STAR, CAHPS, and retention outcomes.</p>
         <p class="hero-audience">Built for Medicare Advantage plans serving dual-eligible members</p>
         <div class="btn-group">
@@ -1493,7 +1517,7 @@
       <h2>No Plan Has This Today</h2>
       <p class="section-intro">There is no system that governs how non-medical benefits are executed across Medicare and Medicaid.</p>
     </div>
-    <p style="font-size:16px;color:var(--text-secondary);font-weight:300;line-height:1.7;max-width:700px;margin-bottom:1rem;">Plans design benefits. Vendors deliver services. But no system manages what happens in between&mdash;or how those decisions perform.</p>
+    <p style="font-size:16px;color:var(--text-secondary);font-weight:300;line-height:1.7;max-width:700px;margin-bottom:1rem;">Plans design benefits. Vendors deliver services. But no system manages what happens in between, or how those decisions perform.</p>
     <ul class="category-bullets">
       <li>No system of record for benefit execution</li>
       <li>No way to evaluate benefit performance across populations</li>
@@ -1629,7 +1653,7 @@
     <div class="section-header">
       <span class="eyebrow">The Compounding Advantage</span>
       <h2>Every Execution Makes the Next One Smarter</h2>
-      <p class="section-intro">Anchor's moat is a library of validated substantiation profiles &mdash; one per plan, per state, per benefit class. The profile is the exact record a CMS or NCQA auditor accepts as evidence for how that benefit was executed and substantiated.</p>
+      <p class="section-intro">Anchor's moat is a library of validated substantiation profiles: one per plan, per state, per benefit class. The profile is the exact record a CMS or NCQA auditor accepts as evidence for how that benefit was executed and substantiated.</p>
     </div>
     <div class="solution-grid">
       <div class="solution-card teal-accent">
@@ -1638,7 +1662,7 @@
       </div>
       <div class="solution-card navy-accent">
         <h3>Data Network Effects</h3>
-        <p>Every plan, state, and benefit class we onboard strengthens the library. Sequencing logic, cap rules, vendor signals, and evidence standards compound &mdash; no single plan sees enough variation to build this alone.</p>
+        <p>Every plan, state, and benefit class we onboard strengthens the library. Sequencing logic, cap rules, vendor signals, and evidence standards compound. No single plan sees enough variation to build this alone.</p>
       </div>
       <div class="solution-card coral-accent">
         <h3>Auditability as a Feature</h3>
@@ -1646,19 +1670,22 @@
       </div>
       <div class="solution-card amber-accent">
         <h3>Cross-Plan Benchmarks</h3>
-        <p>Time-to-delivery, gap rates, vendor performance, and sequencing outcomes &mdash; benchmarked across the network. Plans use the data to improve bids, renegotiate vendors, and defend execution to CMS.</p>
+        <p>Time-to-delivery, gap rates, vendor performance, and sequencing outcomes, all benchmarked across the network. Plans use the data to improve bids, renegotiate vendors, and defend execution to CMS.</p>
       </div>
     </div>
   </div>
 </section>
 <style>
-  .category-contrast { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem; }
+  .category-contrast { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2.5rem; }
   @media (max-width:720px){ .category-contrast { grid-template-columns:1fr; } }
-  .contrast-col { background:#fff; border-radius:10px; padding:1.75rem 1.75rem 1.5rem; border:1px solid rgba(27,42,61,0.08); }
-  .contrast-label { font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--navy); margin-bottom:0.75rem; }
+  .contrast-col { background:#fff; border-radius:14px; padding:2rem 1.75rem 1.75rem; border:1px solid rgba(27,42,61,0.08); box-shadow: 0 1px 2px rgba(27,42,61,0.03), 0 6px 18px rgba(27,42,61,0.05); }
+  .contrast-col:first-child { border-top: 3px solid var(--teal); }
+  .contrast-col:last-child { border-top: 3px solid var(--coral); }
+  .contrast-label { font-family:'DM Serif Display',serif; font-size:1.15rem; color:var(--navy); margin-bottom:1rem; letter-spacing:-0.01em; }
   .contrast-list { list-style:none; padding:0; margin:0; }
-  .contrast-list li { font-size:15px; color:var(--text-secondary); line-height:1.6; padding:0.4rem 0 0.4rem 1.25rem; position:relative; font-weight:300; }
-  .contrast-list li::before { content:""; position:absolute; left:0; top:0.95rem; width:6px; height:6px; border-radius:50%; background:var(--teal); }
+  .contrast-list li { font-size:15px; color:var(--text-secondary); line-height:1.6; padding:0.5rem 0 0.5rem 1.4rem; position:relative; font-weight:300; }
+  .contrast-col:first-child .contrast-list li::before { content:""; position:absolute; left:0; top:1.05rem; width:7px; height:7px; border-radius:50%; background:var(--teal); }
+  .contrast-col:last-child .contrast-list li::before { content:""; position:absolute; left:0; top:1rem; width:10px; height:2px; background:var(--coral); }
 </style>
 
 <!-- FINAL CTA SECTION -->
