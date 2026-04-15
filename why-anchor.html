@@ -176,31 +176,40 @@
       background: white;
       padding: 48px 2rem;
     }
-    #opening .opening-card {
+    .thesis-card {
       max-width: 800px;
       background: var(--teal-pale);
       border-left: 4px solid var(--teal);
       border-radius: 0 12px 12px 0;
       padding: 2.5rem 3rem;
     }
-    #opening .opening-lead {
+    .thesis-card-lead {
       font-family: 'DM Serif Display', serif;
       font-size: 1.35rem;
       color: var(--navy);
       line-height: 1.45;
       margin-bottom: 1.25rem;
+      text-wrap: balance;
     }
-    #opening .opening-body p {
+    .thesis-card-body p {
       font-size: 16px;
       color: var(--text-secondary);
       font-weight: 300;
       line-height: 1.75;
       margin-bottom: 0.75rem;
+      text-wrap: pretty;
     }
-    #opening .opening-body p:last-child {
-      margin-bottom: 0;
-      font-weight: 400;
+    .thesis-card-resolution {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
       color: var(--navy);
+      line-height: 1.5;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+      text-wrap: pretty;
+    }
+    @media (max-width: 640px) {
+      .thesis-card { padding: 2rem 1.75rem; }
     }
 
     /* THE GAP */
@@ -980,13 +989,13 @@
     <div class="section-header" style="margin-bottom: 1.5rem;">
       <h2>A Core Cost and Quality Driver Without Infrastructure</h2>
     </div>
-    <div class="opening-card">
-      <div class="opening-lead">Non-medical benefits are now a core cost and quality driver, but they are not managed like one.</div>
-      <div class="opening-body">
+    <div class="thesis-card">
+      <div class="thesis-card-lead">Non-medical benefits are now a core cost and quality driver, but they are not managed like one.</div>
+      <div class="thesis-card-body">
         <p>Across Medicare and Medicaid, benefit dollars are fragmented across systems, vendors, and workflows, with limited visibility into what is delivered, what works, or how it impacts CAHPS, Star Ratings, and member experience.</p>
         <p>There is no system of record for how this spend is executed or what outcomes it drives.</p>
-        <p style="font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--navy); margin-top: 0.5rem;">Anchor is the evidence layer for non-medical benefit execution: the sequencing, ledger, and reporting that turns benefit spend into measurable performance.</p>
       </div>
+      <p class="thesis-card-resolution">Anchor is the evidence layer for non-medical benefit execution: the sequencing, ledger, and reporting that turns benefit spend into measurable performance.</p>
     </div>
   </div>
 </section>
