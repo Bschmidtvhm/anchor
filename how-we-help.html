@@ -337,6 +337,44 @@
       .persona-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
 
+    /* THESIS CARD */
+    .thesis-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--teal-pale);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      padding: 2.5rem 3rem;
+    }
+    .thesis-card-lead {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.35rem;
+      color: var(--navy);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+      text-wrap: balance;
+    }
+    .thesis-card-body p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+      text-wrap: pretty;
+    }
+    .thesis-card-resolution {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      line-height: 1.5;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+      text-wrap: pretty;
+    }
+    @media (max-width: 640px) {
+      .thesis-card { padding: 2rem 1.75rem; }
+    }
+
     </style>
 </head>
 <body>
@@ -455,6 +493,20 @@
     </div>
   </div>
 </section>
+
+<!-- THESIS -->
+<section style="background: var(--cream); padding: 48px 2rem 56px;">
+  <div class="container">
+    <div class="thesis-card">
+      <div class="thesis-card-lead">Dorothy is one member. The record she just generated is the unit of infrastructure every D-SNP plan needs.</div>
+      <div class="thesis-card-body">
+        <p>Every authorization, delivery event, funding source, and outcome tied to one member record. Multiply that across a plan's full dual-eligible population and you have the system of record for non-medical benefit execution across Medicare, Medicaid, and community services.</p>
+      </div>
+      <p class="thesis-card-resolution">That record does not exist today. Anchor builds it as execution happens.</p>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT THIS MEANS FOR THE PLAN -->
 <section id="plan-impact" style="background: var(--cream); padding: 80px 2rem;">
   <div class="container">
@@ -477,7 +529,6 @@
       </div>
       <p style="font-family: 'DM Serif Display', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); line-height: 1.5; margin-top: 2rem;">This is not an edge case. It is systemic.</p>
       <p style="font-size: 15px; color: var(--text-muted); margin-top: 1rem; font-weight: 300;">Execution gaps show up directly in cost, quality, and revenue.</p>
-      <p style="font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--navy); line-height: 1.5; margin-top: 2rem; border-left: 3px solid var(--teal); padding-left: 1.25rem;">Anchor is the system of record for non-medical benefit execution across Medicare, Medicaid, and community services. The record of Dorothy's benefit path is the unit of infrastructure every D-SNP plan needs.</p>
     </div>
   </div>
 </section>
