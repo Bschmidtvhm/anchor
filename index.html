@@ -1472,7 +1472,7 @@
         <span class="eyebrow">Payer Infrastructure for Dual-Eligible Populations</span>
         <h1>The System of Record for Non-Medical Benefit <em>Execution</em></h1>
         <p class="hero-sub">Anchor is the evidence layer for non-medical benefit execution, orchestrating how benefit dollars flow across Medicare, Medicaid, and community services. A complete, auditable record tied to quality, compliance, and financial performance.</p>
-        <p class="hero-support">Sequence benefits to the right funding source. Capture execution events in a continuously updated ledger. Produce audit-ready evidence tied to STAR, CAHPS, and retention outcomes.</p>
+        <p class="hero-support">Reconcile every authorization to its delivery event, funding source, and claim. Sequence benefits to the correct payer of first resort. Produce audit-ready evidence tied to STAR, CAHPS, and retention outcomes.</p>
         <p class="hero-audience">Built for Medicare Advantage plans serving dual-eligible members</p>
         <div class="btn-group">
           <a href="contact.html" class="btn-primary btn-teal">Request a Demo</a>
@@ -1486,11 +1486,11 @@
             <!-- Left: Triggers & Inputs -->
             <div class="sor-col">
               <div class="sor-col-label">Triggers &amp; Inputs</div>
-              <div class="sor-item">EHR systems</div>
-              <div class="sor-item">Care management</div>
-              <div class="sor-item">AWV / HRA data</div>
-              <div class="sor-item">Discharge planning</div>
-              <div class="sor-item">Claims history</div>
+              <div class="sor-item">Care management platforms</div>
+              <div class="sor-item">UM / authorization systems</div>
+              <div class="sor-item">HRA data</div>
+              <div class="sor-item">Discharge planning events</div>
+              <div class="sor-item">Claims and encounter history</div>
             </div>
             <!-- Arrow -->
             <div class="sor-arrow">&rarr;</div>
@@ -1498,16 +1498,16 @@
             <div class="sor-center">
               <div class="sor-center-title">Anchor</div>
               <div class="sor-pillar">
-                <div class="sor-pillar-name">Sequencing Engine</div>
-                <div class="sor-pillar-desc">SSBCI &rarr; ILOS &rarr; Medicaid LTSS</div>
+                <div class="sor-pillar-name">Execution Ledger</div>
+                <div class="sor-pillar-desc">Reconciled record of authorization, delivery, and attribution</div>
               </div>
               <div class="sor-pillar">
-                <div class="sor-pillar-name">Execution Ledger</div>
-                <div class="sor-pillar-desc">Continuously updated event log</div>
+                <div class="sor-pillar-name">Sequencing Engine</div>
+                <div class="sor-pillar-desc">Payer-of-first-resort logic across Medicare supplemental, SSBCI, ILOS, and Medicaid LTSS</div>
               </div>
               <div class="sor-pillar">
                 <div class="sor-pillar-name">Cap &amp; Rule Enforcement</div>
-                <div class="sor-pillar-desc">Payer-of-first-resort logic</div>
+                <div class="sor-pillar-desc">Benefit limits and funding hierarchy applied at orchestration</div>
               </div>
               <div class="sor-pillar">
                 <div class="sor-pillar-name">Attribution &amp; Reporting</div>
@@ -1526,9 +1526,10 @@
 <section style="background: var(--cream); padding: 48px 2rem 56px;">
   <div class="container">
     <div class="thesis-card">
-      <div class="thesis-card-lead">Non-medical benefits are now a core cost and quality driver. The execution infrastructure is missing.</div>
+      <div class="thesis-card-lead">Non-medical benefits now drive over $10B in Medicare Advantage supplemental spend and a growing share of STAR performance. Yet plans cannot reliably answer what was delivered, what it cost, or which funding source paid.</div>
       <div class="thesis-card-body">
-        <p>Plans invest in benefit design, but execution breaks between authorization and delivery. Benefits are routed through fragmented vendors, disconnected workflows, and separate programs with no shared record of what was delivered, what it cost, or whether it worked.</p>
+        <p>Plans invest in benefit design, but execution breaks between authorization and delivery. Benefits flow through vendors like NationsBenefits, Papa, Mom's Meals, and dozens of local CBOs, each with their own portal, data format, and reporting cadence. No shared record of what was delivered, what it cost, or whether it worked.</p>
+        <p>With CMS HCBS quality reporting requirements beginning for MFP grantee states in September 2026, the execution gap is now a compliance gap.</p>
       </div>
       <p class="thesis-card-resolution">Anchor is the system of record for non-medical benefit execution across Medicare, Medicaid, and community services. One layer that governs spend, captures evidence, and connects execution to quality and financial performance.</p>
     </div>
@@ -1545,12 +1546,12 @@
     </div>
     <div class="solution-grid">
       <div class="solution-card teal-accent">
-        <h3>Sequencing Engine</h3>
-        <p>Routes benefits to the correct program and funding source based on eligibility, timing, and payer-of-first-resort rules. Plan supplemental, SSBCI, ILOS, and Medicaid LTSS, sequenced in real time so Medicaid pays last.</p>
+        <h3>Execution Ledger</h3>
+        <p>A member-level reconciled record of how benefit dollars are actually used. Every authorization is matched to its delivery event, funding source, and claim, with the evidence trail a CMS auditor or state Medicaid agency requires.</p>
       </div>
       <div class="solution-card navy-accent">
-        <h3>Execution Ledger</h3>
-        <p>A continuously updated record of how benefit dollars are actually used. Execution is tracked where data is available, including what was authorized, delivered, delayed or failed, which funding source paid, and how much cap remains.</p>
+        <h3>Sequencing Engine</h3>
+        <p>Routes benefits to the correct program and funding source based on eligibility, timing, and payer-of-first-resort rules. Plan supplemental, SSBCI, ILOS, and Medicaid LTSS, each sequenced to the correct payer of first resort based on benefit type, member eligibility, and state-specific rules. Medicaid remains last-payer where federal rules require it, and primary where LTSS obligations dictate.</p>
       </div>
       <div class="solution-card coral-accent">
         <h3>Cap &amp; Rule Enforcement</h3>
@@ -1562,6 +1563,7 @@
       </div>
     </div>
     <p style="font-size:14px;font-style:italic;color:var(--text-muted);text-align:center;margin-top:2rem;">Anchor is the evidence layer. The plan remains the decision-maker of record; care management retains human-in-the-loop approval.</p>
+    <p style="font-size:15px;color:var(--text-secondary);text-align:center;margin-top:1.5rem;max-width:780px;margin-left:auto;margin-right:auto;line-height:1.6;">Anchor is not a CBO network, a care management platform, an SDOH referral system, or a benefit administration vendor. It is the evidence layer that sits beneath them, the reconciled record of what was authorized, delivered, attributed, and substantiated.</p>
   </div>
 </section>
 
@@ -1575,18 +1577,22 @@
     </div>
     <div class="solution-grid">
       <div class="solution-card teal-accent">
+        <h3>Financial Defensibility</h3>
+        <p>Benefit spend becomes measurable, attributable, and defensible. Anchor quantifies leakage, surfaces clawback exposure from misattributed supplemental spend, and produces the audit-ready documentation STAR measure appeals and state LTSS audits require. The finance and compliance functions gain a system of record for benefit dollars that currently live in reconciliation spreadsheets.</p>
+      </div>
+      <div class="solution-card navy-accent">
         <h3>Consistent Member Experience</h3>
         <p>When benefits arrive as promised, members engage more, stay longer, and recommend the plan. Anchor keeps execution consistent so every member feels the plan working for them, strengthening satisfaction, loyalty, and CAHPS performance.</p>
       </div>
-      <div class="solution-card navy-accent">
+      <div class="solution-card coral-accent">
         <h3>Care Management Efficiency</h3>
         <p>Care managers stop chasing vendors, hunting for delivery confirmation, and reconciling spreadsheets. Anchor gives the team a single view of what was authorized, delivered, delayed, or failed.</p>
       </div>
-      <div class="solution-card coral-accent">
+      <div class="solution-card amber-accent">
         <h3>Quality Performance</h3>
         <p>Verified delivery and documentation of non-medical benefits strengthens the quality measures tied to Star Ratings, CAHPS, and HOS, with an evidence trail that holds up to NCQA and CMS review.</p>
       </div>
-      <div class="solution-card amber-accent">
+      <div class="solution-card teal-accent">
         <h3>Evidence for Benefit Design</h3>
         <p>Time-to-delivery, gap rates, and vendor performance measured across populations. Plans refine bids and benefit design with real execution data instead of assumptions.</p>
       </div>
@@ -1608,7 +1614,7 @@
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">The Compounding Advantage</span>
-      <h2>Every Execution Makes the Next One Smarter</h2>
+      <h2>Every Execution Strengthens the Evidence Library</h2>
       <p class="section-intro">Anchor's moat is a library of validated substantiation profiles: one per plan, per state, per county, per benefit class. The profile is the exact record a CMS or NCQA auditor accepts as evidence for how that benefit was executed and substantiated.</p>
     </div>
     <div class="solution-grid">
@@ -1820,7 +1826,7 @@
     <h4>Data Handling</h4>
     <p>All data is handled in accordance with HIPAA, state and federal privacy laws, and industry best practices. We maintain strict policies around data access, retention, and deletion.</p>
     <h4>Certifications & Standards</h4>
-    <p>We are committed to achieving SOC 2 Type II compliance and are working toward HiTrust certification to further demonstrate our security posture.</p>
+    <p>SOC 2 Type II certification is in progress, with target completion in Q3 2026. HITRUST r2 certification is on our 2027 roadmap. In the interim, Anchor operates under HIPAA-compliant data handling practices with encryption in transit and at rest, role-based access controls, and annual third-party security review.</p>
     <h4>Contact Security Team</h4>
     <p>For questions about security, compliance, or data handling, please contact our Trust & Security team at security@anchorcare.ai.</p>
   </div>
