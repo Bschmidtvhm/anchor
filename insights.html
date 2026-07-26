@@ -213,10 +213,6 @@
     .post-card h3 a:hover { color: var(--teal); }
     .post-card .dek { font-size: 14.5px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; flex: 1; }
 
-    /* Draft gate: remove class="insights-draft" from <body> to publish the articles. */
-    .insights-draft .post-link { pointer-events: none; cursor: default; }
-    .draft-flag { display: none; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); border: 1px solid rgba(192,139,58,0.35); background: rgba(192,139,58,0.08); padding: 4px 10px; border-radius: 4px; }
-    .insights-draft .draft-flag { display: inline-block; }
 
     .subscribe-band { background: var(--navy); border-radius: 12px; padding: 3rem; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; margin-top: 4rem; }
     .subscribe-band h3 { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--cream); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
@@ -257,19 +253,7 @@
 
   </style>
 </head>
-<!--
-  ============================================================================
-  INSIGHTS &mdash; DRAFT GATE
-  The four article pages are written but NOT published. They are:
-    1. blocked from clicking here, via class="insights-draft" on <body> below
-    2. marked <meta name="robots" content="noindex, nofollow"> on each article page
-  TO PUBLISH, once compliance has cleared the CMS / CAHPS claims:
-    a. delete  class="insights-draft"  from the <body> tag below
-    b. delete the robots noindex meta tag from each insights-*.html article page
-    c. replace [Author name] / [Publish date] and delete the .review-note block
-  ============================================================================
--->
-<body class="insights-draft">
+<body>
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
@@ -317,7 +301,7 @@
         <span class="post-tag">Policy &amp; CMS</span>
         <h2><a class="post-link" href="insights-auditable-spend.html">What &ldquo;auditable&rdquo; actually means for supplemental benefit spend</a></h2>
         <p class="dek">CMS increasingly expects plans to show not just that a benefit was offered, but that it was delivered, to whom, and paid for correctly. Here&rsquo;s what that standard looks like in practice &mdash; and where spreadsheets quietly fall short.</p>
-        <div class="post-meta"><span>8 min read</span><span class="dot">&middot;</span><span>Compliance</span><span class="draft-flag">Draft</span></div>
+        <div class="post-meta"><span>8 min read</span><span class="dot">&middot;</span><span>Compliance</span></div>
       </div>
       <div class="featured-post-art"></div>
     </article>
@@ -329,7 +313,7 @@
             <span class="post-tag">Perspective</span>
             <h3><a class="post-link" href="insights-system-of-record.html">The case for a system of record</a></h3>
             <p class="dek">Every plan already has a benefits catalog and a claims system. The gap sits in between &mdash; and it&rsquo;s becoming the thing auditors ask about first.</p>
-            <div class="post-meta"><span>6 min read</span><span class="draft-flag">Draft</span></div>
+            <div class="post-meta"><span>6 min read</span></div>
           </div>
         </article>
         <article class="post-card c2">
@@ -338,7 +322,7 @@
             <span class="post-tag">Benefit Operations</span>
             <h3><a class="post-link" href="insights-reconciliation-spreadsheet.html">Retiring the reconciliation spreadsheet</a></h3>
             <p class="dek">Why the month-end scramble to match vendor invoices to delivered benefits is a symptom, not the disease.</p>
-            <div class="post-meta"><span>6 min read</span><span class="draft-flag">Draft</span></div>
+            <div class="post-meta"><span>6 min read</span></div>
           </div>
         </article>
         <article class="post-card c3">
@@ -347,7 +331,7 @@
             <span class="post-tag">Star Ratings &amp; CAHPS</span>
             <h3><a class="post-link" href="insights-verified-delivery-cahps.html">Verified delivery and the CAHPS connection</a></h3>
             <p class="dek">The link between benefits members actually receive and the survey scores that move your rating.</p>
-            <div class="post-meta"><span>7 min read</span><span class="draft-flag">Draft</span></div>
+            <div class="post-meta"><span>7 min read</span></div>
           </div>
         </article>
     </div>
