@@ -256,6 +256,16 @@
     .article-cta .cta-btn:hover { background: var(--navy-mid); }
     @media (max-width: 768px) { .article-hero { padding-top: 120px; } .article-body { padding-bottom: 70px; } }
 
+    .cite { font-size: 0.72em; vertical-align: super; line-height: 0; text-decoration: none; color: var(--teal); font-weight: 500; padding: 0 1px; }
+    .cite:hover { text-decoration: underline; }
+    .editorial-note { border-left: 2px solid var(--border-strong); padding: 0.2rem 0 0.2rem 1.25rem; margin: 2rem 0; font-size: 13.5px; font-weight: 300; color: var(--text-muted); line-height: 1.65; }
+    .article-refs { margin-top: 3.25rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
+    .article-refs h2 { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 1.25rem; }
+    .article-refs ol { margin: 0; padding-left: 1.4rem; }
+    .article-refs li { font-size: 14px; font-weight: 300; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.8rem; padding-left: 0.3rem; position: static; }
+    .article-refs li::before { content: none; }
+    .article-refs a { color: var(--teal); text-decoration: none; }
+    .article-refs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -296,10 +306,11 @@
 <section class="article-body">
   <div class="container">
     <div class="article-wrap">
-      <div class="article-byline"><span>By [Author name]</span><span>&middot;</span><span>[Publish date]</span><span>&middot;</span><span>7 min read</span></div>
-      <div class="review-note"><strong>Before publishing:</strong> Thought-leadership draft. CAHPS and Star Ratings mechanics, weightings, and any specific measure references should be verified against current CMS methodology and cleared by your compliance/quality reviewer before publishing.</div>
+      <div class="article-byline"><span>Anchor Care, Inc.</span><span>&middot;</span><span>Published July 26, 2026</span><span>&middot;</span><span>7 min read</span></div>
+      <div class="editorial-note">Regulatory citations below link to the current text on the <a href="https://www.ecfr.gov/" style="color:var(--teal);text-decoration:none;">electronic Code of Federal Regulations</a> and were verified on July 26, 2026. Federal regulations change; confirm against the current version before relying on any citation. This article is general information about benefit operations, not legal or compliance advice.</div>
       <p>Plans invest enormous energy designing supplemental benefits that will resonate with dual-eligible members &mdash; transportation, food support, in-home help, over-the-counter allowances. The design instinct is right. But the survey a member fills out doesn&rsquo;t ask what was <em>offered</em>. It reflects what they <em>experienced</em>. And experience is a delivery question, not a catalog question.</p>
       <p>That distinction is where a lot of otherwise strong benefit strategies leak value. A generous benefit that arrives late, arrives wrong, or requires three phone calls to access can score worse than a modest one that simply works. The catalog looks great. The experience &mdash; the thing that actually shows up in CAHPS &mdash; tells a different story.</p>
+      <p>It is worth being precise about the size of this lever, because it recently got smaller. Patient experience and complaint measures carried a weight of 4 through the 2025 Star Ratings; starting with the 2026 Star Ratings they carry a weight of 2.<a class="cite" href="#ref1">1</a> That is a real reduction, and any business case built on the old number needs revisiting. It is also still twice the weight of a process measure, against outcome and intermediate outcome measures at 3 and improvement measures at 5.<a class="cite" href="#ref1">1</a> Experience counts for less than it did two years ago, and more than most individual process measures.</p>
 
       <h2>The gap between offered and received</h2>
       <p>For medical services, the gap between authorized and delivered is relatively small and well-instrumented. For non-medical benefits, it&rsquo;s wide and mostly dark. A benefit passes through vendors, community partners, and multiple funding streams before it reaches a member, and each handoff is a chance for it to slip &mdash; delayed, misdirected, or never delivered at all.</p>
@@ -308,7 +319,7 @@
       <blockquote class="article-pull">Members don&rsquo;t rate your benefits catalog. They rate the ride that showed up &mdash; or didn&rsquo;t.</blockquote>
 
       <h2>Why verified delivery is a quality lever</h2>
-      <p>When you can see delivery at the member level in something close to real time, satisfaction stops being a lagging surprise and becomes something you can manage before the survey ever goes out:</p>
+      <p>CMS bases Part C Star Ratings on data that expressly includes beneficiary experiences alongside clinical data and CMS administrative data.<a class="cite" href="#ref2">2</a> When you can see delivery at the member level in something close to real time, satisfaction stops being a lagging surprise and becomes something you can manage before the survey ever goes out:</p>
       <ul>
         <li><strong>Catch failures while they&rsquo;re still fixable.</strong> A benefit that didn&rsquo;t land is a service-recovery opportunity if you know within days &mdash; and a silent detractor if you find out at survey time.</li>
         <li><strong>Find the friction patterns.</strong> If one vendor or one benefit class consistently underdelivers, verified records make that visible instead of leaving it buried in aggregate spend.</li>
@@ -317,10 +328,20 @@
 
       <h2>From reactive to continuous</h2>
       <p>The conventional rhythm is to design benefits, wait for survey results, and then reverse-engineer what went wrong months after the fact. Verified delivery inverts that. Instead of inferring experience from a delayed score, you observe it as it happens and intervene inside the same period. The survey becomes a confirmation of what you already managed, not a postmortem on what you couldn&rsquo;t see.</p>
-      <p>This is also where the compliance and quality stories converge. The same delivery record that makes benefit spend auditable is what tells you whether members are actually being served. One record, two payoffs: defensible spend and a measurable line to member experience.</p>
+      <p>This is also where the compliance and quality stories converge. The same delivery record that makes benefit spend auditable is what tells you whether members are actually being served. One record, two payoffs: defensible spend and a measurable line to member experience. The record that satisfies the 10-year retention and audit-access obligation<a class="cite" href="#ref3">3</a> and the SSBCI eligibility-documentation requirement<a class="cite" href="#ref4">4</a> is the same record that tells you whether the ride actually arrived.</p>
 
       <h2>The takeaway</h2>
-      <p>Improving member experience scores isn&rsquo;t only about offering more or offering better. It&rsquo;s about closing the gap between the benefit on paper and the benefit in a member&rsquo;s hands &mdash; and you can&rsquo;t close a gap you can&rsquo;t see. Plans that treat verified delivery as core infrastructure, rather than a reporting afterthought, give themselves a live, member-level view of the experience their scores are about to reflect. That&rsquo;s the difference between hoping for a good survey and managing toward one.</p>
+      <p>Improving member experience scores isn&rsquo;t only about offering more or offering better. It&rsquo;s about closing the gap between the benefit on paper and the benefit in a member&rsquo;s hands &mdash; and you can&rsquo;t close a gap you can&rsquo;t see. Plans that treat verified delivery as core infrastructure, rather than a reporting afterthought, give themselves a live, member-level view of the experience their scores are about to reflect. That&rsquo;s the difference between hoping for a good survey and managing toward one. And CAHPS is not only a scorecard input: CMS may reduce a contract&rsquo;s measure rating where data are incomplete, inaccurate or biased, including a failure to adhere to HEDIS, HOS, or CAHPS reporting requirements.<a class="cite" href="#ref5">5</a></p>
+      <section class="article-refs">
+        <h2>References</h2>
+        <ol>
+        <li id="ref1"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-D/section-422.166" target="_blank" rel="noopener">42 CFR &sect; 422.166</a> &mdash; Calculation of Star Ratings. Paragraph (e)(1) sets measure weights: improvement measures 5; outcome and intermediate outcome measures 3; patient experience and complaint measures and access measures 4 through the 2025 Star Ratings and 2 starting with the 2026 Star Ratings; process measures 1.</li>
+        <li id="ref2"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-D/section-422.162" target="_blank" rel="noopener">42 CFR &sect; 422.162</a> &mdash; Medicare Advantage Quality Rating System. Paragraph (c)(1) describes the data on which CMS bases Part C Star Ratings, including beneficiary experiences alongside clinical and administrative data.</li>
+        <li id="ref3"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.504" target="_blank" rel="noopener">42 CFR &sect; 422.504</a> &mdash; Contract provisions. Paragraphs (d) and (e) cover the 10-year records obligation and inspection and audit rights.</li>
+        <li id="ref4"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-C/section-422.102" target="_blank" rel="noopener">42 CFR &sect; 422.102</a> &mdash; Supplemental benefits. Paragraph (f)(4) sets the SSBCI eligibility-documentation requirements.</li>
+        <li id="ref5"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-D/section-422.164" target="_blank" rel="noopener">42 CFR &sect; 422.164</a> &mdash; Adding, updating, and removing measures. Paragraph (g)(2) addresses reduction of a measure rating for incomplete, inaccurate or biased data, including a contract&rsquo;s failure to adhere to HEDIS, HOS, or CAHPS reporting requirements.</li>
+        </ol>
+      </section>
       <div class="article-cta">
         <h4>See member experience before the survey does</h4>
         <p>Anchor verifies non-medical benefit delivery at the member level &mdash; the signal behind the score.</p>

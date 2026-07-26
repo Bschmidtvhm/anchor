@@ -256,6 +256,16 @@
     .article-cta .cta-btn:hover { background: var(--navy-mid); }
     @media (max-width: 768px) { .article-hero { padding-top: 120px; } .article-body { padding-bottom: 70px; } }
 
+    .cite { font-size: 0.72em; vertical-align: super; line-height: 0; text-decoration: none; color: var(--teal); font-weight: 500; padding: 0 1px; }
+    .cite:hover { text-decoration: underline; }
+    .editorial-note { border-left: 2px solid var(--border-strong); padding: 0.2rem 0 0.2rem 1.25rem; margin: 2rem 0; font-size: 13.5px; font-weight: 300; color: var(--text-muted); line-height: 1.65; }
+    .article-refs { margin-top: 3.25rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
+    .article-refs h2 { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 1.25rem; }
+    .article-refs ol { margin: 0; padding-left: 1.4rem; }
+    .article-refs li { font-size: 14px; font-weight: 300; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.8rem; padding-left: 0.3rem; position: static; }
+    .article-refs li::before { content: none; }
+    .article-refs a { color: var(--teal); text-decoration: none; }
+    .article-refs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -296,13 +306,13 @@
 <section class="article-body">
   <div class="container">
     <div class="article-wrap">
-      <div class="article-byline"><span>By [Author name]</span><span>&middot;</span><span>[Publish date]</span><span>&middot;</span><span>6 min read</span></div>
-      <div class="review-note"><strong>Before publishing:</strong> Thought-leadership draft. Confirm any regulatory or market claims with your compliance reviewer and replace bracketed placeholders before this goes live.</div>
+      <div class="article-byline"><span>Anchor Care, Inc.</span><span>&middot;</span><span>Published July 26, 2026</span><span>&middot;</span><span>6 min read</span></div>
+      <div class="editorial-note">Regulatory citations below link to the current text on the <a href="https://www.ecfr.gov/" style="color:var(--teal);text-decoration:none;">electronic Code of Federal Regulations</a> and were verified on July 26, 2026. Federal regulations change; confirm against the current version before relying on any citation. This article is general information about benefit operations, not legal or compliance advice.</div>
       <p>Ask a plan leader to map how a non-medical benefit moves and you&rsquo;ll get a confident answer at the two ends. At the front, there&rsquo;s the benefits catalog: what&rsquo;s offered, to which population, under which plan. At the back, there&rsquo;s finance and claims: what got paid, booked, and reported. Both ends are systematized, owned, and audited.</p>
       <p>Now ask what connects them. The answers get vaguer &mdash; a vendor portal here, a care management note there, a shared spreadsheet, an email confirming a delivery. The middle, where the benefit actually reaches a member, is the least instrumented part of the whole chain. And it&rsquo;s the part regulators, auditors, and finance are increasingly asking about first.</p>
 
       <h2>Why the middle got left out</h2>
-      <p>This isn&rsquo;t negligence; it&rsquo;s history. Claims systems were built for medical services that generate claims. Benefit catalogs were built to define and communicate offerings. Neither was designed for a world where a meaningful share of value is a ride, a meal, or an hour of in-home help delivered by a third party and funded from a blend of sources.</p>
+      <p>This isn&rsquo;t negligence; it&rsquo;s history. Claims systems were built for medical services that generate claims. Benefit catalogs were built to define and communicate offerings. Neither was designed for a world where a meaningful share of value is a ride, a meal, or an hour of in-home help delivered by a third party and funded from a blend of sources. The supplemental benefit rules<a class="cite" href="#ref1">1</a> say what a plan may offer. They do not supply the mechanism that proves it arrived.</p>
       <p>So the middle got handled the way new problems always get handled first: manually, with whatever tools were nearby. That worked when non-medical benefits were a rounding error. It works far less well now that they&rsquo;re a competitive and compliance priority.</p>
 
       <blockquote class="article-pull">Categories emerge when a job that used to live in the margins of existing systems becomes too important &mdash; and too scrutinized &mdash; to keep doing by hand.</blockquote>
@@ -312,17 +322,26 @@
       <p>From that single spine, four things stop being projects and start being queries:</p>
       <ul>
         <li><strong>Execution:</strong> a running ledger of what was delivered, not just authorized.</li>
-        <li><strong>Sequencing:</strong> the logic that keeps benefits and funding sources from colliding or duplicating.</li>
+        <li><strong>Sequencing:</strong> the logic that keeps benefits and funding sources from colliding or duplicating &mdash; the operational form of the coordination responsibility and covered-benefit boundaries a D-SNP already has to document in its State Medicaid agency contract.<a class="cite" href="#ref2">2</a></li>
         <li><strong>Visibility:</strong> a live view of benefit spend across vendors and programs.</li>
-        <li><strong>Attribution:</strong> reporting that ties every aggregate number back to the individual events beneath it.</li>
+        <li><strong>Attribution:</strong> reporting that ties every aggregate number back to the individual events beneath it &mdash; records that must survive 10 years and be produceable to HHS or the Comptroller General on request.<a class="cite" href="#ref3">3</a></li>
       </ul>
 
       <h2>Why now</h2>
-      <p>Three forces are converging. Non-medical benefits are growing as a share of what plans offer. Oversight of how those dollars move is tightening. And the manual approach that carried teams this far collapses exactly when volume and scrutiny both rise &mdash; which is now. When a job gets important enough and watched enough at the same time, it stops being a spreadsheet and becomes infrastructure.</p>
+      <p>Three forces are converging. Non-medical benefits are growing as a share of what plans offer. Oversight of how those dollars move is already specific: a plan offering SSBCI must keep written eligibility policies, document every eligibility determination, publish its objective criteria on a public-facing website, and hold those standards unmodified for the full coverage year.<a class="cite" href="#ref4">4</a> And the manual approach that carried teams this far collapses exactly when volume and scrutiny both rise &mdash; which is now. When a job gets important enough and watched enough at the same time, it stops being a spreadsheet and becomes infrastructure.</p>
 
       <h2>The bet</h2>
       <p>The bet behind a system of record is simple: the record of what was delivered is about to be as load-bearing as the record of what was billed. Plans that treat it that way &mdash; capturing the delivery event as first-class data rather than reconstructing it under audit pressure &mdash; will spend less time reconciling, defend their spend more easily, and be able to prove the value they&rsquo;re already creating.</p>
       <p>The catalog says what you promised. The ledger says what you paid. The system of record says what you actually did. For non-medical benefits, that middle statement is quickly becoming the one that matters most.</p>
+      <section class="article-refs">
+        <h2>References</h2>
+        <ol>
+        <li id="ref1"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-C/section-422.102" target="_blank" rel="noopener">42 CFR &sect; 422.102</a> &mdash; Supplemental benefits. Establishes what an MA plan may offer as a supplemental benefit.</li>
+        <li id="ref2"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-C/section-422.107" target="_blank" rel="noopener">42 CFR &sect; 422.107</a> &mdash; Requirements for dual eligible special needs plans. Paragraph (c) sets the minimum terms a D-SNP contract with the State Medicaid agency must document, including coordination responsibility, eligibility categories and covered Medicaid benefits.</li>
+        <li id="ref3"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.504" target="_blank" rel="noopener">42 CFR &sect; 422.504</a> &mdash; Contract provisions. Paragraphs (d) and (e) cover the 10-year records obligation and HHS / Comptroller General access.</li>
+        <li id="ref4"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-C/section-422.102" target="_blank" rel="noopener">42 CFR &sect; 422.102</a> &mdash; Supplemental benefits. Paragraph (f)(4) sets the SSBCI written-policy, documentation, public-disclosure and coverage-year stability requirements.</li>
+        </ol>
+      </section>
       <div class="article-cta">
         <h4>Anchor is the system of record for non-medical benefit execution</h4>
         <p>Execution, sequencing, visibility, and attribution &mdash; in one record.</p>

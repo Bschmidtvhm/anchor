@@ -256,6 +256,16 @@
     .article-cta .cta-btn:hover { background: var(--navy-mid); }
     @media (max-width: 768px) { .article-hero { padding-top: 120px; } .article-body { padding-bottom: 70px; } }
 
+    .cite { font-size: 0.72em; vertical-align: super; line-height: 0; text-decoration: none; color: var(--teal); font-weight: 500; padding: 0 1px; }
+    .cite:hover { text-decoration: underline; }
+    .editorial-note { border-left: 2px solid var(--border-strong); padding: 0.2rem 0 0.2rem 1.25rem; margin: 2rem 0; font-size: 13.5px; font-weight: 300; color: var(--text-muted); line-height: 1.65; }
+    .article-refs { margin-top: 3.25rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
+    .article-refs h2 { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 1.25rem; }
+    .article-refs ol { margin: 0; padding-left: 1.4rem; }
+    .article-refs li { font-size: 14px; font-weight: 300; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.8rem; padding-left: 0.3rem; position: static; }
+    .article-refs li::before { content: none; }
+    .article-refs a { color: var(--teal); text-decoration: none; }
+    .article-refs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -296,11 +306,11 @@
 <section class="article-body">
   <div class="container">
     <div class="article-wrap">
-      <div class="article-byline"><span>By [Author name]</span><span>&middot;</span><span>[Publish date]</span><span>&middot;</span><span>8 min read</span></div>
-      <div class="review-note"><strong>Before publishing:</strong> This is a thought-leadership draft. Any specific CMS rule, regulation citation, deadline, or dollar figure should be confirmed against current guidance and cleared by your compliance/legal reviewer. Bracketed items are placeholders to fill or verify.</div>
+      <div class="article-byline"><span>Anchor Care, Inc.</span><span>&middot;</span><span>Published July 26, 2026</span><span>&middot;</span><span>8 min read</span></div>
+      <div class="editorial-note">Regulatory citations below link to the current text on the <a href="https://www.ecfr.gov/" style="color:var(--teal);text-decoration:none;">electronic Code of Federal Regulations</a> and were verified on July 26, 2026. Federal regulations change; confirm against the current version before relying on any citation. This article is general information about benefit operations, not legal or compliance advice.</div>
       <p>Dual-eligible special needs plans have spent the last several years expanding what they offer beyond the medical benefit &mdash; transportation, food support, in-home services, and the broader set of supplemental and non-medical benefits that make a real difference for chronically ill members. The design conversation is mature. The <em>execution</em> conversation is not.</p>
 
-      <p>Here&rsquo;s the shift worth paying attention to: it is no longer enough to demonstrate that a benefit exists in your catalog and was communicated to members. The expectation is moving toward evidence of the full chain &mdash; that an eligible member received a specific benefit, delivered by a specific party, on a specific date, funded from the correct source, without duplication across Medicare, Medicaid, and community programs.</p>
+      <p>Here&rsquo;s the shift worth paying attention to: it is no longer enough to demonstrate that a benefit exists in your catalog and was communicated to members. The expectation is moving toward evidence of the full chain &mdash; that an eligible member received a specific benefit, delivered by a specific party, on a specific date, funded from the correct source, without duplication across Medicare, Medicaid, and community programs. The contract terms behind that expectation are not new: an MA organization must maintain books, records and documentation for 10 years, and must give HHS and the Comptroller General the right to inspect and audit them.<a class="cite" href="#ref1">1</a></p>
 
       <p>That is a meaningfully higher bar, and it&rsquo;s a bar most operational tooling wasn&rsquo;t built to clear.</p>
 
@@ -313,25 +323,35 @@
       <h2>Four things a defensible record answers</h2>
       <p>When we talk with compliance and operations teams, the records that hold up under scrutiny tend to answer the same four questions cleanly:</p>
       <ul>
-        <li><strong>Who received it?</strong> The specific member, tied to eligibility at the time of delivery &mdash; not a monthly roster that may have shifted.</li>
+        <li><strong>Who received it?</strong> The specific member, tied to eligibility at the time of delivery &mdash; not a monthly roster that may have shifted. Where the benefit is an SSBCI, the plan must have written eligibility policies and must document each eligibility determination, whether the enrollee was found eligible or ineligible, and make that available to CMS on request.<a class="cite" href="#ref2">2</a></li>
         <li><strong>What was delivered, and when?</strong> The actual benefit event, dated, not just the authorization or the offer.</li>
-        <li><strong>Who delivered and who paid?</strong> The vendor or community partner, and the funding source &mdash; with a clear line preventing the same service being billed twice across programs.</li>
+        <li><strong>Who delivered and who paid?</strong> The vendor or community partner, and the funding source &mdash; with a clear line preventing the same service being billed twice across programs. Delegated vendors sit inside the audit perimeter, not outside it: first tier, downstream and related entities carry the same inspection and retention obligations,<a class="cite" href="#ref3">3</a> and Medicaid&rsquo;s third-party liability rules determine which payer is reached first.<a class="cite" href="#ref4">4</a></li>
         <li><strong>How does it roll up?</strong> The ability to attribute spend by benefit class and by plan, so the aggregate you report matches the sum of the individual events beneath it.</li>
       </ul>
       <p>None of these is exotic. The difficulty is that they usually live in different systems, and the work of stitching them together happens after the fact, under time pressure, by hand.</p>
 
       <h2>Where spreadsheets quietly fall short</h2>
       <p>Reconciliation spreadsheets are the unsung workhorse of benefit operations, and they get further than they have any right to. But they carry three structural weaknesses when the standard is auditability:</p>
-      <p><strong>They record state, not events.</strong> A spreadsheet tells you what a cell says today, not what it said last quarter or who changed it. An audit trail is precisely the history a spreadsheet overwrites.</p>
+      <p><strong>They record state, not events.</strong> A spreadsheet tells you what a cell says today, not what it said last quarter or who changed it. An audit trail is precisely the history a spreadsheet overwrites &mdash; and the obligation runs for 10 years from the end of the final contract period or the completion of an audit, whichever is later.<a class="cite" href="#ref1">1</a></p>
       <p><strong>They don&rsquo;t enforce the funding boundary.</strong> Nothing in a spreadsheet stops the same service from being attributed to two sources. The control lives in the analyst&rsquo;s memory, which is not a control.</p>
       <p><strong>They break at reconciliation.</strong> The moment vendor invoices meet delivered-benefit records, discrepancies surface &mdash; and the spreadsheet becomes a manual investigation rather than a system of record.</p>
 
       <h2>What &ldquo;good&rdquo; looks like</h2>
       <p>A plan that&rsquo;s in a strong position doesn&rsquo;t necessarily spend more or offer more. It can simply answer the four questions above on demand, from a single source, with the history intact. Practically, that means the delivery event &mdash; not the offer, and not the invoice &mdash; is captured as the atomic unit, with eligibility, vendor, funding source, and date attached at the moment it happens. Everything else (reporting, attribution, audit response) becomes a query against that record rather than a reconstruction of it.</p>
-      <p>That&rsquo;s the difference between preparing for an audit and being continuously ready for one.</p>
+      <p>That&rsquo;s the difference between preparing for an audit and being continuously ready for one. It also maps onto a compliance-program element CMS already requires: an effective system for routine monitoring and identification of compliance risks, including internal and external audits of both the organization and its first tier entities.<a class="cite" href="#ref5">5</a></p>
 
       <h2>The takeaway</h2>
       <p>Supplemental and non-medical benefits are now a real part of how D-SNPs compete and serve members. The next phase of maturity isn&rsquo;t offering more &mdash; it&rsquo;s being able to <em>prove</em> what you offered, cleanly and quickly. Plans that build that evidence trail into execution, rather than assembling it after the fact, spend less time in reconciliation and walk into audits with a much shorter to-do list.</p>
+      <section class="article-refs">
+        <h2>References</h2>
+        <ol>
+        <li id="ref1"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.504" target="_blank" rel="noopener">42 CFR &sect; 422.504</a> &mdash; Contract provisions. Paragraph (d) requires the MA organization to maintain books, records and documentation for 10 years; paragraph (e) sets out HHS and Comptroller General inspection and audit rights.</li>
+        <li id="ref2"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-C/section-422.102" target="_blank" rel="noopener">42 CFR &sect; 422.102</a> &mdash; Supplemental benefits. Paragraph (f)(4) sets the written-policy and eligibility-documentation requirements for special supplemental benefits for the chronically ill (SSBCI).</li>
+        <li id="ref3"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.504" target="_blank" rel="noopener">42 CFR &sect; 422.504</a> &mdash; Contract provisions. Paragraphs (i)(2) and (i)(4) extend audit, inspection and record-retention obligations to first tier, downstream and related entities, and require written arrangements specifying and monitoring delegated activities.</li>
+        <li id="ref4"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-433/subpart-D/section-433.139" target="_blank" rel="noopener">42 CFR &sect; 433.139</a> &mdash; Payment of claims. Paragraph (b) governs Medicaid handling of claims where third party liability has been established.</li>
+        <li id="ref5"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.503" target="_blank" rel="noopener">42 CFR &sect; 422.503</a> &mdash; General provisions. Paragraph (b)(4)(vi)(F) requires an effective system for routine monitoring and identification of compliance risks, including internal and external audits of the organization and its first tier entities.</li>
+        </ol>
+      </section>
       <div class="article-cta">
         <h4>See what a defensible benefit record looks like</h4>
         <p>Anchor is the system of record for non-medical benefit execution.</p>

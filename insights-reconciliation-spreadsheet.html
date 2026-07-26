@@ -256,6 +256,16 @@
     .article-cta .cta-btn:hover { background: var(--navy-mid); }
     @media (max-width: 768px) { .article-hero { padding-top: 120px; } .article-body { padding-bottom: 70px; } }
 
+    .cite { font-size: 0.72em; vertical-align: super; line-height: 0; text-decoration: none; color: var(--teal); font-weight: 500; padding: 0 1px; }
+    .cite:hover { text-decoration: underline; }
+    .editorial-note { border-left: 2px solid var(--border-strong); padding: 0.2rem 0 0.2rem 1.25rem; margin: 2rem 0; font-size: 13.5px; font-weight: 300; color: var(--text-muted); line-height: 1.65; }
+    .article-refs { margin-top: 3.25rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
+    .article-refs h2 { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 1.25rem; }
+    .article-refs ol { margin: 0; padding-left: 1.4rem; }
+    .article-refs li { font-size: 14px; font-weight: 300; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.8rem; padding-left: 0.3rem; position: static; }
+    .article-refs li::before { content: none; }
+    .article-refs a { color: var(--teal); text-decoration: none; }
+    .article-refs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -296,8 +306,8 @@
 <section class="article-body">
   <div class="container">
     <div class="article-wrap">
-      <div class="article-byline"><span>By [Author name]</span><span>&middot;</span><span>[Publish date]</span><span>&middot;</span><span>6 min read</span></div>
-      <div class="review-note"><strong>Before publishing:</strong> Thought-leadership draft. Confirm any regulatory or market claims with your compliance reviewer and replace bracketed placeholders before this goes live.</div>
+      <div class="article-byline"><span>Anchor Care, Inc.</span><span>&middot;</span><span>Published July 26, 2026</span><span>&middot;</span><span>6 min read</span></div>
+      <div class="editorial-note">Regulatory citations below link to the current text on the <a href="https://www.ecfr.gov/" style="color:var(--teal);text-decoration:none;">electronic Code of Federal Regulations</a> and were verified on July 26, 2026. Federal regulations change; confirm against the current version before relying on any citation. This article is general information about benefit operations, not legal or compliance advice.</div>
       <p>Walk into almost any plan running non-medical benefits at scale and you&rsquo;ll find the same artifact: a spreadsheet, usually owned by one or two people, where the month actually gets closed. Vendor invoices come in. Delivery records come from somewhere else. Eligibility is checked against a roster. And then someone spends days &mdash; often the same days every month &mdash; making the three agree.</p>
       <p>It works. That&rsquo;s the trap. It works well enough that the underlying problem stays invisible, right up until volume grows, an auditor asks a question, or the one person who understands the tabs goes on vacation.</p>
 
@@ -306,8 +316,8 @@
       <ul>
         <li>It&rsquo;s the <strong>de facto system of record</strong> for what was actually delivered, because nothing else captures the delivery event cleanly.</li>
         <li>It&rsquo;s the <strong>matching engine</strong> between what a vendor billed and what a member received.</li>
-        <li>It&rsquo;s the <strong>duplicate check</strong> that keeps the same service from being paid twice across funding sources.</li>
-        <li>It&rsquo;s the <strong>audit file</strong> someone will reach for when a regulator asks what happened to a specific member.</li>
+        <li>It&rsquo;s the <strong>duplicate check</strong> that keeps the same service from being paid twice across funding sources. Medicaid&rsquo;s third-party liability rules make that ordering a legal question rather than a preference.<a class="cite" href="#ref2">2</a></li>
+        <li>It&rsquo;s the <strong>audit file</strong> someone will reach for when a regulator asks what happened to a specific member &mdash; a record the plan is contractually obliged to retain for 10 years and produce for inspection.<a class="cite" href="#ref1">1</a></li>
       </ul>
       <p>That&rsquo;s a lot of load-bearing weight for a tool with no history, no access controls, and no enforcement. The spreadsheet isn&rsquo;t the problem &mdash; it&rsquo;s heroically covering for four systems that were never built.</p>
 
@@ -315,15 +325,25 @@
 
       <h2>Three places it quietly breaks</h2>
       <p><strong>Volume.</strong> Manual reconciliation scales linearly with delivered benefits &mdash; twice the volume, roughly twice the days. The approach that felt manageable at launch becomes the bottleneck exactly when the program succeeds.</p>
-      <p><strong>Timing.</strong> A spreadsheet reflects the roster as of whenever it was last pulled. Eligibility shifts month to month, so a delivery that looked clean can turn out to have been made to a member who had churned &mdash; a discrepancy the spreadsheet has no way to flag on its own.</p>
-      <p><strong>Memory as a control.</strong> The rule that stops double-counting across Medicare, Medicaid, and community funding usually lives in the analyst&rsquo;s head. That&rsquo;s not a control an auditor can inspect, and it&rsquo;s not one that survives turnover.</p>
+      <p><strong>Timing.</strong> A spreadsheet reflects the roster as of whenever it was last pulled. Eligibility shifts month to month, so a delivery that looked clean can turn out to have been made to a member who had churned &mdash; a discrepancy the spreadsheet has no way to flag on its own. Churn is also not always a clean break: where a SNP enrollee no longer meets the eligibility criteria but can reasonably be expected to meet them again within six months, the enrollee is deemed to remain eligible for a period of not less than 30 days and not more than six months<a class="cite" href="#ref3">3</a> &mdash; a state a static roster does not represent.</p>
+      <p><strong>Memory as a control.</strong> The rule that stops double-counting across Medicare, Medicaid, and community funding usually lives in the analyst&rsquo;s head. That&rsquo;s not a control an auditor can inspect, and it&rsquo;s not one that survives turnover. What CMS asks for is an effective system for routine monitoring, backed by internal and external audits<a class="cite" href="#ref4">4</a> &mdash; a description that does not fit a rule held in one person&rsquo;s memory.</p>
 
       <h2>What replaces it</h2>
-      <p>The fix isn&rsquo;t a better spreadsheet &mdash; it&rsquo;s moving the four jobs into a system that does them by construction. Capture the delivery event once, at the moment it happens, with the member, benefit, date, vendor, and funding source attached. Match invoices against those events automatically instead of by eye. Enforce the funding boundary in software so duplication is prevented, not caught. Keep the whole history immutable so the audit file assembles itself.</p>
+      <p>The fix isn&rsquo;t a better spreadsheet &mdash; it&rsquo;s moving the four jobs into a system that does them by construction. Capture the delivery event once, at the moment it happens, with the member, benefit, date, vendor, and funding source attached. Match invoices against those events automatically instead of by eye, remembering that delegated vendor activity has to be specified and monitored under the plan&rsquo;s written arrangements.<a class="cite" href="#ref5">5</a> Enforce the funding boundary in software so duplication is prevented, not caught. Keep the whole history immutable so the audit file assembles itself.</p>
       <p>When that spine exists, month-end stops being a reconstruction and becomes a review. The exceptions surface on their own; the team spends its time resolving the handful that matter instead of rebuilding the other 95% by hand.</p>
 
       <h2>The signal to watch for</h2>
       <p>You don&rsquo;t need a formal assessment to know whether this applies to you. Ask a simple question: if the person who owns the reconciliation spreadsheet were out for two weeks during close, could someone else finish it confidently? If the honest answer is no, the spreadsheet isn&rsquo;t a tool &mdash; it&rsquo;s a single point of failure wearing the costume of one. That&rsquo;s the moment to move the record into a real system.</p>
+      <section class="article-refs">
+        <h2>References</h2>
+        <ol>
+        <li id="ref1"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.504" target="_blank" rel="noopener">42 CFR &sect; 422.504</a> &mdash; Contract provisions. Paragraph (d) requires records to be maintained for 10 years; paragraph (e) sets out inspection and audit rights.</li>
+        <li id="ref2"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-433/subpart-D/section-433.139" target="_blank" rel="noopener">42 CFR &sect; 433.139</a> &mdash; Payment of claims. Paragraph (b) governs Medicaid claim handling where the probable existence of third party liability has been established.</li>
+        <li id="ref3"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-B/section-422.52" target="_blank" rel="noopener">42 CFR &sect; 422.52</a> &mdash; Eligibility to elect an MA plan for special needs individuals. Paragraph (d) sets the deemed continued eligibility period for an enrollee who no longer meets SNP eligibility criteria.</li>
+        <li id="ref4"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.503" target="_blank" rel="noopener">42 CFR &sect; 422.503</a> &mdash; General provisions. Paragraph (b)(4)(vi)(F) requires routine monitoring and internal and external auditing as a compliance-program element.</li>
+        <li id="ref5"><a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-422/subpart-K/section-422.504" target="_blank" rel="noopener">42 CFR &sect; 422.504</a> &mdash; Contract provisions. Paragraph (i)(4) requires written arrangements that specify delegated activities and how the MA organization monitors them.</li>
+        </ol>
+      </section>
       <div class="article-cta">
         <h4>Close the month by reviewing, not rebuilding</h4>
         <p>Anchor captures delivered benefits as a system of record &mdash; so reconciliation becomes an exception review.</p>
