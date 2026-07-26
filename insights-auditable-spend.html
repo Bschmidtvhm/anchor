@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Anchor | Built by People Inside the Problem</title>
-  <meta name="description" content="Anchor was built by people who lived inside the dual-eligible problem. Meet the team behind the governance layer." />
-  <meta property="og:title" content="About Anchor | Built by People Inside the Problem" />
-  <meta property="og:description" content="Anchor was built by people who lived inside the dual-eligible problem. Meet the team behind the governance layer." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://anchorcare.ai/about.html" />
+  <title>What "auditable" actually means for supplemental benefit spend | Anchor Insights</title>
+  <meta name="description" content="CMS increasingly expects plans to prove a benefit was delivered, to whom, and paid for correctly. What that standard looks like in practice for D-SNP supplemental benefits." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="What "auditable" actually means for supplemental benefit spend | Anchor Insights" />
+  <meta property="og:description" content="CMS increasingly expects plans to prove a benefit was delivered, to whom, and paid for correctly. What that standard looks like in practice for D-SNP supplemental benefits." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anchorcare.ai/insights-auditable-spend.html" />
   <meta property="og:image" content="https://anchorcare.ai/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Anchor | Built by People Inside the Problem" />
-  <meta name="twitter:description" content="Anchor was built by people who lived inside the dual-eligible problem. Meet the team behind the governance layer." />
+  <meta name="twitter:title" content="What "auditable" actually means for supplemental benefit spend | Anchor Insights" />
+  <meta name="twitter:description" content="CMS increasingly expects plans to prove a benefit was delivered, to whom, and paid for correctly. What that standard looks like in practice for D-SNP supplemental benefits." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -44,22 +45,6 @@
     .page-hero p { font-size: 18px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; max-width: 600px; }
     .eyebrow { display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.25rem; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.2; letter-spacing: -0.02em; color: var(--navy); margin-bottom: 1rem; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .about-text p { font-size: 16px; color: var(--text-secondary); font-weight: 300; line-height: 1.75; margin-bottom: 1.25rem; }
-    .about-text p:last-child { margin-bottom: 0; }
-    .about-pull { font-family: 'DM Serif Display', serif; font-size: 1.4rem; font-style: italic; color: var(--navy); line-height: 1.4; border-left: 3px solid var(--teal); padding-left: 1.5rem; margin: 2rem 0; }
-    .expertise-box { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
-    .expertise-item { display: flex; gap: 1rem; align-items: flex-start; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
-    .expertise-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .expertise-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; margin-top: 6px; }
-    .expertise-item h4 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 2px; }
-    .expertise-item p { font-size: 13px; color: var(--text-secondary); font-weight: 300; line-height: 1.5; }
-    .stat-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--cream); padding: 2rem; }
-    .stat-bar-inner { max-width: 1140px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .stat-item { padding: 0 2rem; border-right: 1px solid var(--border); }
-    .stat-item:last-child { border-right: none; }
-    .stat-number { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: var(--navy); line-height: 1; margin-bottom: 6px; }
-    .stat-desc { font-size: 14px; color: var(--text-secondary); font-weight: 300; }
     footer { background: #101D2B; }
     .footer-main { max-width: 1140px; margin: 0 auto; padding: 3.5rem 2rem 2.5rem; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 3rem; }
     .footer-brand p { font-size: 13.5px; color: rgba(245,242,237,0.45); font-weight: 300; line-height: 1.65; margin-top: 1.25rem; max-width: 240px; }
@@ -197,7 +182,80 @@
       }
     }
 
-    @media (max-width: 768px) {  .about-grid { grid-template-columns: 1fr; gap: 2rem; } .stat-bar-inner { grid-template-columns: 1fr; gap: 2rem; } .stat-item { padding: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; } .stat-item:last-child { border-bottom: none; }  }
+
+    /* ---------------- INSIGHTS ---------------- */
+    .insights-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .chip { border: 1px solid var(--border); background: white; color: var(--text-secondary); font-family: 'DM Sans', sans-serif; font-size: 13.5px; font-weight: 400; padding: 7px 16px; border-radius: 999px; cursor: pointer; transition: all 0.2s; }
+    .chip:hover { border-color: var(--teal); color: var(--teal); }
+    .chip.active { background: var(--navy); border-color: var(--navy); color: var(--cream); font-weight: 500; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); background: var(--teal-pale); padding: 5px 11px; border-radius: 4px; }
+    .post-meta { font-size: 13px; color: var(--text-muted); font-weight: 300; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .post-meta span.dot { opacity: 0.5; }
+
+    .featured-post { display: grid; grid-template-columns: 1.15fr 1fr; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: white; margin-bottom: 2.5rem; transition: border-color 0.2s; }
+    .featured-post:hover { border-color: var(--border-strong); }
+    .featured-post-body { padding: 3rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-items: flex-start; }
+    .featured-post h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-bottom: 0; }
+    .featured-post h2 a { color: var(--navy); text-decoration: none; }
+    .featured-post h2 a:hover { color: var(--teal); }
+    .featured-post .dek { font-size: 16px; font-weight: 300; color: var(--text-secondary); line-height: 1.7; }
+    .featured-post-art { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, var(--teal) 145%); min-height: 280px; position: relative; }
+    .featured-post-art::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 22% 30%, rgba(245,242,237,0.16) 0 2px, transparent 2px), radial-gradient(circle at 62% 68%, rgba(245,242,237,0.11) 0 2px, transparent 2px), radial-gradient(circle at 82% 22%, rgba(245,242,237,0.13) 0 2px, transparent 2px); background-size: 54px 54px; }
+
+    .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+    .post-card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s; }
+    .post-card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+    .post-card-art { height: 110px; background: linear-gradient(120deg, var(--cream) 0%, var(--cream-dark) 100%); }
+    .post-card.c2 .post-card-art { background: linear-gradient(120deg, var(--teal-pale) 0%, #CFE4E0 100%); }
+    .post-card.c3 .post-card-art { background: linear-gradient(120deg, #EFF1F6 0%, #DCE0EA 100%); }
+    .post-card-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.85rem; flex: 1; align-items: flex-start; }
+    .post-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.01em; color: var(--navy); }
+    .post-card h3 a { color: var(--navy); text-decoration: none; }
+    .post-card h3 a:hover { color: var(--teal); }
+    .post-card .dek { font-size: 14.5px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; flex: 1; }
+
+    /* Draft gate: remove class="insights-draft" from <body> to publish the articles. */
+    .insights-draft .post-link { pointer-events: none; cursor: default; }
+    .draft-flag { display: none; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); border: 1px solid rgba(192,139,58,0.35); background: rgba(192,139,58,0.08); padding: 4px 10px; border-radius: 4px; }
+    .insights-draft .draft-flag { display: inline-block; }
+
+    .subscribe-band { background: var(--navy); border-radius: 12px; padding: 3rem; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; margin-top: 4rem; }
+    .subscribe-band h3 { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--cream); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .subscribe-band p { font-size: 15px; font-weight: 300; color: rgba(245,242,237,0.6); line-height: 1.65; }
+    .subscribe-band .subscribe-btn { background: var(--teal); color: white; border: none; padding: 13px 26px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+    .subscribe-band .subscribe-btn:hover { background: var(--teal-light); }
+
+    @media (max-width: 900px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 860px) { .featured-post { grid-template-columns: 1fr; } .featured-post-art { min-height: 150px; order: -1; } .featured-post-body { padding: 2rem; } }
+    @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } .subscribe-band { grid-template-columns: 1fr; padding: 2rem; gap: 1.5rem; } }
+
+    /* ---------------- ARTICLE ---------------- */
+    .article-wrap { max-width: 720px; margin: 0 auto; }
+    .insights-list { padding-top: 56px; padding-bottom: 80px; }
+    .article-back { display: block; width: fit-content; font-size: 14px; color: var(--text-secondary); text-decoration: none; margin-bottom: 1.75rem; transition: color 0.2s; }
+    .article-back:hover { color: var(--teal); }
+    .article-hero { padding-top: 140px; padding-bottom: 0; }
+    .article-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.1rem, 3.6vw, 2.9rem); line-height: 1.18; letter-spacing: -0.02em; color: var(--navy); margin: 1rem 0 1.25rem; }
+    .article-standfirst { font-size: 19px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; }
+    .article-byline { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; font-size: 13px; color: var(--text-muted); font-weight: 300; padding: 1.1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0 2.5rem; }
+    .article-body { padding-top: 0; padding-bottom: 100px; }
+    .article-body h2 { font-size: clamp(1.5rem, 2.4vw, 1.85rem); margin-top: 2.75rem; margin-bottom: 0.9rem; }
+    .article-body p { font-size: 16.5px; font-weight: 300; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; }
+    .article-body p strong, .article-body li strong { color: var(--navy); font-weight: 500; }
+    .article-body em { font-style: italic; }
+    .article-body ul { list-style: none; margin: 0 0 1.5rem; }
+    .article-body li { position: relative; padding-left: 1.5rem; font-size: 16.5px; font-weight: 300; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.85rem; }
+    .article-body li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+    .article-pull { font-family: 'DM Serif Display', serif; font-size: 1.35rem; font-style: italic; color: var(--navy); line-height: 1.45; border-left: 3px solid var(--teal); padding-left: 1.5rem; margin: 2.25rem 0; }
+    .review-note { border: 1px dashed rgba(192,139,58,0.55); background: rgba(192,139,58,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin: 2rem 0; font-size: 14px; font-weight: 300; color: #7A5C1E; line-height: 1.6; }
+    .review-note strong { color: #5F4715; font-weight: 500; }
+    .article-cta { margin-top: 3.5rem; padding: 2.5rem; background: var(--teal-pale); border-radius: 12px; text-align: center; }
+    .article-cta h4 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .article-cta p { font-size: 15px; font-weight: 300; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .article-cta .cta-btn { display: inline-block; background: var(--navy); color: var(--cream); padding: 12px 26px; border-radius: 6px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+    .article-cta .cta-btn:hover { background: var(--navy-mid); }
+    @media (max-width: 768px) { .article-hero { padding-top: 120px; } .article-body { padding-bottom: 70px; } }
+
   </style>
 </head>
 <body>
@@ -219,73 +277,67 @@
       <li><a href="how-it-works.html">How It Works</a></li>
       <li><a href="why-anchor.html">Why Anchor</a></li>
       <li><a href="how-we-help.html">How We Help</a></li>
-      <li><a href="insights.html">Insights</a></li>
+      <li><a href="insights.html" class="active">Insights</a></li>
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="contact.html" class="nav-cta">Request a Demo</a></li>
     </ul>
   </div>
 </nav>
-<section class="page-hero">
+<section class="page-hero article-hero">
   <div class="container">
-    <span class="eyebrow">About Anchor</span>
-    <h1>Built by people who've been inside the problem</h1>
-    <p>Anchor is the system of record for non-medical benefit execution across Medicare, Medicaid, and community services. Operating as Anchor Care, Inc., we were founded to address a gap that becomes obvious only once you've watched care managers navigate it in real time: the upstream governance layer for non-medical benefit execution simply doesn't exist.</p>
-  </div>
-</section>
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Our founding team brings direct experience scaling health tech ventures, combined with deep domain expertise in D-SNP benefit design, Medicaid LTSS policy, and payer operations. Our leadership has spent careers at the intersection of payer partnerships and supplemental benefits, including senior roles at Solera Health and Redesign Health.</p>
-        <blockquote class="about-pull">"We're not building a feature. We're building the infrastructure that makes every other dual-eligible tool more effective."</blockquote>
-        <p>We work closely with a clinical and payer advisory network that includes a former D-SNP medical director (Darren Wethers, MD), a former AVP of corporate strategy at Molina (Harsha Prabhala), senior payer leaders (Riaz Ali), a former health plan president and strategy leader (Matt Wandoloski), and the former head of product for AARP (Sanjay Khurana). Their operating experience ensures that what we build is grounded in how plans actually run, not how we imagine they do.</p>
-        <p>Our mission is clear: become the evidence layer for non-medical benefit execution in dual-eligible plans. We build the sequencing, ledger, and reporting that plan operations, compliance, and CMS reporting already assume exists.</p>
-      </div>
-      <div class="about-right">
-        <div class="expertise-box">
-          <div style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.5rem;">Our expertise spans</div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>D-SNP & Dual-Eligible Policy</h4>
-              <p>FIDE, MMAI, D-SNP benefit design, CMS compliance requirements, HCBS audit standards</p>
-            </div>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>Health Plan Operations</h4>
-              <p>Care management workflows, benefit authorization systems, Medicaid LTSS execution evidence, vendor management</p>
-            </div>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>Health Tech Venture Building</h4>
-              <p>Scaling from zero to market: product, payer sales, regulatory, and clinical integration</p>
-            </div>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-dot"></div>
-            <div>
-              <h4>Data Infrastructure & AI</h4>
-              <p>Claims data, rules-based decisioning, execution dataset architecture</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="article-wrap">
+      <a class="article-back" href="insights.html">&#8592; All Insights</a>
+      <span class="post-tag">Policy &amp; CMS</span>
+      <h1>What &ldquo;auditable&rdquo; actually means for supplemental benefit spend</h1>
+      <p class="article-standfirst">Offering a benefit is the easy part. Increasingly, the harder question &mdash; the one that surfaces in a CMS program audit &mdash; is whether you can prove the benefit reached the member and was paid for correctly. That&rsquo;s a documentation standard, not a benefit-design one, and it&rsquo;s where a lot of well-run plans discover they&rsquo;re thinner than they thought.</p>
     </div>
   </div>
 </section>
-<!-- DIVIDER -->
-<div style="background: #F5F2ED; padding: 1.5rem 0;"></div>
+<section class="article-body">
+  <div class="container">
+    <div class="article-wrap">
+      <div class="article-byline"><span>By [Author name]</span><span>&middot;</span><span>[Publish date]</span><span>&middot;</span><span>8 min read</span></div>
+      <div class="review-note"><strong>Before publishing:</strong> This is a thought-leadership draft. Any specific CMS rule, regulation citation, deadline, or dollar figure should be confirmed against current guidance and cleared by your compliance/legal reviewer. Bracketed items are placeholders to fill or verify.</div>
+      <p>Dual-eligible special needs plans have spent the last several years expanding what they offer beyond the medical benefit &mdash; transportation, food support, in-home services, and the broader set of supplemental and non-medical benefits that make a real difference for chronically ill members. The design conversation is mature. The <em>execution</em> conversation is not.</p>
 
-<!-- FINAL CTA SECTION -->
-<section id="final-cta" style="background: #1B2A3D; padding: 80px 2rem;">
-  <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-    <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.2; letter-spacing: -0.02em; color: #F5F2ED; font-weight: 400; margin-bottom: 1.25rem;">Built for the Next Era of<br><em style="font-style: italic; color: #3A9E8E;">Medicare and Medicaid</em></h2>
-    <p style="font-size: 18px; font-weight: 300; color: rgba(245,242,237,0.65); line-height: 1.65; margin-bottom: 2.5rem; max-width: 520px; margin-left: auto; margin-right: auto;">Anchor is building the infrastructure to manage non-medical benefit spend across payers, providers, and communities.</p>
-    <a href="contact.html" style="display: inline-block; background: #2D7D6F; color: white; padding: 13px 32px; border-radius: 6px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s;">Request a Demo</a>
+      <p>Here&rsquo;s the shift worth paying attention to: it is no longer enough to demonstrate that a benefit exists in your catalog and was communicated to members. The expectation is moving toward evidence of the full chain &mdash; that an eligible member received a specific benefit, delivered by a specific party, on a specific date, funded from the correct source, without duplication across Medicare, Medicaid, and community programs.</p>
+
+      <p>That is a meaningfully higher bar, and it&rsquo;s a bar most operational tooling wasn&rsquo;t built to clear.</p>
+
+      <h2>Why &ldquo;we offered it&rdquo; no longer settles the question</h2>
+      <p>When a benefit is non-medical, it usually doesn&rsquo;t generate a clean medical claim. A ride to a dialysis appointment, a box of medically-tailored groceries, a few hours of in-home support &mdash; these move through vendors, community organizations, and multiple funding streams. Each of those handoffs is a place where the record can thin out.</p>
+      <p>The result is a familiar pattern. The benefit was real. The member was helped. But when someone asks, months later, to reconstruct exactly what happened and who paid for it, the answer lives across a vendor portal, an email thread, a care manager&rsquo;s notes, and a spreadsheet that has been touched by four people. The story is true; it just isn&rsquo;t <em>defensible</em> in the form an auditor needs.</p>
+
+      <blockquote class="article-pull">The gap is rarely whether the benefit happened. It&rsquo;s whether you can prove it happened, in one place, without a week of reconstruction.</blockquote>
+
+      <h2>Four things a defensible record answers</h2>
+      <p>When we talk with compliance and operations teams, the records that hold up under scrutiny tend to answer the same four questions cleanly:</p>
+      <ul>
+        <li><strong>Who received it?</strong> The specific member, tied to eligibility at the time of delivery &mdash; not a monthly roster that may have shifted.</li>
+        <li><strong>What was delivered, and when?</strong> The actual benefit event, dated, not just the authorization or the offer.</li>
+        <li><strong>Who delivered and who paid?</strong> The vendor or community partner, and the funding source &mdash; with a clear line preventing the same service being billed twice across programs.</li>
+        <li><strong>How does it roll up?</strong> The ability to attribute spend by benefit class and by plan, so the aggregate you report matches the sum of the individual events beneath it.</li>
+      </ul>
+      <p>None of these is exotic. The difficulty is that they usually live in different systems, and the work of stitching them together happens after the fact, under time pressure, by hand.</p>
+
+      <h2>Where spreadsheets quietly fall short</h2>
+      <p>Reconciliation spreadsheets are the unsung workhorse of benefit operations, and they get further than they have any right to. But they carry three structural weaknesses when the standard is auditability:</p>
+      <p><strong>They record state, not events.</strong> A spreadsheet tells you what a cell says today, not what it said last quarter or who changed it. An audit trail is precisely the history a spreadsheet overwrites.</p>
+      <p><strong>They don&rsquo;t enforce the funding boundary.</strong> Nothing in a spreadsheet stops the same service from being attributed to two sources. The control lives in the analyst&rsquo;s memory, which is not a control.</p>
+      <p><strong>They break at reconciliation.</strong> The moment vendor invoices meet delivered-benefit records, discrepancies surface &mdash; and the spreadsheet becomes a manual investigation rather than a system of record.</p>
+
+      <h2>What &ldquo;good&rdquo; looks like</h2>
+      <p>A plan that&rsquo;s in a strong position doesn&rsquo;t necessarily spend more or offer more. It can simply answer the four questions above on demand, from a single source, with the history intact. Practically, that means the delivery event &mdash; not the offer, and not the invoice &mdash; is captured as the atomic unit, with eligibility, vendor, funding source, and date attached at the moment it happens. Everything else (reporting, attribution, audit response) becomes a query against that record rather than a reconstruction of it.</p>
+      <p>That&rsquo;s the difference between preparing for an audit and being continuously ready for one.</p>
+
+      <h2>The takeaway</h2>
+      <p>Supplemental and non-medical benefits are now a real part of how D-SNPs compete and serve members. The next phase of maturity isn&rsquo;t offering more &mdash; it&rsquo;s being able to <em>prove</em> what you offered, cleanly and quickly. Plans that build that evidence trail into execution, rather than assembling it after the fact, spend less time in reconciliation and walk into audits with a much shorter to-do list.</p>
+      <div class="article-cta">
+        <h4>See what a defensible benefit record looks like</h4>
+        <p>Anchor is the system of record for non-medical benefit execution.</p>
+        <a class="cta-btn" href="contact.html">Request a Demo</a>
+      </div>
+    </div>
   </div>
 </section>
 <footer>
