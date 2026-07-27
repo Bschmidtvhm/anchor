@@ -271,6 +271,14 @@
     .article-refs li::before { content: none; }
     .article-refs a { color: var(--teal); text-decoration: none; }
     .article-refs a:hover { text-decoration: underline; }
+  
+    .article-hero.masthead{background:#8A3F2F;}
+    .article-hero.masthead .article-back{color:rgba(255,255,255,.72);}
+    .article-hero.masthead .article-back:hover{color:#fff;}
+    .article-hero.masthead .mast-tick{display:block;width:48px;height:5px;border-radius:3px;background:#EBC9A2;margin:.4rem 0 1.3rem;}
+    .article-hero.masthead .post-tag{background:rgba(255,255,255,.13);color:#EBC9A2;}
+    .article-hero.masthead h1{color:#F7EFE7;}
+    .article-hero.masthead .article-standfirst{color:rgba(245,242,237,.85);}
   </style>
 </head>
 <body>
@@ -298,10 +306,11 @@
     </ul>
   </div>
 </nav>
-<section class="page-hero article-hero">
+<section class="page-hero article-hero masthead">
   <div class="container">
     <div class="article-wrap">
       <a class="article-back" href="insights.html">&#8592; All Insights</a>
+      <span class="mast-tick"></span>
       <span class="post-tag">Policy &amp; CMS</span>
       <h1>Referral rails aren’t determination records</h1>
       <p class="article-standfirst">Three state Medicaid programs have built strong ways to move a referral. None has yet built a way to prove a determination. North Carolina, California and Illinois are each at a different phase of the same problem, and for dual-eligible members, the missing artifact is the same one.</p>

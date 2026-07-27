@@ -271,6 +271,14 @@
     .article-refs li::before { content: none; }
     .article-refs a { color: var(--teal); text-decoration: none; }
     .article-refs a:hover { text-decoration: underline; }
+  
+    .article-hero.masthead{background:#7A5A1F;}
+    .article-hero.masthead .article-back{color:rgba(255,255,255,.72);}
+    .article-hero.masthead .article-back:hover{color:#fff;}
+    .article-hero.masthead .mast-tick{display:block;width:48px;height:5px;border-radius:3px;background:#5FC0B0;margin:.4rem 0 1.3rem;}
+    .article-hero.masthead .post-tag{background:rgba(255,255,255,.13);color:#5FC0B0;}
+    .article-hero.masthead h1{color:#F7F1E4;}
+    .article-hero.masthead .article-standfirst{color:rgba(245,242,237,.85);}
   </style>
 </head>
 <body>
@@ -298,10 +306,11 @@
     </ul>
   </div>
 </nav>
-<section class="page-hero article-hero">
+<section class="page-hero article-hero masthead">
   <div class="container">
     <div class="article-wrap">
       <a class="article-back" href="insights.html">&#8592; All Insights</a>
+      <span class="mast-tick"></span>
       <span class="post-tag">Policy &amp; CMS</span>
       <h1>What &ldquo;auditable&rdquo; actually means for supplemental benefit spend</h1>
       <p class="article-standfirst">Offering a benefit is the easy part. Increasingly, the harder question, the one that surfaces in a CMS program audit, is whether you can prove the benefit reached the member and was paid for correctly. That&rsquo;s a documentation standard, not a benefit-design one, and it&rsquo;s where a lot of well-run plans discover they&rsquo;re thinner than they thought.</p>

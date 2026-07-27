@@ -271,6 +271,14 @@
     .article-refs li::before { content: none; }
     .article-refs a { color: var(--teal); text-decoration: none; }
     .article-refs a:hover { text-decoration: underline; }
+  
+    .article-hero.masthead{background:#1B2A3D;}
+    .article-hero.masthead .article-back{color:rgba(255,255,255,.72);}
+    .article-hero.masthead .article-back:hover{color:#fff;}
+    .article-hero.masthead .mast-tick{display:block;width:48px;height:5px;border-radius:3px;background:#3A9E8E;margin:.4rem 0 1.3rem;}
+    .article-hero.masthead .post-tag{background:rgba(255,255,255,.13);color:#3A9E8E;}
+    .article-hero.masthead h1{color:#F5F2ED;}
+    .article-hero.masthead .article-standfirst{color:rgba(245,242,237,.85);}
   </style>
 </head>
 <body>
@@ -298,10 +306,11 @@
     </ul>
   </div>
 </nav>
-<section class="page-hero article-hero">
+<section class="page-hero article-hero masthead">
   <div class="container">
     <div class="article-wrap">
       <a class="article-back" href="insights.html">&#8592; All Insights</a>
+      <span class="mast-tick"></span>
       <span class="post-tag">Policy &amp; CMS</span>
       <h1>Same benefits, fewer members, a determination for each one</h1>
       <p class="article-standfirst">In 2025 roughly 15 percent of D-SNP members were in plans offering SSBCI. In 2026 it is roughly 90 percent. The benefit menu barely moved. What changed underneath it is the basis on which a member qualifies, and that is a product strategy problem before it is a compliance one.</p>

@@ -271,6 +271,14 @@
     .article-refs li::before { content: none; }
     .article-refs a { color: var(--teal); text-decoration: none; }
     .article-refs a:hover { text-decoration: underline; }
+  
+    .article-hero.masthead{background:#1E5A50;}
+    .article-hero.masthead .article-back{color:rgba(255,255,255,.72);}
+    .article-hero.masthead .article-back:hover{color:#fff;}
+    .article-hero.masthead .mast-tick{display:block;width:48px;height:5px;border-radius:3px;background:#EAD3A0;margin:.4rem 0 1.3rem;}
+    .article-hero.masthead .post-tag{background:rgba(255,255,255,.13);color:#EAD3A0;}
+    .article-hero.masthead h1{color:#F5F2ED;}
+    .article-hero.masthead .article-standfirst{color:rgba(245,242,237,.85);}
   </style>
 </head>
 <body>
@@ -298,10 +306,11 @@
     </ul>
   </div>
 </nav>
-<section class="page-hero article-hero">
+<section class="page-hero article-hero masthead">
   <div class="container">
     <div class="article-wrap">
       <a class="article-back" href="insights.html">&#8592; All Insights</a>
+      <span class="mast-tick"></span>
       <span class="post-tag">Perspective</span>
       <h1>The case for a system of record</h1>
       <p class="article-standfirst">Every health plan already has a benefits catalog and a claims system. The problem isn&rsquo;t at either end, it&rsquo;s the space in between, where non-medical benefits actually get delivered and where, today, the record is thinnest. That in-between is becoming a category of its own.</p>

@@ -252,6 +252,11 @@
     .article-cta .cta-btn:hover { background: var(--navy-mid); }
     @media (max-width: 768px) { .article-hero { padding-top: 120px; } .article-body { padding-bottom: 70px; } }
 
+  
+    .featured-post-art{display:block;text-decoration:none;}
+    .featured-post-art svg,.post-card-art svg{width:100%;height:100%;display:block;}
+    .post-card-art{height:150px;display:block;text-decoration:none;}
+    .post-card-art::after{content:none;}
   </style>
 </head>
 <body>
@@ -304,12 +309,12 @@
         <p class="dek">In 2025 roughly 15 percent of D-SNP members were in plans offering SSBCI. In 2026 it is roughly 90 percent. The benefit menu barely moved. What changed underneath it is the basis on which a member qualifies.</p>
         <div class="post-meta"><span>7 min read</span><span class="dot">&middot;</span><span>Duals Strategy</span></div>
       </div>
-      <div class="featured-post-art"></div>
+      <a class="featured-post-art" href="insights-vbid-to-ssbci.html" aria-label="Read the featured article"><svg viewBox="0 0 460 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="460" height="300" fill="#1B2A3D"/><circle cx="360" cy="60" r="2.5" fill="#F5F2ED" opacity="0.12"/><circle cx="410" cy="110" r="2.5" fill="#F5F2ED" opacity="0.08"/><circle cx="330" cy="140" r="2.5" fill="#F5F2ED" opacity="0.07"/><circle cx="400" cy="210" r="2.5" fill="#F5F2ED" opacity="0.06"/><rect x="40" y="46" width="46" height="5" rx="2.5" fill="#3A9E8E"/><text x="40" y="140" font-family="'DM Serif Display',serif" font-size="36" fill="#F5F2ED">Same benefits.</text><text x="40" y="186" font-family="'DM Serif Display',serif" font-size="32" fill="#3A9E8E">New way to qualify.</text><line x1="40" y1="248" x2="420" y2="248" stroke="#F5F2ED" opacity="0.18"/><text x="40" y="272" font-family="'DM Sans',sans-serif" font-weight="500" font-size="17" fill="#F5F2ED">anchor</text></svg></a>
     </article>
 
     <div class="post-grid">
         <article class="post-card c1">
-          <div class="post-card-art"></div>
+          <a class="post-card-art" href="insights-system-of-record.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#1E5A50"/><circle cx="300" cy="34" r="2" fill="#F5F2ED" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F5F2ED" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F5F2ED" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#EAD3A0"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F5F2ED">What you promised.</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#EAD3A0">What actually happened.</text></svg></a>
           <div class="post-card-body">
             <span class="post-tag">Perspective</span>
             <h3><a class="post-link" href="insights-system-of-record.html">The case for a system of record</a></h3>
@@ -318,7 +323,7 @@
           </div>
         </article>
         <article class="post-card c2">
-          <div class="post-card-art"></div>
+          <a class="post-card-art" href="insights-reconciliation-spreadsheet.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#2A3F58"/><circle cx="300" cy="34" r="2" fill="#F5F2ED" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F5F2ED" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F5F2ED" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#4FB3A2"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F5F2ED">One spreadsheet.</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#4FB3A2">One person’s memory.</text></svg></a>
           <div class="post-card-body">
             <span class="post-tag">Benefit Operations</span>
             <h3><a class="post-link" href="insights-reconciliation-spreadsheet.html">Retiring the reconciliation spreadsheet</a></h3>
@@ -327,7 +332,7 @@
           </div>
         </article>
         <article class="post-card c3">
-          <div class="post-card-art"></div>
+          <a class="post-card-art" href="insights-referral-rails.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#8A3F2F"/><circle cx="300" cy="34" r="2" fill="#F7EFE7" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F7EFE7" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F7EFE7" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#EBC9A2"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F7EFE7">Two payers, one member.</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#EBC9A2">No record.</text></svg></a>
           <div class="post-card-body">
             <span class="post-tag">Policy &amp; CMS</span>
             <h3><a class="post-link" href="insights-referral-rails.html">Referral rails aren&rsquo;t determination records</a></h3>
@@ -336,7 +341,7 @@
           </div>
         </article>
         <article class="post-card c4">
-          <div class="post-card-art"></div>
+          <a class="post-card-art" href="insights-auditable-spend.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#7A5A1F"/><circle cx="300" cy="34" r="2" fill="#F7F1E4" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F7F1E4" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F7F1E4" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#5FC0B0"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F7F1E4">At audit, fragments</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#5FC0B0">are a finding.</text></svg></a>
           <div class="post-card-body">
             <span class="post-tag">Policy &amp; CMS</span>
             <h3><a class="post-link" href="insights-auditable-spend.html">What &ldquo;auditable&rdquo; actually means for supplemental benefit spend</a></h3>
