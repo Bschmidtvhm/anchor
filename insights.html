@@ -257,7 +257,7 @@
     .featured-post-art svg,.post-card-art svg{width:100%;height:100%;display:block;}
     .post-card-art{height:150px;display:block;text-decoration:none;}
     .post-card-art::after{content:none;}
-  </style>
+  .subscribe-form{display:flex;flex-direction:column;gap:.6rem;}.subscribe-form .subscribe-btn{align-self:flex-start;}.subscribe-input{background:#fff;border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-primary);width:100%;}.subscribe-input::placeholder{color:var(--text-muted);}.subscribe-done{color:var(--cream);font-size:14px;font-weight:300;}</style>
 </head>
 <body>
 <nav>
@@ -357,7 +357,7 @@
         <p>A short, no-noise summary of CMS updates and benefit-execution practice, for compliance, operations, and actuarial teams. One email a month.</p>
       </div>
       <div>
-        <button class="subscribe-btn" onclick="openContactModal()">Subscribe</button>
+        <form class="subscribe-form" action="https://formspree.io/f/xnjelvoq" method="POST" onsubmit="handleSubscribe(event)"><input type="hidden" name="_subject" value="New subscriber — monthly D-SNP brief" /><input type="hidden" name="form_type" value="Newsletter subscribe" /><input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" /><input class="subscribe-input" type="text" name="name" placeholder="Your name" required aria-label="Your name" /><input class="subscribe-input" type="email" name="email" placeholder="you@plan.com" required aria-label="Work email" /><button class="subscribe-btn" type="submit">Subscribe</button></form><p class="subscribe-done" style="display:none;">Thanks — you’re on the list. We’ll send the monthly brief.</p>
       </div>
     </section>
   </div>
@@ -387,7 +387,7 @@
 <div class="modal-overlay" id="contact-modal" onclick="closeIfOverlay(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeContactModal()">&times;</button>
-    <div id="modal-form-wrap"><h3>Get in touch</h3><p class="modal-sub">Complete the form below and we'll respond within one business day.</p><form class="modal-form" onsubmit="handleModalSubmit(event)"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label>First name</label><input type="text" placeholder="Jane" required /></div><div class="form-group"><label>Last name</label><input type="text" placeholder="Smith" required /></div></div><div class="form-group"><label>Organization</label><input type="text" placeholder="Health plan or company" /></div><div class="form-group"><label>Email</label><input type="email" placeholder="jane@plan.com" required /></div><div class="form-group"><label>Message</label><textarea placeholder="How can we help?"></textarea></div><div class="modal-btn-row"><button type="button" class="modal-cancel" onclick="closeContactModal()">Cancel</button><button type="submit" class="modal-submit" id="modal-submit-btn">Send message</button></div></form></div>
+    <div id="modal-form-wrap"><h3>Get in touch</h3><p class="modal-sub">Complete the form below and we'll respond within one business day.</p><form class="modal-form" action="https://formspree.io/f/xnjelvoq" method="POST" onsubmit="handleModalSubmit(event)"><input type="hidden" name="_subject" value="Contact / Demo request — anchorcare.ai" /><input type="hidden" name="form_type" value="Contact / Demo request" /><input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" /><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label>First name</label><input type="text" name="first_name" placeholder="Jane" required /></div><div class="form-group"><label>Last name</label><input type="text" name="last_name" placeholder="Smith" required /></div></div><div class="form-group"><label>Organization</label><input type="text" name="organization" placeholder="Health plan or company" /></div><div class="form-group"><label>Email</label><input type="email" name="email" placeholder="jane@plan.com" required /></div><div class="form-group"><label>Message</label><textarea name="message" placeholder="How can we help?"></textarea></div><div class="modal-btn-row"><button type="button" class="modal-cancel" onclick="closeContactModal()">Cancel</button><button type="submit" class="modal-submit" id="modal-submit-btn">Send message</button></div></form></div>
     <div class="modal-success" id="modal-success"><div class="modal-success-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#2D7D6F" opacity="0.15"/><path d="M6 11l3.5 3.5L16 8" stroke="#2D7D6F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p><strong style="color:var(--navy);font-weight:500;">Message received.</strong><br>We'll be in touch within one business day.</p></div>
   </div>
 </div>
@@ -397,7 +397,7 @@
 function openContactModal(){document.getElementById('contact-modal').classList.add('open');document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contact-modal').classList.remove('open');document.body.style.overflow='';}
 function closeIfOverlay(e){if(e.target===document.getElementById('contact-modal'))closeContactModal();}
-function handleModalSubmit(e){e.preventDefault();const btn=document.getElementById('modal-submit-btn');btn.textContent='Sending...';btn.disabled=true;setTimeout(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('modal-success').style.display='block';},800);}
+function handleModalSubmit(e){e.preventDefault();var f=e.target;var btn=document.getElementById('modal-submit-btn');var t=btn.textContent;btn.textContent='Sending...';btn.disabled=true;fetch('https://formspree.io/f/xnjelvoq',{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('modal-success').style.display='block';}else{btn.textContent=t;btn.disabled=false;var er=f.querySelector('.form-err');if(!er){er=document.createElement('p');er.className='form-err';er.style.cssText='color:#C4614A;font-size:13px;margin-top:10px;';f.appendChild(er);}er.textContent="Sorry, that didn't send — please try again in a moment.";}}).catch(function(){btn.textContent=t;btn.disabled=false;});}
 function openPolicy(which){document.getElementById(which+'-page').classList.add('open');document.body.style.overflow='hidden';window.scrollTo(0,0);}
 function closePolicy(which){document.getElementById(which+'-page').classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('DOMContentLoaded',function(){const currentPage=window.location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav-links a').forEach(link=>{const href=link.getAttribute('href');if(href===currentPage){link.classList.add('active');}else{link.classList.remove('active');}});});
@@ -420,5 +420,5 @@ document.addEventListener('DOMContentLoaded',function(){const currentPage=window
   }
 </script>
 
-</body>
+<script>function handleSubscribe(e){e.preventDefault();var f=e.target;var btn=f.querySelector('button[type="submit"]');var t=btn.textContent;btn.textContent='Subscribing...';btn.disabled=true;fetch('https://formspree.io/f/xnjelvoq',{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){f.style.display='none';var d=f.parentNode.querySelector('.subscribe-done');if(d)d.style.display='block';}else{btn.textContent=t;btn.disabled=false;}}).catch(function(){btn.textContent=t;btn.disabled=false;});}</script></body>
 </html>
