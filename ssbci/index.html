@@ -1,4 +1,4 @@
-icare<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -219,9 +219,9 @@ icare<!DOCTYPE html>
       <div class="card">
         <h3>Book a time now</h3>
         <p class="sub">Thirty minutes with our team, on your calendar.</p>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/brenda-anchorcare/30min?hide_gdpr_banner=1&primary_color=0e7c7b" style="min-width:280px;height:580px;"></div>
+        <div id="calendlyWidget" class="calendly-inline-widget" style="min-width:280px;height:580px;"></div>
         <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <p class="microcopy">Prefer a direct link? <a href="https://calendly.com/brenda-anchorcare/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
+        <p class="microcopy">Prefer a direct link? <a id="calendlyDirect" href="https://calendly.com/brenda-anchorcare/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
       </div>
 
       <!-- Fallback form -->
@@ -232,6 +232,14 @@ icare<!DOCTYPE html>
           <input type="hidden" name="_subject" value="SSBCI working session request">
           <!-- honeypot: hidden from people, catches bots -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+          <!-- attribution: filled automatically from the landing URL -->
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="landing_page" value="">
+          <input type="hidden" name="referrer" value="">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required>
           <label for="title">Title / role</label>
@@ -260,28 +268,75 @@ icare<!DOCTYPE html>
 </footer>
 
 <script>
-  // Formspree submission via AJAX so the visitor stays on the page.
-  // Endpoint is set on the form's action attribute (formspree.io/f/meeynqov).
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var form = this;
-    var err = document.getElementById('err');
-    err.style.display = 'none';
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(function(res){
-      if (res.ok) {
-        form.style.display = 'none';
-        document.getElementById('thanks').style.display = 'block';
-      } else {
-        err.style.display = 'block';
-      }
-    }).catch(function(){
-      err.style.display = 'block';
+(function () {
+  // --- 1. Read UTM / attribution params from the landing URL ---
+  var qs = new URLSearchParams(window.location.search);
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  var utm = {};
+  UTM_KEYS.forEach(function (k) { var v = qs.get(k); if (v) utm[k] = v; });
+
+  // --- 2. Push UTMs (+ context) into the Formspree form's hidden fields ---
+  var form = document.getElementById('contactForm');
+  function setField(name, value) {
+    var input = form.querySelector('input[name="' + name + '"]');
+    if (!input) {
+      input = document.createElement('input');
+      input.type = 'hidden'; input.name = name; form.appendChild(input);
+    }
+    input.value = value || '';
+  }
+  if (form) {
+    UTM_KEYS.forEach(function (k) { setField(k, utm[k]); });
+    setField('landing_page', window.location.href);
+    setField('referrer', document.referrer || '(direct)');
+  }
+
+  // --- 3. Carry UTMs onto the direct Calendly link ---
+  var directLink = document.getElementById('calendlyDirect');
+  if (directLink) {
+    var params = ['hide_gdpr_banner=1'];
+    UTM_KEYS.forEach(function (k) { if (utm[k]) params.push(k + '=' + encodeURIComponent(utm[k])); });
+    directLink.href = 'https://calendly.com/brenda-anchorcare/30min?' + params.join('&');
+  }
+
+  // --- 4. Initialise the inline Calendly widget, passing UTMs through ---
+  var UTM_MAP = { utm_source: 'utmSource', utm_medium: 'utmMedium', utm_campaign: 'utmCampaign', utm_content: 'utmContent', utm_term: 'utmTerm' };
+  function calendlyUtm() {
+    var out = {};
+    Object.keys(UTM_MAP).forEach(function (k) { if (utm[k]) out[UTM_MAP[k]] = utm[k]; });
+    return out;
+  }
+  function initCalendly() {
+    if (!window.Calendly) { setTimeout(initCalendly, 120); return; }
+    Calendly.initInlineWidget({
+      url: 'https://calendly.com/brenda-anchorcare/30min?hide_gdpr_banner=1&primary_color=0e7c7b',
+      parentElement: document.getElementById('calendlyWidget'),
+      utm: calendlyUtm()
     });
-  });
+  }
+  initCalendly();
+
+  // --- 5. Formspree submit via AJAX so the visitor stays on the page ---
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var err = document.getElementById('err');
+      err.style.display = 'none';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('thanks').style.display = 'block';
+        } else {
+          err.style.display = 'block';
+        }
+      }).catch(function () { err.style.display = 'block'; });
+    });
+  }
+})();
 </script>
 
 </body>
