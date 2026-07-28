@@ -222,7 +222,19 @@
       <div class="card">
         <h3>Book a time now</h3>
         <p class="sub">Thirty minutes with our team, on your calendar.</p>
-        <div id="calendlyWidget" class="calendly-inline-widget" style="min-width:280px;height:580px;"></div>
+        <div id="calendlyWidget" class="calendly-inline-widget" data-url="https://calendly.com/brenda-anchorcare/30min?hide_gdpr_banner=1&primary_color=0e7c7b" style="min-width:280px;height:580px;"></div>
+        <script>
+          (function(){
+            var qs = new URLSearchParams(window.location.search);
+            var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+            var extra = [];
+            keys.forEach(function(k){ var v = qs.get(k); if (v) extra.push(k + '=' + encodeURIComponent(v)); });
+            if (extra.length) {
+              var el = document.getElementById('calendlyWidget');
+              el.setAttribute('data-url', el.getAttribute('data-url') + '&' + extra.join('&'));
+            }
+          })();
+        </script>
         <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <p class="microcopy">Prefer a direct link? <a id="calendlyDirect" href="https://calendly.com/brenda-anchorcare/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
       </div>
@@ -302,24 +314,7 @@
     directLink.href = 'https://calendly.com/brenda-anchorcare/30min?' + params.join('&');
   }
 
-  // --- 4. Initialise the inline Calendly widget, passing UTMs through ---
-  var UTM_MAP = { utm_source: 'utmSource', utm_medium: 'utmMedium', utm_campaign: 'utmCampaign', utm_content: 'utmContent', utm_term: 'utmTerm' };
-  function calendlyUtm() {
-    var out = {};
-    Object.keys(UTM_MAP).forEach(function (k) { if (utm[k]) out[UTM_MAP[k]] = utm[k]; });
-    return out;
-  }
-  function initCalendly() {
-    if (!window.Calendly) { setTimeout(initCalendly, 120); return; }
-    Calendly.initInlineWidget({
-      url: 'https://calendly.com/brenda-anchorcare/30min?hide_gdpr_banner=1&primary_color=0e7c7b',
-      parentElement: document.getElementById('calendlyWidget'),
-      utm: calendlyUtm()
-    });
-  }
-  initCalendly();
-
-  // --- 5. Formspree submit via AJAX so the visitor stays on the page ---
+  // --- 4. Formspree submit via AJAX so the visitor stays on the page ---
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
