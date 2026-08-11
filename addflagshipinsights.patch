@@ -1,4 +1,4 @@
-From 0278e532eee71619376f547dbf0f777a3ec5bfa0 Mon Sep 17 00:00:00 2001
+From 878f3c1a53e9c0f709602b56cff29c6c3f6d2ffc Mon Sep 17 00:00:00 2001
 From: Claude <brenda@anchorcare.ai>
 Date: Tue, 11 Aug 2026 00:36:14 +0000
 Subject: [PATCH] Add flagship Insights article: real governance for
@@ -523,7 +523,7 @@ index 0000000..a739f8e
 +</body>
 +</html>
 diff --git a/insights.html b/insights.html
-index b53c6fe..d7b31a0 100644
+index b53c6fe..e3a5df0 100644
 --- a/insights.html
 +++ b/insights.html
 @@ -314,14 +314,23 @@
@@ -538,7 +538,7 @@ index b53c6fe..d7b31a0 100644
 +        <div class="post-meta"><span>8 min read</span><span class="dot">&middot;</span><span>Flagship</span></div>
        </div>
 -      <a class="featured-post-art" href="insights-vbid-to-ssbci.html" aria-label="Read the featured article"><svg viewBox="0 0 460 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="460" height="300" fill="#1B2A3D"/><circle cx="360" cy="60" r="2.5" fill="#F5F2ED" opacity="0.12"/><circle cx="410" cy="110" r="2.5" fill="#F5F2ED" opacity="0.08"/><circle cx="330" cy="140" r="2.5" fill="#F5F2ED" opacity="0.07"/><circle cx="400" cy="210" r="2.5" fill="#F5F2ED" opacity="0.06"/><rect x="40" y="46" width="46" height="5" rx="2.5" fill="#3A9E8E"/><text x="40" y="140" font-family="'DM Serif Display',serif" font-size="36" fill="#F5F2ED">Same benefits.</text><text x="40" y="186" font-family="'DM Serif Display',serif" font-size="32" fill="#3A9E8E">New way to qualify.</text><line x1="40" y1="248" x2="420" y2="248" stroke="#F5F2ED" opacity="0.18"/><text x="40" y="272" font-family="'DM Sans',sans-serif" font-weight="500" font-size="17" fill="#F5F2ED">anchor</text></svg></a>
-+      <a class="featured-post-art" href="insights-real-governance.html" aria-label="Read the featured article"><img src="og-real-governance.png" alt="A benefit you offered. A decision you defend. A record that proves it. The case for real governance." style="width:100%;height:100%;object-fit:cover;object-position:left center;display:block;" /></a>
++      <a class="featured-post-art" href="insights-real-governance.html" aria-label="Read the featured article"><svg viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E2E42"/><stop offset="0.55" stop-color="#1B2A3D"/><stop offset="1" stop-color="#14212E"/></linearGradient></defs><rect width="480" height="320" fill="url(#fg)"/><circle cx="392" cy="52" r="2.5" fill="#F5F2ED" opacity="0.12"/><circle cx="436" cy="96" r="2.5" fill="#F5F2ED" opacity="0.08"/><circle cx="360" cy="128" r="2.5" fill="#F5F2ED" opacity="0.07"/><circle cx="430" cy="210" r="2.5" fill="#F5F2ED" opacity="0.06"/><rect x="44" y="52" width="56" height="6" rx="3" fill="#3A9E8E"/><text x="44" y="128" font-family="'DM Sans',sans-serif" font-weight="400" font-size="31" fill="#F5F2ED">A benefit you offered.</text><text x="44" y="170" font-family="'DM Sans',sans-serif" font-weight="400" font-size="31" fill="#F5F2ED">A decision you defend.</text><text x="44" y="212" font-family="'DM Sans',sans-serif" font-weight="400" font-size="31" fill="#3A9E8E">A record that proves it.</text><line x1="44" y1="264" x2="436" y2="264" stroke="#F5F2ED" opacity="0.16"/><text x="44" y="292" font-family="'DM Sans',sans-serif" font-weight="500" font-size="17" fill="#F5F2ED">anchor</text><line x1="108" y1="281" x2="108" y2="296" stroke="#F5F2ED" opacity="0.28"/><text x="122" y="292" font-family="'DM Sans',sans-serif" font-weight="400" font-size="14.5" fill="#8FA3B8">The case for real governance.</text></svg></a>
      </article>
  
      <div class="post-grid">
