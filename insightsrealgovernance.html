@@ -12,16 +12,22 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights | Anchor</title>
-  <meta name="description" content="Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move." />
-  <meta property="og:title" content="Insights | Anchor" />
-  <meta property="og:description" content="Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://anchorcare.ai/insights.html" />
-  <meta property="og:image" content="https://anchorcare.ai/og-image.png" />
+  <title>The year non-medical benefits came under real governance | Anchor Insights</title>
+  <meta name="description" content="In one year, federal and state regulators moved to make non-medical benefit and HCBS execution documented, verifiable, and producible on demand. From Medicare to Medicaid, a benefit you offered is becoming a decision you have to defend." />
+  <meta property="og:title" content="The year non-medical benefits came under real governance | Anchor Insights" />
+  <meta property="og:description" content="In one year, federal and state regulators moved to make non-medical benefit and HCBS execution documented, verifiable, and producible on demand. From Medicare to Medicaid, a benefit you offered is becoming a decision you have to defend." />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-08-11" />
+  <meta property="article:publisher" content="Anchor Care, Inc." />
+  <meta property="og:url" content="https://anchorcare.ai/insights-real-governance.html" />
+  <meta property="og:image" content="https://anchorcare.ai/og-real-governance.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="628" />
+  <meta property="og:image:type" content="image/png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Insights | Anchor" />
-  <meta name="twitter:description" content="Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move." />
+  <meta name="twitter:image" content="https://anchorcare.ai/og-real-governance.png" />
+  <meta name="twitter:title" content="The year non-medical benefits came under real governance | Anchor Insights" />
+  <meta name="twitter:description" content="In one year, federal and state regulators moved to make non-medical benefit and HCBS execution documented, verifiable, and producible on demand. From Medicare to Medicaid, a benefit you offered is becoming a decision you have to defend." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -216,13 +222,16 @@
     .post-card-art { height: 110px; background: linear-gradient(120deg, var(--cream) 0%, var(--cream-dark) 100%); }
     .post-card.c2 .post-card-art { background: linear-gradient(120deg, var(--teal-pale) 0%, #CFE4E0 100%); }
     .post-card.c3 .post-card-art { background: linear-gradient(120deg, #EFF1F6 0%, #DCE0EA 100%); }
-    .post-card.c4 .post-card-art { background: linear-gradient(120deg, #F0EADD 0%, #E3D6BE 100%); }
     .post-card-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.85rem; flex: 1; align-items: flex-start; }
     .post-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.01em; color: var(--navy); }
     .post-card h3 a { color: var(--navy); text-decoration: none; }
     .post-card h3 a:hover { color: var(--teal); }
     .post-card .dek { font-size: 14.5px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; flex: 1; }
 
+    /* Draft gate: remove class="insights-draft" from <body> to publish the articles. */
+    .insights-draft .post-link { pointer-events: none; cursor: default; }
+    .draft-flag { display: none; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); border: 1px solid rgba(192,139,58,0.35); background: rgba(192,139,58,0.08); padding: 4px 10px; border-radius: 4px; }
+    .insights-draft .draft-flag { display: inline-block; }
 
     .subscribe-band { background: var(--navy); border-radius: 12px; padding: 3rem; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; margin-top: 4rem; }
     .subscribe-band h3 { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--cream); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
@@ -261,12 +270,25 @@
     .article-cta .cta-btn:hover { background: var(--navy-mid); }
     @media (max-width: 768px) { .article-hero { padding-top: 120px; } .article-body { padding-bottom: 70px; } }
 
+    .cite { font-size: 0.72em; vertical-align: super; line-height: 0; text-decoration: none; color: var(--teal); font-weight: 500; padding: 0 1px; }
+    .cite:hover { text-decoration: underline; }
+    .editorial-note { border-left: 2px solid var(--border-strong); padding: 0.2rem 0 0.2rem 1.25rem; margin: 2rem 0; font-size: 13.5px; font-weight: 300; color: var(--text-muted); line-height: 1.65; }
+    .article-refs { margin-top: 3.25rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
+    .article-refs h2 { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 1.25rem; }
+    .article-refs ol { margin: 0; padding-left: 1.4rem; }
+    .article-refs li { font-size: 14px; font-weight: 300; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.8rem; padding-left: 0.3rem; position: static; }
+    .article-refs li::before { content: none; }
+    .article-refs a { color: var(--teal); text-decoration: none; }
+    .article-refs a:hover { text-decoration: underline; }
   
-    .featured-post-art{display:block;text-decoration:none;}
-    .featured-post-art svg,.post-card-art svg{width:100%;height:100%;display:block;}
-    .post-card-art{height:150px;display:block;text-decoration:none;}
-    .post-card-art::after{content:none;}
-  .subscribe-form{display:flex;flex-direction:column;gap:.6rem;}.subscribe-form .subscribe-btn{align-self:flex-start;}.subscribe-input{background:#fff;border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-primary);width:100%;}.subscribe-input::placeholder{color:var(--text-muted);}.subscribe-done{color:var(--cream);font-size:14px;font-weight:300;}</style>
+    .article-hero.masthead{background:#1B2A3D;}
+    .article-hero.masthead .article-back{color:rgba(255,255,255,.72);}
+    .article-hero.masthead .article-back:hover{color:#fff;}
+    .article-hero.masthead .mast-tick{display:block;width:48px;height:5px;border-radius:3px;background:#3A9E8E;margin:.4rem 0 1.3rem;}
+    .article-hero.masthead .post-tag{background:rgba(255,255,255,.13);color:#3A9E8E;}
+    .article-hero.masthead h1{color:#F5F2ED;}
+    .article-hero.masthead .article-standfirst{color:rgba(245,242,237,.85);}
+  .subscribe-form{display:flex;gap:.6rem;flex-wrap:wrap;}.subscribe-input{background:#fff;border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-primary);min-width:220px;flex:1 1 200px;}.subscribe-input::placeholder{color:var(--text-muted);}.subscribe-done{color:var(--cream);font-size:14px;font-weight:300;}</style>
 </head>
 <body>
 <nav>
@@ -293,91 +315,101 @@
     </ul>
   </div>
 </nav>
-<section class="page-hero">
+<section class="page-hero article-hero masthead">
   <div class="container">
-    <span class="eyebrow">Insights</span>
-    <h1>Insights on non-medical benefit execution</h1>
-    <p>Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move.</p>
+    <div class="article-wrap">
+      <a class="article-back" href="insights.html">&#8592; All Insights</a>
+      <span class="mast-tick"></span>
+      <span class="post-tag">Policy &amp; CMS</span>
+      <h1>The year non-medical benefits came under real governance</h1>
+      <p class="article-standfirst">In the same year, federal and state regulators moved to make non-medical benefit and HCBS execution documented, verifiable, and producible on demand. From Medicare to Medicaid, a benefit you offered is becoming a decision you have to defend. The readiness work is now.</p>
+    </div>
   </div>
 </section>
-<section class="insights-list">
+<section class="article-body">
   <div class="container">
-    <div class="insights-toolbar">
-      <button class="chip active">All</button>
-      <button class="chip">Compliance &amp; Audit</button>
-      <button class="chip">Benefit Operations</button>
-      <button class="chip">Duals &amp; HRSN</button>
-      <button class="chip">Policy &amp; CMS</button>
-      <button class="chip">Perspective</button>
+    <div class="article-wrap">
+      <div class="article-byline"><span>Anchor Care, Inc.</span><span>&middot;</span><span>Published August 11, 2026</span><span>&middot;</span><span>8 min read</span></div>
+
+      <p>For dual-eligible members, the support that matters most is often the support no claim ever sees. A ride to a food pantry. A home modification that prevents a fall. A personal care aide who keeps someone in their home instead of a facility. Respite for a family caregiver. These benefits span Medicare, Medicaid, and community services, and for most of their history they have been managed with far less governance than medical and pharmacy benefits.</p>
+
+      <p>That is changing, at both ends of the same member, in the same year.</p>
+
+      <p>On the Medicare side and the Medicaid side, regulators have moved to make non-medical benefit and home and community-based service execution documented, verifiable, and producible on request. The details differ. The direction is identical. What used to be a benefit you offered is becoming a decision you have to defend.</p>
+
+      <h2>What changed on the Medicare side</h2>
+
+      <p>Three moves matter.</p>
+
+      <p><strong>First, supplemental benefit eligibility is coming under objective standards.</strong> Beginning with 2027 coverage, eligibility for Special Supplemental Benefits for the Chronically Ill can no longer rest on member self-attestation. Plans have to verify eligibility through objective means, document the written criteria, post them publicly, and hold them steady for the coverage year. Each determination becomes an objective, documented decision on the record.</p>
+
+      <p><strong>Second, dual plans are being pushed toward a single integrated record.</strong> For many dual eligible special needs plans, CMS is requiring integrated member identification cards and a single integrated health risk assessment for Medicare and Medicaid by 2027, in place of separate processes for each program. One member. One assessment. One record that has to hold together across two funding sources.</p>
+
+      <p><strong>Third, the audit climate has changed.</strong> CMS has announced it will audit every eligible Medicare Advantage contract every payment year, expanding its review workforce many times over and pulling far more records per plan. Those risk-adjustment audits target diagnosis codes, not supplemental benefits, so I want to be precise about that. The signal, though, is unmistakable. The expectation now is that a plan can produce a clean, supported record on demand, for any decision, at any time.</p>
+
+      <h2>What changed on the Medicaid side</h2>
+
+      <p>The Ensuring Access to Medicaid Services rule brought home and community-based services under a new standard of oversight.</p>
+
+      <p>States now have to operate an electronic incident management system that can identify, report, investigate, and track critical incidents, and they have to investigate the large majority of those incidents within set timeframes. They have to review person-centered service plans at least annually for most enrollees. Beginning July 1, 2026, they have to publish HCBS payment rates. And most payment for homemaker, home health aide, and personal care services has to reach the direct-care worker rather than the agency.</p>
+
+      <p>Read those together and a picture forms. The delivery of a home and community-based service, the record that it happened, the plan behind it, and the dollars that paid for it are all being pulled into the light at once.</p>
+
+      <p>States are not waiting for Washington either. Ohio is a clear example. Through House Bill 795, the state is adding electronic visit verification and stronger fraud enforcement to home care, after allegations of large improper payments. Ohio is also taking Next Generation MyCare, its integrated managed care program for dual members, statewide on August 1, 2026, and expanding waiver benefits at the same time. More documentation. More verification. More integration. The same direction as the federal moves, arriving through a different door.</p>
+
+      <h2>The common thread</h2>
+
+      <p>The rules are different. The gap they expose is the same.</p>
+
+      <p>Deciding that a member qualifies for a benefit is one step. Getting the benefit to them, confirming it arrived, reconciling what was paid, and keeping a record that survives a review is the rest of the mountain. For most plans, that work lives across a benefit list, a handful of vendor portals, a care management system, and a spreadsheet. None of them were built to produce, on request, the determination, the criteria applied that day, the proof the benefit reached an eligible member, and the reconciliation of what it cost.</p>
+
+      <blockquote class="article-pull">That is the work non-medical benefit execution has always required. Regulators on both sides have now made it non-optional.</blockquote>
+
+      <h2>What audit readiness actually means</h2>
+
+      <p>Auditability is often pictured as a report you assemble at year end. It is more useful to think of it as a property built into each decision from the start.</p>
+
+      <p>A determination that holds up to review captures the inputs that drove it. It records the exact policy version in force on that date. It carries who or what made each step, and when. It cannot be altered after the fact. And it can be retrieved as of any date and produced on request. The same properties apply to a home and community-based service record. What was authorized, what was delivered, what was verified, what was paid.</p>
+
+      <p>These properties cannot be added to a record after an audit begins. Either the system captured them at the moment of the decision, or it did not.</p>
+
+      <p>Throughout, the plan and the state stay in control. The plan sets the eligibility policy and makes the determination. The state owns its program authority. The role of a system of record is to capture and execute those decisions faithfully, and to keep them audit-ready.</p>
+
+      <blockquote class="article-pull">It records. It does not decide.</blockquote>
+
+      <h2>Why this matters most for the dual member</h2>
+
+      <p>The stakes are highest for dual-eligible members, precisely because their benefits span Medicare, Medicaid, and community services. When those live in systems that do not connect, the member&rsquo;s non-medical benefit story is fragmented, hard to see whole, and hard to verify. The federal push toward one integrated assessment and one identification card, and the state push toward documented HCBS delivery, are both reaching for the same thing from different sides. One coherent record for one person.</p>
+
+      <p>For the members who need the most coordination, that single, auditable record is not a nice-to-have. It is the whole point.</p>
+
+      <h2>The category</h2>
+
+      <p>This is the category our team is building. A system of record for non-medical benefit execution. It ingests the criteria a plan already publishes and the data a plan already owns. It sequences benefits across Medicare, Medicaid, and community services. It routes each referral to the aggregator or vendor the plan already uses. It confirms delivery through confidence-graded verification. And it produces audit-ready documentation and reconciliation for every decision. It is neutral across payers, because a record meant to be trusted under audit should not be tied to any single plan&rsquo;s interests.</p>
+
+      <p>Handled well, this is more than a compliance requirement. It is the chance to bring non-medical benefits into the same real governance that medical and pharmacy benefits already have, to connect them to outcomes, and to make sure the benefit reaches the member who needs it, with the proof that it did.</p>
+
+      <p>If your team is working through this for the year ahead, whether you sit on the Medicare side, the Medicaid side, or both, I would welcome the conversation. This is the right time to have it.</p>
+
+      <section class="article-refs">
+        <h2>Sources</h2>
+        <ol>
+          <li><a href="https://www.cms.gov/newsroom/fact-sheets/contract-year-2027-medicare-advantage-part-d-final-rule" target="_blank" rel="noopener">Contract Year 2027 Medicare Advantage and Part D Final Rule</a>. CMS fact sheet, April 2, 2026. Objective eligibility standards and public posting for SSBCI; dual-eligible integration provisions.</li>
+          <li>Contract Year 2026 Medicare Advantage and Part D Final Rule. CMS fact sheet. Integrated member identification cards and a single integrated health risk assessment for applicable D-SNPs.</li>
+          <li>CMS press release on accelerated Medicare Advantage risk-adjustment (RADV) audits. Annual audit of every eligible MA contract and expanded review workforce.</li>
+          <li>Ensuring Access to Medicaid Services final rule (Medicaid Access Rule). Electronic incident management, person-centered service plan review, HCBS payment rate transparency beginning July 1, 2026, and the direct-care worker payment standard for homemaker, home health aide, and personal care services.</li>
+          <li>Administration for Community Living (ACL) overview of home and community-based services, and Medicaid.gov HCBS critical incident management reporting requirements.</li>
+          <li>Ohio House Bill 795, as reported by the Ohio Capital Journal; Ohio Department of Medicaid materials on Next Generation MyCare statewide expansion effective August 1, 2026.</li>
+        </ol>
+        <p style="font-size:14px;color:#7A8FA6;font-weight:300;margin-top:18px;">This article is general information about benefit operations and policy direction. It is not legal or compliance advice. Regulatory requirements and effective dates should be confirmed against the current text of each rule.</p>
+      </section>
+
+      <div class="article-cta">
+        <h4>Bring non-medical benefits under real governance</h4>
+        <p>Anchor is the system of record for non-medical benefit execution. The plan sets eligibility policy and retains determination authority. It records. It does not decide.</p>
+        <a class="cta-btn" href="contact.html">Talk to the team</a>
+      </div>
     </div>
-
-    <article class="featured-post">
-      <div class="featured-post-body">
-        <span class="post-tag">Policy &amp; CMS</span>
-        <h2><a class="post-link" href="insights-real-governance.html">The year non-medical benefits came under real governance</a></h2>
-        <p class="dek">In the same year, federal and state regulators moved to make non-medical benefit and HCBS execution documented, verifiable, and producible on demand. From Medicare to Medicaid, a benefit you offered is becoming a decision you have to defend.</p>
-        <div class="post-meta"><span>8 min read</span><span class="dot">&middot;</span><span>Flagship</span></div>
-      </div>
-      <a class="featured-post-art" href="insights-real-governance.html" aria-label="Read the featured article"><img src="og-real-governance.png" alt="A benefit you offered. A decision you defend. A record that proves it. The case for real governance." style="width:100%;height:100%;object-fit:cover;object-position:left center;display:block;" /></a>
-    </article>
-
-    <div class="post-grid">
-        <article class="post-card">
-          <a class="post-card-art" href="insights-vbid-to-ssbci.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#1B2A3D"/><circle cx="300" cy="34" r="2" fill="#F5F2ED" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F5F2ED" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F5F2ED" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#3A9E8E"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F5F2ED">Same benefits.</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#3A9E8E">New way to qualify.</text></svg></a>
-          <div class="post-card-body">
-            <span class="post-tag">Policy &amp; CMS</span>
-            <h3><a class="post-link" href="insights-vbid-to-ssbci.html">Same benefits, fewer members, a determination for each one</a></h3>
-            <p class="dek">The VBID sunset moved most D-SNP supplemental benefits onto SSBCI authority. The basis on which a member qualifies changed from a status to a determination for each individual.</p>
-            <div class="post-meta"><span>7 min read</span></div>
-          </div>
-        </article>
-        <article class="post-card c1">
-          <a class="post-card-art" href="insights-system-of-record.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#1E5A50"/><circle cx="300" cy="34" r="2" fill="#F5F2ED" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F5F2ED" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F5F2ED" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#EAD3A0"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F5F2ED">What you promised.</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#EAD3A0">What actually happened.</text></svg></a>
-          <div class="post-card-body">
-            <span class="post-tag">Perspective</span>
-            <h3><a class="post-link" href="insights-system-of-record.html">The case for a system of record</a></h3>
-            <p class="dek">Every plan already has a benefits catalog and a claims system. The gap sits in between, and it is becoming the thing auditors ask about first.</p>
-            <div class="post-meta"><span>6 min read</span></div>
-          </div>
-        </article>
-        <article class="post-card c2">
-          <a class="post-card-art" href="insights-reconciliation-spreadsheet.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#2A3F58"/><circle cx="300" cy="34" r="2" fill="#F5F2ED" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F5F2ED" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F5F2ED" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#4FB3A2"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F5F2ED">One spreadsheet.</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#4FB3A2">One person’s memory.</text></svg></a>
-          <div class="post-card-body">
-            <span class="post-tag">Benefit Operations</span>
-            <h3><a class="post-link" href="insights-reconciliation-spreadsheet.html">Retiring the reconciliation spreadsheet</a></h3>
-            <p class="dek">Why the month-end scramble to match vendor invoices to delivered benefits is a symptom, not the disease.</p>
-            <div class="post-meta"><span>6 min read</span></div>
-          </div>
-        </article>
-        <article class="post-card c3">
-          <a class="post-card-art" href="insights-referral-rails.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#8A3F2F"/><circle cx="300" cy="34" r="2" fill="#F7EFE7" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F7EFE7" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F7EFE7" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#EBC9A2"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F7EFE7">Two payers, one member.</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#EBC9A2">No record.</text></svg></a>
-          <div class="post-card-body">
-            <span class="post-tag">Policy &amp; CMS</span>
-            <h3><a class="post-link" href="insights-referral-rails.html">Referral rails aren&rsquo;t determination records</a></h3>
-            <p class="dek">North Carolina, California and Illinois have each built strong ways to move a referral. The determination record is the piece still to be built.</p>
-            <div class="post-meta"><span>9 min read</span></div>
-          </div>
-        </article>
-        <article class="post-card c4">
-          <a class="post-card-art" href="insights-auditable-spend.html" aria-label="Read article"><svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="150" fill="#7A5A1F"/><circle cx="300" cy="34" r="2" fill="#F7F1E4" opacity="0.1"/><circle cx="332" cy="60" r="2" fill="#F7F1E4" opacity="0.07"/><circle cx="285" cy="70" r="2" fill="#F7F1E4" opacity="0.06"/><rect x="26" y="22" width="34" height="4" rx="2" fill="#5FC0B0"/><text x="26" y="64" font-family="'DM Serif Display',serif" font-size="21" fill="#F7F1E4">At audit, fragments</text><text x="26" y="94" font-family="'DM Serif Display',serif" font-size="21" fill="#5FC0B0">are a finding.</text></svg></a>
-          <div class="post-card-body">
-            <span class="post-tag">Policy &amp; CMS</span>
-            <h3><a class="post-link" href="insights-auditable-spend.html">What &ldquo;auditable&rdquo; actually means for supplemental benefit spend</a></h3>
-            <p class="dek">CMS increasingly expects plans to show not just that a benefit was offered, but that it was delivered, to whom, and paid for correctly.</p>
-            <div class="post-meta"><span>8 min read</span></div>
-          </div>
-        </article>
-    </div>
-
-    <section class="subscribe-band">
-      <div>
-        <h3>The monthly D-SNP compliance brief</h3>
-        <p>A short, no-noise summary of CMS updates and benefit-execution practice, for compliance, operations, and actuarial teams. One email a month.</p>
-      </div>
-      <div>
-        <form class="subscribe-form" action="https://formspree.io/f/xnjelvoq" method="POST" onsubmit="handleSubscribe(event)"><input type="hidden" name="_subject" value="New subscriber — monthly D-SNP brief" /><input type="hidden" name="form_type" value="Newsletter subscribe" /><input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" /><input class="subscribe-input" type="text" name="name" placeholder="Your name" required aria-label="Your name" /><input class="subscribe-input" type="email" name="email" placeholder="you@plan.com" required aria-label="Work email" /><button class="subscribe-btn" type="submit">Subscribe</button></form><p class="subscribe-done" style="display:none;">Thanks — you’re on the list. We’ll send the monthly brief.</p>
-      </div>
-    </section>
   </div>
 </section>
 <footer>
