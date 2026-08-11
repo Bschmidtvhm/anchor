@@ -118,7 +118,21 @@
       .footer-brand { grid-column: 1 / -1; }
     }
     @media (max-width: 420px) { .footer-main { grid-template-columns: 1fr !important; } .footer-brand { grid-column: auto; } }
-  </style>
+  
+    /* Footer ACAP Preferred Vendor badge */
+    .footer-acap { margin-top: 1.4rem; }
+    .footer-acap-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(245,242,237,0.55);
+      margin-bottom: 0.55rem;
+    }
+    .footer-acap-chip {
+      display: inline-block; background: #ffffff; border-radius: 8px;
+      padding: 10px 14px; line-height: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+    }
+    .footer-acap-chip img { height: 34px; width: auto; display: block; }
+</style>
 </head>
 <body>
 <nav>
@@ -261,6 +275,13 @@
         </g>
       </svg>
       <p>Improve Quality. Control Spend. Prove Execution.</p>
+    
+      <div class="footer-acap">
+        <div class="footer-acap-label">Preferred Vendor</div>
+        <div class="footer-acap-chip">
+          <img src="ACAP-logo.png" alt="ACAP &mdash; Association for Community Affiliated Plans" width="115" height="34">
+        </div>
+      </div>
     </div>
     <div><div class="footer-col-title">Platform</div><ul class="footer-col-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="why-anchor.html">Why Anchor</a></li><li><a href="how-we-help.html">How We Help</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Request a Demo</a></li></ul></div>
     <div><div class="footer-col-title">Legal</div><ul class="footer-col-links"><li><a href="contact.html">Contact Us</a></li></ul></div>
