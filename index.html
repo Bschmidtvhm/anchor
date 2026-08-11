@@ -144,6 +144,43 @@
       color: var(--teal);
       margin-bottom: 1.25rem;
     }
+    /* Preferred Vendor trust strip */
+    .trust-strip {
+      background: white;
+      border-top: 1px solid var(--cream-dark);
+      padding: 26px 2rem;
+    }
+    .trust-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .trust-strip-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .trust-strip-divider {
+      width: 1px;
+      height: 34px;
+      background: var(--cream-dark);
+    }
+    .trust-strip-logo {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .trust-strip-divider { display: none; }
+      .trust-strip-inner { gap: 12px; }
+      .trust-strip-logo { height: 40px; }
+    }
     h1 {
       font-family: 'DM Serif Display', serif;
       font-size: clamp(2.5rem, 4.4vw, 3.6rem);
@@ -1570,6 +1607,17 @@
           <div class="sor-footnote">Human-in-the-loop: approval stays with care management</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREFERRED VENDOR TRUST STRIP -->
+<section class="trust-strip" aria-label="ACAP Preferred Vendor">
+  <div class="container">
+    <div class="trust-strip-inner">
+      <span class="trust-strip-label">Preferred Vendor</span>
+      <span class="trust-strip-divider" aria-hidden="true"></span>
+      <img src="ACAP-logo.png" alt="ACAP &mdash; Association for Community Affiliated Plans" class="trust-strip-logo" width="156" height="48">
     </div>
   </div>
 </section>
