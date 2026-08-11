@@ -775,7 +775,21 @@
     }
   
     .steps-grid .step-card:last-child:nth-child(odd){grid-column:1 / -1;}
-  </style>
+  
+    /* Footer ACAP Preferred Vendor badge */
+    .footer-acap { margin-top: 1.4rem; }
+    .footer-acap-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(245,242,237,0.55);
+      margin-bottom: 0.55rem;
+    }
+    .footer-acap-chip {
+      display: inline-block; background: #ffffff; border-radius: 8px;
+      padding: 10px 14px; line-height: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+    }
+    .footer-acap-chip img { height: 34px; width: auto; display: block; }
+</style>
 </head>
 <body>
 
@@ -1016,6 +1030,13 @@
         </g>
       </svg>
       <p>Improve Quality. Capture Revenue. Control Spend.</p>
+    
+      <div class="footer-acap">
+        <div class="footer-acap-label">Preferred Vendor</div>
+        <div class="footer-acap-chip">
+          <img src="ACAP-logo.png" alt="ACAP &mdash; Association for Community Affiliated Plans" width="115" height="34">
+        </div>
+      </div>
     </div>
 
     <div>
