@@ -12,16 +12,16 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights | Anchor</title>
-  <meta name="description" content="Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move." />
-  <meta property="og:title" content="Insights | Anchor" />
-  <meta property="og:description" content="Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move." />
+  <title>News &amp; Insights | Anchor</title>
+  <meta name="description" content="Company news, press releases, and perspective on compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, from the team building the system of record for non-medical benefit execution." />
+  <meta property="og:title" content="News &amp; Insights | Anchor" />
+  <meta property="og:description" content="Company news, press releases, and perspective on compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://anchorcare.ai/insights.html" />
   <meta property="og:image" content="https://anchorcare.ai/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Insights | Anchor" />
-  <meta name="twitter:description" content="Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move." />
+  <meta name="twitter:title" content="News &amp; Insights | Anchor" />
+  <meta name="twitter:description" content="Company news, press releases, and perspective on compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -223,6 +223,25 @@
     .post-card h3 a:hover { color: var(--teal); }
     .post-card .dek { font-size: 14.5px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; flex: 1; }
 
+    .section-head { display: flex; align-items: baseline; gap: 1rem; margin: 0 0 1.75rem; }
+    .section-head h2 { font-size: clamp(1.35rem, 2.2vw, 1.7rem); margin: 0; }
+    .section-head .section-rule { flex: 1; height: 1px; background: var(--border); }
+    .section-block { margin-bottom: 4.5rem; }
+    .post-tag.press { background: var(--teal-pale); color: var(--teal); }
+
+    .news-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .news-item { display: grid; grid-template-columns: 1fr 210px; gap: 2.5rem; align-items: center; border: 1px solid var(--border); border-radius: 12px; background: #fff; padding: 2rem 2.25rem; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .news-item:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(27,42,61,0.06); }
+    .news-item-body { display: flex; flex-direction: column; align-items: flex-start; gap: 0.7rem; }
+    .news-item h3 { font-family: 'DM Serif Display', serif; font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.25; letter-spacing: -0.01em; color: var(--navy); }
+    .news-item h3 a { color: var(--navy); text-decoration: none; }
+    .news-item h3 a:hover { color: var(--teal); }
+    .news-item .dek { font-size: 15.5px; font-weight: 300; color: var(--text-secondary); line-height: 1.7; }
+    .news-read { font-size: 14px; font-weight: 500; color: var(--teal); text-decoration: none; margin-top: 0.15rem; }
+    .news-read:hover { text-decoration: underline; }
+    .news-logo { display: flex; align-items: center; justify-content: center; background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 1.6rem 1.25rem; }
+    .news-logo img { width: 100%; max-width: 158px; height: auto; display: block; }
+    @media (max-width: 720px) { .news-item { grid-template-columns: 1fr; gap: 1.5rem; } .news-logo { order: -1; justify-content: flex-start; padding: 1.25rem 1.5rem; } .news-logo img { max-width: 140px; } }
 
     .subscribe-band { background: var(--navy); border-radius: 12px; padding: 3rem; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; margin-top: 4rem; }
     .subscribe-band h3 { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--cream); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
@@ -301,21 +320,46 @@
       <li><a href="how-it-works.html">How It Works</a></li>
       <li><a href="why-anchor.html">Why Anchor</a></li>
       <li><a href="how-we-help.html">How We Help</a></li>
-      <li><a href="insights.html" class="active">Insights</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="insights.html" class="active">News &amp; Insights</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Request a Demo</a></li>
     </ul>
   </div>
 </nav>
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">Insights</span>
-    <h1>Insights on non-medical benefit execution</h1>
-    <p>Compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move.</p>
+    <span class="eyebrow">News &amp; Insights</span>
+    <h1>News and insights on non-medical benefit execution</h1>
+    <p>Company announcements alongside compliance, benefit operations, and the evidence trail behind D-SNP supplemental benefits, written for the teams accountable for how those dollars move.</p>
   </div>
 </section>
 <section class="insights-list">
   <div class="container">
+
+    <div class="section-block">
+      <div class="section-head">
+        <h2>In the news</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <div class="news-item-body">
+            <span class="post-tag press">Press Release</span>
+            <h3><a class="post-link" href="news-acap-preferred-vendor.html">Anchor named a Preferred Vendor by the Association for Community Affiliated Plans</a></h3>
+            <p class="dek">The designation gives ACAP&rsquo;s member plans &mdash; 92 plans covering more than 30 million people &mdash; access to Anchor to sequence, route, verify, and document non-medical benefits, as CY2027 rules raise the documentation bar for D-SNPs.</p>
+            <div class="post-meta"><span>Aug 13, 2026</span><span class="dot">&middot;</span><span>Phoenix, AZ</span></div>
+            <a class="news-read" href="news-acap-preferred-vendor.html">Read the release &rarr;</a>
+          </div>
+          <a class="news-logo" href="news-acap-preferred-vendor.html" aria-label="Read the press release"><img src="ACAP-preferred-vendor.png" alt="ACAP Preferred Vendor" width="170"></a>
+        </article>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-head">
+        <h2>Insights</h2>
+        <span class="section-rule"></span>
+      </div>
     <div class="insights-toolbar">
       <button class="chip active">All</button>
       <button class="chip">Compliance &amp; Audit</button>
@@ -373,6 +417,7 @@
           </div>
         </article>
     </div>
+    </div>
 
     <section class="subscribe-band">
       <div>
@@ -408,7 +453,7 @@
         </div>
       </div>
     </div>
-    <div><div class="footer-col-title">Platform</div><ul class="footer-col-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="why-anchor.html">Why Anchor</a></li><li><a href="how-we-help.html">How We Help</a></li><li><a href="insights.html">Insights</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Request a Demo</a></li></ul></div>
+    <div><div class="footer-col-title">Platform</div><ul class="footer-col-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="why-anchor.html">Why Anchor</a></li><li><a href="how-we-help.html">How We Help</a></li><li><a href="insights.html">News &amp; Insights</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Request a Demo</a></li></ul></div>
     <div><div class="footer-col-title">Legal</div><ul class="footer-col-links"><li><a href="#" onclick="openPolicy('privacy'); return false;">Privacy Policy</a></li><li><a href="#" onclick="openPolicy('trust'); return false;">Trust Center</a></li><li><a href="#" onclick="openContactModal(); return false;">Contact Us</a></li></ul></div>
     <div><div class="footer-col-title">Contact</div><div class="footer-contact-detail"><div class="footer-contact-line">5227 N 7th Street<br>Phoenix, AZ 85014</div><div class="footer-contact-line" style="margin-top:0.25rem;font-size:12px;">Anchor Care, Inc.</div></div></div>
   </div>
