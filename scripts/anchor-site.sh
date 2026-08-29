@@ -3,6 +3,7 @@
 #
 #   ./scripts/anchor-site.sh check
 #   ./scripts/anchor-site.sh publish "commit message"
+#   ./scripts/anchor-site.sh sitemap        regenerate sitemap.xml (publish does this too)
 #
 # Must run on the Mac itself (needs network and the keychain credential helper).
 # The sandboxed Claude VM has no network; git fetch/push there fail with a 403
@@ -52,6 +53,63 @@ verify_live() {
   bad "$mismatch page(s) out of sync with live"; return 1
 }
 
+# --- sitemap -----------------------------------------------------------------
+# sitemap.xml is generated, never hand-edited. It lists every tracked html page
+# except: pages carrying <meta name="robots" content="noindex">, and the files
+# in SITEMAP_EXCLUDE (known duplicate uploads that should not be indexed).
+# 'publish' regenerates it before committing; 'check' fails if it is stale.
+SITEMAP_EXCLUDE="insightsrealgovernance.html insights-vbid-to-ssbci_2.html"
+
+sitemap_pages() {
+  # prints "url<TAB>lastmod" for every page that belongs in the sitemap
+  local f url lastmod
+  for f in $($GIT ls-files '*.html'); do
+    case " $SITEMAP_EXCLUDE " in *" $f "*) continue ;; esac
+    grep -qiE '<meta[^>]+name="robots"[^>]+noindex' "$f" && continue
+    case "$f" in
+      index.html)    url="$LIVE/" ;;
+      */index.html)  url="$LIVE/${f%index.html}" ;;
+      *)             url="$LIVE/$f" ;;
+    esac
+    lastmod=$($GIT log -1 --format=%cs -- "$f" 2>/dev/null)
+    [ -z "$lastmod" ] && lastmod=$(date +%F)
+    printf '%s\t%s\n' "$url" "$lastmod"
+  done | sort
+}
+
+render_sitemap() {
+  local url lastmod
+  printf '<?xml version="1.0" encoding="UTF-8"?>\n'
+  printf '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+  while IFS=$'\t' read -r url lastmod; do
+    printf '  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n  </url>\n' "$url" "$lastmod"
+  done < <(sitemap_pages)
+  printf '</urlset>\n'
+}
+
+cmd_sitemap() {
+  render_sitemap > sitemap.xml
+  ok "sitemap.xml regenerated ($(grep -c '<loc>' sitemap.xml) pages)"
+}
+
+verify_sitemap() {
+  # Fails if sitemap.xml is missing or does not match what the generator would
+  # produce from the current tree (new page, removed page, or a page edited
+  # since its lastmod). Fix: ./scripts/anchor-site.sh sitemap
+  [ -f sitemap.xml ] || { bad "sitemap.xml is missing. Fix: ./scripts/anchor-site.sh sitemap"; return 1; }
+  if ! diff -q <(render_sitemap) sitemap.xml >/dev/null 2>&1; then
+    bad "sitemap.xml is STALE. Fix: ./scripts/anchor-site.sh sitemap"
+    diff <(render_sitemap) sitemap.xml | grep '^[<>]' | grep -E 'loc|lastmod' | sed 's/^/        /' | head -10
+    return 1
+  fi
+  ok "sitemap.xml matches the current pages ($(grep -c '<loc>' sitemap.xml) pages)"
+  local live_sum local_sum
+  live_sum=$(curl -fsS -m 25 "$LIVE/sitemap.xml" 2>/dev/null | shasum -a 256 | cut -d' ' -f1)
+  local_sum=$(shasum -a 256 sitemap.xml | cut -d' ' -f1)
+  if [ -z "$live_sum" ]; then warn "sitemap.xml not reachable at $LIVE"; return 1; fi
+  [ "$live_sum" = "$local_sum" ] && ok "sitemap.xml matches the live site" || { bad "sitemap.xml differs from live"; return 1; }
+}
+
 cmd_check() {
   hr; echo "PREFLIGHT"; hr
   clear_stale_locks
@@ -84,7 +142,11 @@ cmd_check() {
   else ok "working tree clean"; fi
 
   hr; echo "LIVE SITE"; hr
-  verify_live
+  local rc=0
+  verify_live || rc=1
+  hr; echo "SITEMAP"; hr
+  verify_sitemap || rc=1
+  return $rc
 }
 
 cmd_publish() {
@@ -97,10 +159,18 @@ cmd_publish() {
     bad "REFUSING to publish: local is behind origin. Run 'check' and reconcile first."; return 1
   fi
 
+  # sitemap.xml is derived from the page list; lastmod comes from git, so
+  # regenerate it AFTER committing page edits and fold it into the same push.
   if [ -n "$($GIT status --porcelain)" ]; then
     $GIT add -A && $GIT commit -m "$msg" -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" || { bad "commit failed"; return 1; }
     ok "committed"
   else warn "nothing to commit"; fi
+
+  render_sitemap > sitemap.xml
+  if [ -n "$($GIT status --porcelain sitemap.xml)" ]; then
+    $GIT add sitemap.xml && $GIT commit -m "Regenerate sitemap.xml" --quiet || { bad "sitemap commit failed"; return 1; }
+    ok "sitemap.xml regenerated and committed"
+  else ok "sitemap.xml already current"; fi
 
   $GIT push origin main 2>&1 | tail -2 || { bad "PUSH FAILED - the commit exists locally but the site is NOT updated"; return 1; }
   [ "$($GIT rev-list --count origin/main..main)" -eq 0 ] || { bad "push did not land; still ahead"; return 1; }
@@ -110,15 +180,16 @@ cmd_publish() {
   local i
   for i in 1 2 3 4 5 6 7 8; do
     sleep 15
-    if verify_live >/dev/null 2>&1; then ok "live site now matches local (after $((i*15))s)"; return 0; fi
+    if verify_live >/dev/null 2>&1 && verify_sitemap >/dev/null 2>&1; then ok "live site and sitemap now match local (after $((i*15))s)"; return 0; fi
     printf '  ... %ss\n' "$((i*15))"
   done
   warn "live site still differs after 120s. Pages may still be building; re-run 'check' shortly."
-  verify_live
+  verify_live; verify_sitemap
 }
 
 case "${1:-check}" in
   check)   cmd_check ;;
   publish) shift; cmd_publish "${1:-}" ;;
-  *) echo "usage: $0 {check|publish \"message\"}"; exit 2 ;;
+  sitemap) cmd_sitemap ;;
+  *) echo "usage: $0 {check|publish \"message\"|sitemap}"; exit 2 ;;
 esac
