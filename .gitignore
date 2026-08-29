@@ -1,0 +1,4 @@
+_to_delete/
+.fuse_hidden*
+.DS_Store
+.claude/
