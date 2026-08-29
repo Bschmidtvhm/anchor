@@ -1,0 +1,110 @@
+# CLAUDE.md
+
+Instructions for Claude working in this repository.
+
+## What this is
+
+The static marketing site for **anchorcare.ai** (Anchor Care, Inc.).
+GitHub Pages serves `main` directly. `CNAME` points at the apex domain.
+No build step, no framework, no package manager. Each page is a single
+self-contained `.html` file with its CSS inlined in a `<style>` block.
+
+## Read this before you touch anything
+
+This repo has **two independent write paths** and nothing reconciles them
+automatically:
+
+1. The local clone at `~/anchor-landing` on the owner's Mac, pushed over git.
+2. The GitHub web UI and Claude-on-GitHub pull request branches.
+
+They have silently diverged before. In July 2026 a set of commits was made in
+the local clone and never pushed, and stale `.git/*.lock` files then wedged that
+clone. Work continued through the web UI instead. Four months later `main` was
+35 commits ahead of the clone, the clone held 5 commits nobody had seen, and
+there was no signal to anyone. The guard below exists so that cannot repeat
+quietly.
+
+**Assume nothing about which copy is current. Verify.**
+
+## Required workflow
+
+From the local clone, always run the preflight before reading or editing:
+
+```
+./scripts/anchor-site.sh check
+```
+
+It clears stale git locks, fetches, reports ahead/behind, and hash-compares
+every tracked `.html` page against what anchorcare.ai is actually serving.
+
+To ship:
+
+```
+./scripts/anchor-site.sh publish "commit message"
+```
+
+It refuses to run if local is behind origin, then commits, pushes, and polls
+until the live site matches.
+
+Rules:
+
+- Never run a bare `git push`. Use `publish`.
+- **Never `git push --force`.** It would erase work that arrived through the
+  web UI path.
+- If the preflight reports BEHIND, stop. Preserve any unpushed local commits on
+  a backup branch and push that branch before resetting to `origin/main`.
+  Confirm before discarding anything.
+- A green push is not success. GitHub Pages can lag or fail to build. Confirm
+  the live site matches, then say which pages changed.
+- `.git/hooks/post-commit` auto-pushes commits on `main`. Hooks are not
+  versioned, so reinstall it after any fresh clone.
+
+If a working environment has no network for git (some sandboxes do not), run
+git network operations on the Mac itself rather than assuming the push
+succeeded.
+
+## Working with the owner
+
+The owner does not run git commands and should never be asked to. Do every step
+for her and report the outcome, not the instructions. Confirm before adding any
+new file to the repo.
+
+## Content and copy
+
+**Do not change any headline, category line, positioning statement, or factual
+claim on your own initiative.** Anchor's messaging rules and the verified
+sourcing behind every regulatory claim live in the team's private working notes,
+not in this repo. Ask first. A change that reads as a harmless tightening can
+contradict a decision made deliberately elsewhere.
+
+Style rules that apply to every edit:
+
+- No em-dashes. Use periods, commas, or restructure the sentence.
+- Every market or regulatory claim needs a named, verified source. No
+  unsourced superlatives.
+- Match the voice already on the page. The site speaks as a team, not as one
+  person.
+- Keep pages self-contained. Do not introduce a build step, a bundler, or an
+  external stylesheet.
+
+## Layout
+
+```
+index.html            homepage
+about.html            how-it-works.html   how-we-help.html   why-anchor.html
+contact.html          request.html        thank-you.html
+insights.html         insights-*.html     article pages
+og-*.png              per-article social share cards
+ACAP-logo.png         ACAP-preferred-vendor.png
+CNAME                 apex domain for GitHub Pages
+scripts/              anchor-site.sh, the preflight and publish guard
+```
+
+Privacy Policy and Trust Center are JavaScript modals inside the pages, not
+separate files. Contact and demo forms post to Formspree.
+
+## Do not commit
+
+Secrets or tokens of any kind. This repository is **public**.
+Also keep out: `.patch` files, editor and OS scratch files, mount artifacts
+(`.fuse_hidden*`), and anything under `_to_delete/`. See `.gitignore`.
