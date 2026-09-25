@@ -1640,7 +1640,7 @@
 <section style="background: var(--cream); padding: 48px 2rem 56px;">
   <div class="container">
     <div class="thesis-card">
-      <div class="thesis-card-lead">A dual-eligible member&rsquo;s needs are met through the plan&rsquo;s supplemental benefits, Medicaid, waivers, and community programs. Care managers refer to each one through a separate process.</div>
+      <div class="thesis-card-lead">A dual-eligible member&rsquo;s needs are met through SSBCI and the plan&rsquo;s other supplemental benefits, Medicaid, waivers, and community programs. Care managers refer to each one through a separate process.</div>
       <div class="thesis-card-body">
         <p>Each funding source works with its own vendors, data formats, and reporting cadence. Caseloads run in the hundreds, and the next call may reach a different care manager, with no single record of what was referred or where it stands.</p>
               </div>
@@ -1702,13 +1702,27 @@
       </div>
     </div>
     <div class="cross-cutting">
-      <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:0.75rem;font-weight:400;">One Record, Six Teams That Use It</h3>
-      <p style="font-size:16px;color:var(--text-secondary);font-weight:300;line-height:1.7;margin-bottom:1.5rem;max-width:600px;">Care management, compliance and audit, finance and med econ, quality, product and bid, and vendor management.</p>
-      <ul class="buyer-bullets">
-        <li>Every referral and where it stands</li>
-        <li>Each vendor's record, accepted and graded</li>
-        <li>Criteria and PBP on record for each determination</li>
-      </ul>
+      <style>
+        .six-teams-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:1.75rem; }
+        .six-team { background:#fff; border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:10px; padding:1.4rem 1.4rem 1.5rem; box-shadow:0 1px 2px rgba(27,42,61,0.03),0 6px 18px rgba(27,42,61,0.05); }
+        .six-team h4 { font-size:16px; font-weight:500; color:var(--navy); margin-bottom:0.6rem; }
+        .six-team p { font-size:15px; color:var(--text-secondary); font-weight:300; line-height:1.6; margin:0; }
+        .six-teams-band { margin-top:1.5rem; background:var(--navy); color:var(--cream); border-left:4px solid var(--amber); border-radius:8px; padding:1.1rem 1.5rem; font-size:16px; font-weight:500; }
+        @media (max-width:900px){ .six-teams-grid { grid-template-columns:1fr 1fr; } }
+        @media (max-width:600px){ .six-teams-grid { grid-template-columns:1fr; } }
+      </style>
+      <span class="eyebrow">Across the Plan</span>
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--navy);margin:0.5rem 0 0.75rem;font-weight:400;">One Record, Six Teams That Use It</h3>
+      <p style="font-size:16px;color:var(--text-secondary);font-weight:300;line-height:1.7;max-width:780px;">The spend happens either way. Anchor makes it activated, matched to delivery, and attributable, from one record.</p>
+      <div class="six-teams-grid">
+        <div class="six-team"><h4>Care management</h4><p>One screen from need to confirmed service. Fewer steps per activation.</p></div>
+        <div class="six-team"><h4>Compliance and audit</h4><p>Member-level determinations, with criteria and PBP on record, attributed, producible for any member, any date.</p></div>
+        <div class="six-team"><h4>Finance and med econ</h4><p>Authorization matched to delivery. The documented event behind each funded service.</p></div>
+        <div class="six-team"><h4>Quality</h4><p>Benefits activated and days to confirmation as member-level inputs.</p></div>
+        <div class="six-team"><h4>Product and bid</h4><p>Cap use, time to activation, and vendor delivery as observations.</p></div>
+        <div class="six-team"><h4>Vendor management</h4><p>Referrals sent, fulfilled, and time to delivery, by vendor.</p></div>
+      </div>
+      <div class="six-teams-band">One record the whole plan can act on.</div>
     </div>
   </div>
 </section>
