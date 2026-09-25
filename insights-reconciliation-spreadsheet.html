@@ -383,7 +383,7 @@
       </section>
       <div class="article-cta">
         <h4>Close the month by reviewing, not rebuilding</h4>
-        <p>Anchor captures delivered benefits as a system of record, so reconciliation becomes an exception review.</p>
+        <p>Anchor matches each authorization to the vendor&rsquo;s delivery record at the member level, so reconciliation becomes an exception review.</p>
         <a class="cta-btn" href="contact.html">Request a Demo</a>
       </div>
     </div>
@@ -404,7 +404,7 @@
           <path d="M3533.44,2349.59c283.15,20.93,249.59,460.4-32.54,439.54s-250.61-460.46,32.54-439.54M3519.77,2440c-63.1-1.32-115.48,55.34-116.95,126.52s48.48,130,111.55,131.3,115.47-55.34,116.94-126.52-48.48-130-111.54-131.3Z"/>
           <path d="M3913.66,2418.14c0,1.84,3.18,2.51,4.54,1,45.93-50.14,109.17-71.99,189.7-65.56,12,1,21.1,8.49,21.1,17.53v59.92c0,1.11-.28,2.21-.82,3.19-6.09,11.08-15.55,16.65-28.37,16.71-74.84.48-130.32,8.16-166.51,60.26-10.73,15.42-15.95,42.98-15.64,82.68.54,70.58.54,123.7,0,159.37-.27,16.78-13.76,25.34-40.47,25.68-36.28.48-60.47-.06-72.39-1.63-11.64-1.56-17.64-7.27-18-17.25-1-28.2-1.58-149.87-1.73-365,0-10.66.73-18.48,2.09-23.3,2.18-7.88,11.37-13.59,22.19-13.79,6.73-.14,30.34-.32,70.84-.54,20.67-.14,31.58,6.79,32.74,20.79.64,8.62.91,21.94.73,39.94h0Z"/>
         </g>
-      </svg><p>Improve Quality. Capture Revenue. Control Spend.</p>
+      </svg><p>Improve efficiency. Substantiate spend. Simplify member experience.</p>
       <div class="footer-acap">
         <div class="footer-acap-label">Preferred Vendor</div>
         <div class="footer-acap-chip">
@@ -431,7 +431,7 @@
 function openContactModal(){document.getElementById('contact-modal').classList.add('open');document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contact-modal').classList.remove('open');document.body.style.overflow='';}
 function closeIfOverlay(e){if(e.target===document.getElementById('contact-modal'))closeContactModal();}
-function handleModalSubmit(e){e.preventDefault();var f=e.target;var btn=document.getElementById('modal-submit-btn');var t=btn.textContent;btn.textContent='Sending...';btn.disabled=true;fetch('https://formspree.io/f/xnjelvoq',{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('modal-success').style.display='block';}else{btn.textContent=t;btn.disabled=false;var er=f.querySelector('.form-err');if(!er){er=document.createElement('p');er.className='form-err';er.style.cssText='color:#C4614A;font-size:13px;margin-top:10px;';f.appendChild(er);}er.textContent="Sorry, that didn't send — please try again in a moment.";}}).catch(function(){btn.textContent=t;btn.disabled=false;});}
+function handleModalSubmit(e){e.preventDefault();var f=e.target;var btn=document.getElementById('modal-submit-btn');var t=btn.textContent;btn.textContent='Sending...';btn.disabled=true;fetch('https://formspree.io/f/xnjelvoq',{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('modal-success').style.display='block';}else{btn.textContent=t;btn.disabled=false;var er=f.querySelector('.form-err');if(!er){er=document.createElement('p');er.className='form-err';er.style.cssText='color:#C4614A;font-size:13px;margin-top:10px;';f.appendChild(er);}er.textContent="Sorry, that didn't send. Please try again in a moment.";}}).catch(function(){btn.textContent=t;btn.disabled=false;});}
 function openPolicy(which){document.getElementById(which+'-page').classList.add('open');document.body.style.overflow='hidden';window.scrollTo(0,0);}
 function closePolicy(which){document.getElementById(which+'-page').classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('DOMContentLoaded',function(){const currentPage=window.location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav-links a').forEach(link=>{const href=link.getAttribute('href');if(href===currentPage){link.classList.add('active');}else{link.classList.remove('active');}});});
