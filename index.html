@@ -1698,26 +1698,29 @@
     </div>
     <div class="cross-cutting">
       <style>
-        .six-teams-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:1.75rem; }
+        .six-teams-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:1.25rem; margin-top:1.75rem; }
         .six-team { background:#fff; border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:10px; padding:1.4rem 1.4rem 1.5rem; box-shadow:0 1px 2px rgba(27,42,61,0.03),0 6px 18px rgba(27,42,61,0.05); }
         .six-team h4 { font-size:16px; font-weight:500; color:var(--navy); margin-bottom:0.6rem; }
         .six-team p { font-size:15px; color:var(--text-secondary); font-weight:300; line-height:1.6; margin:0; }
         .six-teams-band { margin-top:1.5rem; background:var(--navy); color:var(--cream); border-left:4px solid var(--amber); border-radius:8px; padding:1.1rem 1.5rem; font-size:16px; font-weight:500; }
-        @media (max-width:900px){ .six-teams-grid { grid-template-columns:1fr 1fr; } }
+        .six-team { grid-column:span 3; } .six-team:nth-child(n+5) { grid-column:span 4; }
+        .six-teams-band span { display:block; margin-top:0.35rem; font-size:14px; font-weight:300; opacity:0.85; }
+        @media (max-width:900px){ .six-teams-grid { grid-template-columns:1fr 1fr; } .six-team, .six-team:nth-child(n+5) { grid-column:auto; } }
         @media (max-width:600px){ .six-teams-grid { grid-template-columns:1fr; } }
       </style>
       <span class="eyebrow">Across the Plan</span>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--navy);margin:0.5rem 0 0.75rem;font-weight:400;">One Record, Six Teams That Use It</h3>
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--navy);margin:0.5rem 0 0.75rem;font-weight:400;">One Record, Seven Teams That Use It</h3>
       <p style="font-size:16px;color:var(--text-secondary);font-weight:300;line-height:1.7;max-width:780px;">The spend happens either way. Anchor makes it activated, matched to delivery, and attributable, from one record.</p>
       <div class="six-teams-grid">
         <div class="six-team"><h4>Care management</h4><p>One screen from need to confirmed service. Fewer steps per activation.</p></div>
+        <div class="six-team"><h4>Member services</h4><p>Where a referral or an open request stands, on the first call.</p></div>
+        <div class="six-team"><h4>Vendor management</h4><p>Referrals sent, fulfilled, and time to delivery, by vendor.</p></div>
+        <div class="six-team"><h4>Quality</h4><p>Benefits activated and days to confirmation as member-level inputs.</p></div>
         <div class="six-team"><h4>Compliance and audit</h4><p>Member-level determinations, with criteria and PBP on record, attributed, producible for any member, any date.</p></div>
         <div class="six-team"><h4>Finance and med econ</h4><p>Authorization matched to delivery. The documented event behind each funded service.</p></div>
-        <div class="six-team"><h4>Quality</h4><p>Benefits activated and days to confirmation as member-level inputs.</p></div>
         <div class="six-team"><h4>Product and bid</h4><p>Cap use, time to activation, and vendor delivery as observations.</p></div>
-        <div class="six-team"><h4>Vendor management</h4><p>Referrals sent, fulfilled, and time to delivery, by vendor.</p></div>
       </div>
-      <div class="six-teams-band">One record the whole plan can act on.</div>
+      <div class="six-teams-band">One record the whole plan can act on.<span>Access is role-based. The plan defines what each role sees.</span></div>
     </div>
   </div>
 </section>
